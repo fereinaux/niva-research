@@ -1,0 +1,45 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+
+# Logs
+*.log
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.production
+
+# Dependências
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Arquivos de build
+dist/
+build/
+*.exe
+*.dll
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de dados grandes (se aplicável)
+*.csv
+*.json
+*.xlsx
+*.db
+*.sqlite
+
+# Arquivos de backup
+*.bak
+*.backup 
