@@ -164,139 +164,227 @@ function AboutNiva() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* A Origem da Niva Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Nossos Valores</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Porque e como começamos?</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Os princípios que guiam nosso trabalho e relacionamento com clientes
+              A nossa história importa e, por causa dela, chegamos até aqui.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Value 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Text Content */}
+            <div className="text-center md:text-left">
+              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-emerald-500/10 relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full -translate-y-16 translate-x-16 opacity-30 animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full translate-y-12 -translate-x-12 opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
+                
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg shadow-emerald-500/25">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6">
+                    A Niva nasceu da união entre pesquisa, legado e desejo de fazer diferença.
+                  </p>
+                  <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6">
+                    O amor pela metodologia da pesquisa e a valorização de princípios é o que nos move.
+                  </p>
+                  <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6">
+                    O nosso nome é uma homenagem ao Nivaldo, o pai e grande incentivador da trajetória profissional da Delly.
+                  </p>
+                  <div className="bg-gradient-to-r from-emerald-100 to-teal-100 rounded-2xl p-6 border-l-4 border-emerald-500">
+                    <p className="text-lg md:text-xl font-semibold text-slate-800 leading-relaxed">
+                      Somos uma empresa que honra os seus valores e não abre mão deles.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Cooperação e Empatia</h3>
-              <p className="text-slate-600">
-                Acreditamos no poder da colaboração e na importância de entender profundamente 
-                as necessidades e contextos de nossos clientes e participantes.
-              </p>
             </div>
 
-            {/* Value 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            {/* Visual Element */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl shadow-emerald-500/10">
+                {/* Background Pattern */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-emerald-300 to-teal-300 rounded-full -translate-y-20 translate-x-20 opacity-20 animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-cyan-300 to-blue-300 rounded-full translate-y-16 -translate-x-16 opacity-20 animate-pulse" style={{animationDelay: '1s'}}></div>
+                
+                <div className="relative z-10">
+                  {/* Image Section */}
+                  <div className="text-center mb-8">
+                    <div className="relative inline-block">
+                      <div className="w-32 h-32 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/25 relative overflow-hidden">
+                        <img 
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop&crop=face" 
+                          alt="Nivaldo - Pai e incentivador" 
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-cyan-500/20"></div>
+                      </div>
+                      <div className="absolute bottom-2 right-2 w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Uma empresa com propósito</h3>
+                    <p className="text-slate-600 text-sm">
+                      Em memória de Nivaldo Severiano
+                    </p>
+                  </div>
+                  
+                  {/* Three Pillars */}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center hover:bg-white/90 transition-all duration-300 hover:scale-105 group">
+                      <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-md group-hover:shadow-lg transition-shadow">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                      <span className="font-semibold text-emerald-700 text-sm">Expertise</span>
+                    </div>
+                    
+                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center hover:bg-white/90 transition-all duration-300 hover:scale-105 group">
+                      <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-md group-hover:shadow-lg transition-shadow">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                      </div>
+                      <span className="font-semibold text-teal-700 text-sm">Legado</span>
+                    </div>
+                    
+                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center hover:bg-white/90 transition-all duration-300 hover:scale-105 group">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-md group-hover:shadow-lg transition-shadow">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <span className="font-semibold text-cyan-700 text-sm">Valores</span>
+                    </div>
+                  </div>
+                  
+                  {/* Decorative Quote */}
+                  <div className="mt-6 text-center">
+                    <div className="inline-block bg-gradient-to-r from-emerald-100 to-teal-100 rounded-full px-4 py-2">
+                      <p className="text-sm text-slate-600 italic">
+                        "O amor pela pesquisa e a valorização de princípios"
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Integridade Intelectual e Metodológica</h3>
-              <p className="text-slate-600">
-                Mantemos rigor científico em todas as nossas pesquisas, garantindo 
-                transparência, objetividade e confiabilidade em nossos métodos e resultados.
-              </p>
-            </div>
-
-            {/* Value 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Compromisso e Responsabilidade</h3>
-              <p className="text-slate-600">
-                Assumimos total responsabilidade pelos projetos que abraçamos, 
-                cumprindo prazos, mantendo comunicação transparente e entregando 
-                resultados que superam expectativas.
-              </p>
-            </div>
-
-            {/* Value 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Propósito com Impacto</h3>
-              <p className="text-slate-600">
-                Buscamos gerar mudanças reais e mensuráveis através de nossas pesquisas, 
-                contribuindo para o desenvolvimento de soluções que realmente fazem diferença.
-              </p>
-            </div>
-
-            {/* Value 5 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Legado e Aprendizado Contínuo</h3>
-              <p className="text-slate-600">
-                Valorizamos o conhecimento acumulado e nos dedicamos ao aprendizado 
-                constante, sempre buscando aprimorar nossas metodologias e expandir 
-                nossas capacidades.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20">
+      {/* Nossos Princípios Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Nossa História</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Nossos Princípios</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Como a Niva nasceu e evoluiu para se tornar referência em pesquisa aplicada
+              Agora que você já nos conhece, entenda nossos pilares:
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">De onde viemos</h3>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                A Niva nasceu da paixão por transformar dados em insights acionáveis. 
-                Fundada por pesquisadores experientes, nossa empresa surgiu da necessidade 
-                de democratizar o acesso à pesquisa de qualidade no Brasil.
-              </p>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Com anos de experiência em metodologias qualitativas e quantitativas, 
-                nossa equipe desenvolveu uma abordagem única que combina rigor científico 
-                com pragmatismo empresarial.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Hoje, somos parceiros estratégicos de organizações que buscam entender 
-                profundamente seus usuários, mercados e oportunidades de crescimento.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Princípio 1: Cooperação e empatia */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-emerald-100 overflow-hidden">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/25 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-slate-800 mb-4">Nossos Números</h4>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-3xl font-bold text-emerald-600">50+</div>
-                    <div className="text-sm text-slate-600">Projetos Concluídos</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-teal-600">30+</div>
-                    <div className="text-sm text-slate-600">Clientes Satisfeitos</div>
-                  </div>
+                <h3 className="text-xl font-bold text-slate-800 mb-4">Cooperação e empatia</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  As pessoas importam muito para nós e elas são o começo, meio e fim de quem somos e o que fazemos.
+                </p>
+              </div>
+            </div>
+
+            {/* Princípio 2: Integridade intelectual e metodológica */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-teal-100 overflow-hidden">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/25 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
+                <h3 className="text-xl font-bold text-slate-800 mb-4">Integridade intelectual e metodológica</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Com anos de experiência no que fazemos, usamos a nossa expertise, para escolher métodos assertivos e alinhados com a necessidade.
+                </p>
+              </div>
+            </div>
+
+            {/* Princípio 3: Compromisso e responsabilidade */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-cyan-100 overflow-hidden">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/25 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 mb-4">Compromisso e responsabilidade</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Não abrimos mão do nosso compromisso com quem nos contrata. Somos profissionais e prezamos por isso.
+                </p>
+              </div>
+            </div>
+
+            {/* Princípio 4: Propósito com impacto */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-blue-100 overflow-hidden">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/25 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 mb-4">Propósito com impacto</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Acreditamos que os nossos pilares são realmente valiosos e entregam resultados palpáveis para os envolvidos.
+                </p>
+              </div>
+            </div>
+
+            {/* Princípio 5: Legado e aprendizado contínuo */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-indigo-100 overflow-hidden md:col-span-2 lg:col-span-1">
+              {/* Background decorative elements */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-pink-200 to-rose-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/25 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 mb-4">Legado e aprendizado contínuo</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  A nossa trajetória nos conduziu até aqui e a nossa busca por aprendizados será o que nos levará adiante.
+                </p>
               </div>
             </div>
           </div>
