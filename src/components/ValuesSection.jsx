@@ -152,7 +152,7 @@ function ValuesSection() {
         {/* Section Title */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            O que está por trás do nosso propósito
+            Nossos valores
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto rounded-full"></div>
         </div>
