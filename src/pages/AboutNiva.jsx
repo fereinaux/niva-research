@@ -3,10 +3,10 @@ import React from 'react';
 function AboutNiva() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
-      {/* Hero Section */}
+      {/* Quem faz a Niva Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-950 via-teal-900 to-cyan-900 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <svg
             width="60"
             height="60"
@@ -15,53 +15,65 @@ function AboutNiva() {
             className="w-full h-full"
           >
             <g fill="none" fillRule="evenodd">
-              <g fill="#ffffff" fillOpacity="0.05">
+              <g fill="#ffffff" fillOpacity="0.1">
                 <circle cx="30" cy="30" r="2" />
               </g>
             </g>
           </svg>
         </div>
-
         <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                Transformando
-              </span>
-              <span className="block text-white">organizações</span>
-              <span className="block bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                através da pesquisa
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-emerald-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Acreditamos na transformação das organizações por meio de insights e decisões estratégicas
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Quem faz a Niva Section */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-10 w-40 h-40 bg-teal-500/10 rounded-full blur-xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute top-1/2 left-20 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl animate-float"
+            style={{ animationDelay: "4s" }}
+          ></div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quem forma a Niva?
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              De onde vim, por que pesquiso e onde quero chegar com a Niva.
+            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed mb-8">
+              Conheça um pouco da história da Delly.
             </p>
+            
+            {/* Decorative Elements */}
+            <div className="flex justify-center space-x-8 opacity-50">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce"></div>
+              <div
+                className="w-2 h-2 bg-teal-400 rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"
+                style={{ animationDelay: "0.4s" }}
+              ></div>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
             <div className="text-center lg:text-left">
-              <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto lg:mx-0 mb-8 shadow-lg shadow-emerald-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+              <div className="w-56 h-56 bg-white rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-12 shadow-2xl shadow-black/20 overflow-hidden transform hover:scale-110 transition-all duration-500 border-4 border-white/50 relative group">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=224&h=224&fit=crop&crop=face" 
+                  alt="Delly - Pesquisadora e fundadora da Niva" 
+                  className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700"
+                />
+                <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
               </div>
-              <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-                Olá! Me chamos Delly :) Estou há quase 10 anos realizando pesquisas e costumo dizer que, como boa curiosa que sou, sinto que nasci para ser pesquisadora e responder dúvidas. Com experiência em universidades, órgãos públicos, multinacional e startup, o meu objetivo é levar para os projetos o melhor do que aprendi em cada um destes universos.
+              <p className="text-lg md:text-xl text-emerald-100 leading-relaxed mb-4">
+                Olá! Sou a Delly :) Estou há quase 10 anos realizando pesquisas e costumo dizer que, como boa curiosa nata, sinto que nasci para ser pesquisadora e responder dúvidas.
+              </p>
+              <p className="text-lg md:text-xl text-emerald-100 leading-relaxed">
+                Após realizar pesquisas para universidades, órgãos públicos, multinacional e startup, o meu objetivo é levar para os projetos o melhor do que aprendi em cada um destes universos.
               </p>
             </div>
 
@@ -76,10 +88,10 @@ function AboutNiva() {
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/25">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Experiência Diversificada</h3>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Múltiplas experiências</h3>
                     <p className="text-slate-600 text-sm">10 anos de jornada em diferentes universos</p>
                   </div>
                   
