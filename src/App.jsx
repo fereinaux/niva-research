@@ -8,6 +8,7 @@ import CareerSection from './components/CareerSection';
 import RecommendationsSection from './components/RecommendationsSection';
 import CallToActionSection from './components/CallToActionSection';
 import AboutNiva from './pages/AboutNiva';
+import Products from './pages/Products';
 
 function HomePage() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/sobre" element={<AboutNiva />} />
+            <Route path="/produtos" element={<Products />} />
             <Route path="/contato" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-slate-800">Página de Contato - Em breve!</h1></div>} />
           </Routes>
         </div>

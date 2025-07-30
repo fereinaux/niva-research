@@ -1,24 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ServicesSection() {
   const services = [
     {
-      title: "Pesquisas Qualitativas, Quantitativas e Mistas",
-      icon: (
-        <svg
-          className="w-10 h-10 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
+      title: "Pesquisa de Percepção e Imagem",
+      description: "Entenda como sua marca é percebida pelo público",
+      icon: "🎯",
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-50 to-teal-50",
       borderColor: "border-emerald-100/50",
@@ -28,22 +16,9 @@ function ServicesSection() {
       shadowColor: "group-hover:shadow-emerald-500/25"
     },
     {
-      title: "Estudos de Percepção, Comportamentos e Tendências",
-      icon: (
-        <svg
-          className="w-10 h-10 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
+      title: "Pesquisa de Satisfação e Experiência",
+      description: "Escute seus clientes com metodologias empáticas",
+      icon: "❤️",
       gradient: "from-teal-500 to-cyan-600",
       bgGradient: "from-teal-50 to-cyan-50",
       borderColor: "border-teal-100/50",
@@ -53,22 +28,9 @@ function ServicesSection() {
       shadowColor: "group-hover:shadow-teal-500/25"
     },
     {
-      title: "Análises Estratégicas Sob Medida",
-      icon: (
-        <svg
-          className="w-10 h-10 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-          />
-        </svg>
-      ),
+      title: "Teste de Usabilidade Digital",
+      description: "Avalie se seu produto digital é intuitivo e funcional",
+      icon: "💻",
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-50 to-blue-50",
       borderColor: "border-cyan-100/50",
@@ -78,22 +40,8 @@ function ServicesSection() {
       shadowColor: "group-hover:shadow-cyan-500/25"
     },
     {
-      title: "Projetos para Empresas, Órgãos Públicos, Instituições Sem Fins Lucrativos ou Universidades",
-      icon: (
-        <svg
-          className="w-10 h-10 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
+      title: "Estudos de Comportamento e Cultura",
+      icon: "🔍",
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-50",
       borderColor: "border-blue-100/50",
@@ -148,9 +96,9 @@ function ServicesSection() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
+          <Link to="/produtos" className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
             <span className="relative z-10 flex items-center">
-              Veja nossos serviços
+              Conheça nossos produtos
               <svg
                 className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
@@ -167,7 +115,7 @@ function ServicesSection() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -32,25 +32,44 @@ function AboutNiva() {
             className="absolute top-1/2 left-20 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl animate-float"
             style={{ animationDelay: "4s" }}
           ></div>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Quem forma a Niva?
-            </h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed mb-8">
-              Conheça um pouco da história da Delly.
-            </p>
+          <div className="text-center mb-16 relative">
+            {/* Background decorative elements */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <div className="w-96 h-96 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full blur-3xl animate-pulse"></div>
+            </div>
             
-            {/* Decorative Elements */}
-            <div className="flex justify-center space-x-8 opacity-50">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce"></div>
-              <div
-                className="w-2 h-2 bg-teal-400 rounded-full animate-bounce"
-                style={{ animationDelay: "0.2s" }}
-              ></div>
-              <div
-                className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"
-                style={{ animationDelay: "0.4s" }}
-              ></div>
+            {/* Main content */}
+            <div className="relative z-10">
+              <div className="inline-block mb-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
+                  <span className="text-emerald-200 text-sm font-medium">Nossa fundadora</span>
+                </div>
+              </div>
+              
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Quem forma a{" "}
+                <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+                  Niva?
+                </span>
+              </h2>
+              
+              <p className="text-xl md:text-2xl text-emerald-100 max-w-4xl mx-auto leading-relaxed mb-8">
+                Conheça um pouco da história da{" "}
+                <span className="font-semibold text-white">Delly</span>.
+              </p>
+              
+              {/* Enhanced decorative elements */}
+              <div className="flex justify-center items-center space-x-6">
+                <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                <div className="w-1 h-1 bg-teal-400 rounded-full animate-pulse" style={{ animationDelay: "0.3s" }}></div>
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+                <div className="w-1 h-1 bg-emerald-300 rounded-full animate-pulse" style={{ animationDelay: "0.9s" }}></div>
+                <div className="w-3 h-3 bg-teal-300 rounded-full animate-pulse" style={{ animationDelay: "1.2s" }}></div>
+              </div>
+              
+              {/* Floating accent */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full opacity-60 animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-60 animate-float" style={{ animationDelay: "2s" }}></div>
             </div>
           </div>
 
@@ -282,109 +301,98 @@ function AboutNiva() {
         </div>
       </section>
 
-      {/* Nossos Princípios Section */}
+      {/* Values Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Nossos Princípios</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Agora que você já nos conhece, entenda nossos pilares:
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              Agora que você já nos conhece, entenda nossos valores:
+            </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Princípio 1: Cooperação e empatia */}
-            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-emerald-100 overflow-hidden">
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/25 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+          <div className="space-y-8">
+            {/* Value 1 */}
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">1</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Cooperação e empatia</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  As pessoas importam muito para nós e elas são o começo, meio e fim de quem somos e o que fazemos.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Cooperação e empatia</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    As pessoas importam muito para nós e elas são o começo, meio e fim de quem somos e o que fazemos.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Princípio 2: Integridade intelectual e metodológica */}
-            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-teal-100 overflow-hidden">
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/25 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+            {/* Value 2 */}
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">2</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Integridade intelectual e metodológica</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Com anos de experiência no que fazemos, usamos a nossa expertise, para escolher métodos assertivos e alinhados com a necessidade.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Integridade intelectual e metodológica</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Com anos de experiência no que fazemos, usamos a nossa expertise, para escolher métodos assertivos e alinhados com a necessidade.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Princípio 3: Compromisso e responsabilidade */}
-            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-cyan-100 overflow-hidden">
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/25 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
+            {/* Value 3 */}
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">3</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Compromisso e responsabilidade</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Não abrimos mão do nosso compromisso com quem nos contrata. Somos profissionais e prezamos por isso.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Compromisso e responsabilidade</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Não abrimos mão do nosso compromisso com quem nos contrata. Somos profissionais e prezamos por isso.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Princípio 4: Propósito com impacto */}
-            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-blue-100 overflow-hidden">
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/25 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+            {/* Value 4 */}
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">4</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Propósito com impacto</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Acreditamos que os nossos pilares são realmente valiosos e entregam resultados palpáveis para os envolvidos.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Propósito com impacto</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Acreditamos que os nossos pilares são realmente valiosos e entregam resultados palpáveis para os envolvidos.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Princípio 5: Legado e aprendizado contínuo */}
-            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 border border-indigo-100 overflow-hidden md:col-span-2 lg:col-span-1">
-              {/* Background decorative elements */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full -translate-y-12 translate-x-12 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-br from-pink-200 to-rose-200 rounded-full translate-y-8 -translate-x-8 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/25 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+            {/* Value 5 */}
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100">
+              <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">5</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Legado e aprendizado contínuo</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  A nossa trajetória nos conduziu até aqui e a nossa busca por aprendizados será o que nos levará adiante.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4">Legado e aprendizado contínuo</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    A nossa trajetória nos conduziu até aqui e a nossa busca por aprendizados será o que nos levará adiante.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

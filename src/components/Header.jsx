@@ -72,6 +72,21 @@ function Header() {
             </Link>
 
             <Link 
+              to="/produtos" 
+              className={`relative px-6 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 group ${
+                isActive('/produtos') 
+                  ? 'text-emerald-600 bg-gradient-to-r from-emerald-50 to-teal-50 shadow-lg shadow-emerald-500/20' 
+                  : 'text-slate-700 hover:text-emerald-600 hover:bg-slate-50/80'
+              }`}
+            >
+              <span className="relative z-10">Produtos</span>
+              {isActive('/produtos') && (
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl animate-pulse"></div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Link>
+
+            <Link 
               to="/contato" 
               className={`relative px-6 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 group ${
                 isActive('/contato') 
@@ -157,6 +172,23 @@ function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Sobre a Niva
+                </span>
+              </Link>
+              
+              <Link 
+                to="/produtos" 
+                className={`block px-6 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 group ${
+                  isActive('/produtos') 
+                    ? 'text-emerald-600 bg-gradient-to-r from-emerald-50 to-teal-50 shadow-lg shadow-emerald-500/20' 
+                    : 'text-slate-700 hover:text-emerald-600 hover:bg-slate-50/80'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="flex items-center">
+                  <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                  Produtos
                 </span>
               </Link>
               
