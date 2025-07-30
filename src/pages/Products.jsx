@@ -462,17 +462,105 @@ function Products() {
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section className="py-20">
+      {/* Section 3 - Produtos Extras */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-emerald-50">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Seção 3
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-6">
+              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full px-6 py-2 shadow-lg">
+                <span className="text-white text-sm font-medium">Serviços Complementares</span>
+              </div>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+              Serviços que{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                potencializam seus resultados
+              </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Em construção
-            </p>
           </div>
+
+          {/* Extra Services Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Workshop */}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-emerald-700 transition-colors duration-300">
+                    Workshops para sensibilização
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-lg">
+                    Sessões interativas para sensibilizar equipes com os insights obtidos nas pesquisas, facilitando a compreensão e aplicação dos resultados.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Relatórios */}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-teal-700 transition-colors duration-300">
+                    Criação de relatórios visuais e executivos
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-lg">
+                    Desenvolvimento de relatórios customizados com visualizações atrativas e linguagem executiva para facilitar a tomada de decisão.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Formação */}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-cyan-700 transition-colors duration-300">
+                    Formação para equipes em cultura de pesquisa
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-lg">
+                    Programas de capacitação para desenvolver uma cultura organizacional baseada em evidências e metodologia de pesquisa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Capacitação */}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                    Capacitação técnica para times de pesquisa
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-lg">
+                    Treinamentos especializados em metodologias, ferramentas e técnicas de pesquisa para fortalecer a capacidade interna das equipes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </section>
 
