@@ -564,16 +564,55 @@ function Products() {
         </div>
       </section>
 
-      {/* Section 4 */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* Section 4 - Chamada Final */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-emerald-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-teal-400 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Seção 4
+            {/* Badge */}
+            <div className="inline-block mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
+                <span className="text-emerald-200 text-sm font-medium">Vamos conversar?</span>
+              </div>
+            </div>
+            
+            {/* Main Title */}
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              Pronto para transformar{" "}
+              <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+                dados em insights?
+              </span>
             </h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
-              Em construção
+            
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-emerald-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Nossa equipe está pronta para entender suas necessidades e criar soluções personalizadas que gerem resultados reais para sua organização.
             </p>
+            
+            {/* CTA Button */}
+            <div className="flex justify-center">
+              <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-emerald-600 bg-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
+                <span className="relative z-10 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                  Agendar uma conversa
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+            </div>
+            
+            {/* Additional Info */}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-emerald-200 text-lg">
+                Resposta em até 24 horas • Primeira consulta gratuita
+              </p>
+            </div>
           </div>
         </div>
       </section>

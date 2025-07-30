@@ -78,7 +78,7 @@ function AboutNiva() {
             <div className="text-center lg:text-left">
               <div className="w-56 h-56 bg-white rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-12 shadow-2xl shadow-black/20 overflow-hidden transform hover:scale-110 transition-all duration-500 border-4 border-white/50 relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=224&h=224&fit=crop&crop=face" 
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='224' viewBox='0 0 224 224'%3E%3Crect width='224' height='224' fill='%23f3f4f6'/%3E%3C/svg%3E" 
                   alt="Delly - Pesquisadora e fundadora da Niva" 
                   className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700"
                 />
@@ -110,7 +110,7 @@ function AboutNiva() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Múltiplas experiências</h3>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-2">Uma carreira sólida</h3>
                     <p className="text-slate-600 text-sm">10 anos de jornada em diferentes universos</p>
                   </div>
                   
@@ -127,7 +127,7 @@ function AboutNiva() {
                           <div className="font-bold text-emerald-600 text-lg">Universidades</div>
                           <div className="text-slate-600 text-sm">Acadêmico & Pesquisa</div>
                         </div>
-                        <div className="text-2xl text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</div>
+
                       </div>
                     </div>
 
@@ -142,7 +142,7 @@ function AboutNiva() {
                           <div className="font-bold text-teal-600 text-lg">Órgãos Públicos</div>
                           <div className="text-slate-600 text-sm">Governamental & Social</div>
                         </div>
-                        <div className="text-2xl text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</div>
+
                       </div>
                     </div>
 
@@ -157,7 +157,7 @@ function AboutNiva() {
                           <div className="font-bold text-cyan-600 text-lg">Multinacional</div>
                           <div className="text-slate-600 text-sm">Corporativo & Estratégico</div>
                         </div>
-                        <div className="text-2xl text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</div>
+
                       </div>
                     </div>
 
@@ -172,7 +172,7 @@ function AboutNiva() {
                           <div className="font-bold text-blue-600 text-lg">Startup</div>
                           <div className="text-slate-600 text-sm">Inovação & Agilidade</div>
                         </div>
-                        <div className="text-2xl text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</div>
+
                       </div>
                     </div>
                   </div>
@@ -238,7 +238,7 @@ function AboutNiva() {
                     <div className="relative inline-block">
                       <div className="w-32 h-32 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/25 relative overflow-hidden">
                         <img 
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop&crop=face" 
+                          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' fill='%23f3f4f6'/%3E%3C/svg%3E" 
                           alt="Nivaldo - Pai e incentivador" 
                           className="w-full h-full object-cover"
                         />
