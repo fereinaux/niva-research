@@ -496,7 +496,7 @@ function Products() {
                     Workshops para sensibilização
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-lg">
-                    Sessões interativas para sensibilizar equipes com os insights obtidos nas pesquisas, facilitando a compreensão e aplicação dos resultados.
+                    Sessões interativas para sensibilizar equipes com os insights obtidos nas pesquisas.
                   </p>
                 </div>
               </div>
@@ -515,7 +515,7 @@ function Products() {
                     Criação de relatórios visuais e executivos
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-lg">
-                    Desenvolvimento de relatórios customizados com visualizações atrativas e linguagem executiva para facilitar a tomada de decisão.
+                    Relatórios customizados com visualizações atrativas e linguagem executiva.
                   </p>
                 </div>
               </div>
@@ -534,7 +534,7 @@ function Products() {
                     Formação para equipes em cultura de pesquisa
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-lg">
-                    Programas de capacitação para desenvolver uma cultura organizacional baseada em evidências e metodologia de pesquisa.
+                    Programas para desenvolver uma cultura organizacional baseada em evidências.
                   </p>
                 </div>
               </div>
@@ -553,7 +553,7 @@ function Products() {
                     Capacitação técnica para times de pesquisa
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-lg">
-                    Treinamentos especializados em metodologias, ferramentas e técnicas de pesquisa para fortalecer a capacidade interna das equipes.
+                    Treinamentos especializados em metodologias e técnicas de pesquisa.
                   </p>
                 </div>
               </div>
