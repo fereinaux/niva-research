@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
@@ -9,6 +9,7 @@ import RecommendationsSection from './components/RecommendationsSection';
 import CallToActionSection from './components/CallToActionSection';
 import AboutNiva from './pages/AboutNiva';
 import Products from './pages/Products';
+import Contact from './pages/Contact';
 
 function HomePage() {
   return (
@@ -23,17 +24,29 @@ function HomePage() {
   );
 }
 
+// Component to handle scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen">
+        <ScrollToTop />
         <Header />
         <div className="pt-20"> {/* Add padding-top to account for fixed header */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/sobre" element={<AboutNiva />} />
             <Route path="/produtos" element={<Products />} />
-            <Route path="/contato" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-slate-800">Página de Contato - Em breve!</h1></div>} />
+            <Route path="/contato" element={<Contact />} />
           </Routes>
         </div>
       </div>
