@@ -194,7 +194,7 @@ function RecommendationsSection() {
               <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16 opacity-50"></div>
               
               {/* Decorative Stars */}
-              <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-20">
+              <div className="hidden md:block absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-20">
                 <div className="flex space-x-1">
                   {renderStars(recommendations[currentIndex].rating)}
                 </div>
