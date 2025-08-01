@@ -6,7 +6,7 @@ function ValuesSection() {
       name: "Cooperação e empatia",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -15,7 +15,7 @@ function ValuesSection() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
           />
         </svg>
       ),
@@ -31,7 +31,7 @@ function ValuesSection() {
       name: "Integridade intelectual",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ function ValuesSection() {
       name: "Compromisso e responsabilidade",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ function ValuesSection() {
       name: "Propósito com impacto",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ function ValuesSection() {
       name: "Legado e aprendizado contínuo",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 h-6 md:w-8 md:h-8 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -130,7 +130,7 @@ function ValuesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-50">
         <svg
@@ -150,22 +150,22 @@ function ValuesSection() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-8 md:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
             Nossos valores
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto rounded-full"></div>
         </div>
 
         {/* Values Presentation - Creative Layout */}
         <div className="relative">
           {/* Central Value Card */}
-          <div className="flex justify-center mb-12">
-            <div className="group relative bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-md rounded-3xl p-10 border border-emerald-400/30 hover:border-emerald-300/50 transition-all duration-500 hover:scale-105 max-w-2xl">
+          <div className="flex justify-center mb-8 md:mb-12">
+            <div className="group relative bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-md rounded-2xl md:rounded-3xl p-6 md:p-10 border border-emerald-400/30 hover:border-emerald-300/50 transition-all duration-500 hover:scale-105 max-w-2xl">
               <div className="text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl group-hover:shadow-emerald-500/25">
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl group-hover:shadow-emerald-500/25">
                   <svg
-                    className="w-12 h-12 text-white"
+                    className="w-8 h-8 md:w-12 md:h-12 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -179,26 +179,26 @@ function ValuesSection() {
                   </svg>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-emerald-300 transition-colors duration-300 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 group-hover:text-emerald-300 transition-colors duration-300 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent leading-tight">
                   Pilares para transformar dados em insights valiosos
                 </h3>
-                <p className="text-emerald-200 text-xl font-semibold"></p>
+                <p className="text-emerald-200 text-lg md:text-xl font-semibold"></p>
               </div>
             </div>
           </div>
 
           {/* Values Grid - Hexagonal Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
             {values.map((value, index) => (
-              <div key={index} className="group relative transform hover:scale-110 transition-all duration-500">
-                <div className={`bg-gradient-to-br ${value.bgGradient} backdrop-blur-sm rounded-2xl p-6 ${value.borderColor} ${value.hoverBorderColor} transition-all duration-500 ${value.hoverBg}`}>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${value.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+              <div key={index} className="group relative transform hover:scale-105 md:hover:scale-110 transition-all duration-500">
+                <div className={`bg-gradient-to-br ${value.bgGradient} backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 ${value.borderColor} ${value.hoverBorderColor} transition-all duration-500 ${value.hoverBg}`}>
+                  <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${value.gradient} rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                     {value.icon}
                   </div>
-                  <h4 className={`text-lg font-bold text-white mb-2 ${value.hoverTextColor} transition-colors duration-300`}>
+                  <h4 className={`text-base md:text-lg font-bold text-white mb-2 ${value.hoverTextColor} transition-colors duration-300 leading-tight`}>
                     {value.name}
                   </h4>
-                  <div className={`w-8 h-1 bg-gradient-to-r ${value.lineGradient} rounded-full group-hover:w-12 transition-all duration-300`}></div>
+                  <div className={`w-6 md:w-8 h-0.5 md:h-1 bg-gradient-to-r ${value.lineGradient} rounded-full group-hover:w-10 md:group-hover:w-12 transition-all duration-300`}></div>
                 </div>
               </div>
             ))}
@@ -252,22 +252,22 @@ function ValuesSection() {
         </div>
 
         {/* Decorative Elements */}
-        <div className="mt-16 flex justify-center space-x-8 opacity-30">
-          <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+        <div className="mt-8 md:mt-16 flex justify-center space-x-4 md:space-x-8 opacity-30">
+          <div className="w-2 h-2 md:w-3 md:h-3 bg-emerald-400 rounded-full animate-pulse"></div>
           <div
-            className="w-3 h-3 bg-teal-400 rounded-full animate-pulse"
+            className="w-2 h-2 md:w-3 md:h-3 bg-teal-400 rounded-full animate-pulse"
             style={{ animationDelay: "0.5s" }}
           ></div>
           <div
-            className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"
+            className="w-2 h-2 md:w-3 md:h-3 bg-cyan-400 rounded-full animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"
+            className="w-2 h-2 md:w-3 md:h-3 bg-blue-400 rounded-full animate-pulse"
             style={{ animationDelay: "1.5s" }}
           ></div>
           <div
-            className="w-3 h-3 bg-indigo-400 rounded-full animate-pulse"
+            className="w-2 h-2 md:w-3 md:h-3 bg-indigo-400 rounded-full animate-pulse"
             style={{ animationDelay: "2s" }}
           ></div>
         </div>

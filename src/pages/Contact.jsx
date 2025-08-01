@@ -626,10 +626,10 @@ function Contact() {
 
           {/* Progress Bar */}
           <div className="mb-8">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4 overflow-x-auto">
               {steps.map((step, index) => (
-                <div key={index} className="flex items-center">
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-300 ${
+                <div key={index} className="flex items-center flex-shrink-0">
+                  <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-sm md:text-lg font-bold transition-all duration-300 ${
                     index <= currentStep 
                       ? 'bg-emerald-500 text-white' 
                       : 'bg-white/20 text-emerald-200'
@@ -637,7 +637,7 @@ function Contact() {
                     {index < currentStep ? '✓' : step.icon}
                   </div>
                   {index < steps.length - 1 && (
-                    <div className={`w-16 h-1 mx-2 transition-all duration-300 ${
+                    <div className={`w-8 md:w-16 h-1 mx-1 md:mx-2 transition-all duration-300 ${
                       index < currentStep ? 'bg-emerald-500' : 'bg-white/20'
                     }`} />
                   )}
@@ -645,7 +645,7 @@ function Contact() {
               ))}
             </div>
             <div className="text-center">
-              <span className="text-emerald-200 text-sm font-medium">
+              <span className="text-emerald-200 text-xs md:text-sm font-medium">
                 Passo {currentStep + 1} de {steps.length}: {steps[currentStep].title}
               </span>
             </div>
@@ -656,12 +656,12 @@ function Contact() {
             {renderStep()}
             
             {/* Navigation Buttons */}
-            <div className="flex justify-between items-center mt-8 pt-8 border-t border-white/20">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 pt-8 border-t border-white/20">
               <button
                 type="button"
                 onClick={prevStep}
                 disabled={currentStep === 0}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                className={`w-full sm:w-auto px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   currentStep === 0
                     ? 'bg-white/10 text-white/50 cursor-not-allowed'
                     : 'bg-white/20 text-white hover:bg-white/30'
@@ -674,14 +674,14 @@ function Contact() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Próximo
                 </button>
               ) : (
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Enviar Formulário
                 </button>

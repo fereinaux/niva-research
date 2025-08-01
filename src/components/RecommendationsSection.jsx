@@ -138,27 +138,27 @@ function RecommendationsSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-rose-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-48 h-48 md:w-72 md:h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-48 h-48 md:w-72 md:h-72 bg-rose-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-sm font-medium mb-6">
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <div className="text-center mb-8 md:mb-16">
+          <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6">
+            <svg className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
             </svg>
             Recomendações Profissionais
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
             Uma carreira sólida, construída com o suporte de muitas pessoas
           </h2>
-          <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-slate-600 mb-6 md:mb-8 max-w-3xl mx-auto">
             Veja o que dizem sobre meu trabalho no LinkedIn e descubra como posso contribuir para o seu projeto
           </p>
         </div>
@@ -169,9 +169,9 @@ function RecommendationsSection() {
           <button
             onClick={prevCard}
             disabled={isTransitioning}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <svg className="w-6 h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -179,22 +179,22 @@ function RecommendationsSection() {
           <button
             onClick={nextCard}
             disabled={isTransitioning}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <svg className="w-6 h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Main Card Container */}
-          <div className="px-20">
+          <div className="px-12 md:px-20">
             {/* Testimonial Card */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+            <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-12 relative overflow-hidden">
               {/* Background Pattern */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16 opacity-50"></div>
               
               {/* Decorative Stars */}
-              <div className="absolute bottom-8 right-8 opacity-20">
+              <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-20">
                 <div className="flex space-x-1">
                   {renderStars(recommendations[currentIndex].rating)}
                 </div>
@@ -203,32 +203,32 @@ function RecommendationsSection() {
               {/* Content */}
               <div className="relative z-10">
                 {/* Quote Icon */}
-                <div className="flex justify-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl flex items-center justify-center">
-                    <svg className="w-8 h-8 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex justify-center mb-6 md:mb-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl md:rounded-2xl flex items-center justify-center">
+                    <svg className="w-6 h-6 md:w-8 md:h-8 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
                 </div>
 
                 {/* Testimonial Text */}
-                <blockquote className="text-lg md:text-xl text-slate-700 leading-relaxed mb-12 italic">
+                <blockquote className="text-base md:text-lg lg:text-xl text-slate-700 leading-relaxed mb-8 md:mb-12 italic">
                   "{recommendations[currentIndex].content}"
                 </blockquote>
 
                 {/* Author Info */}
                 <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg mr-4 shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl md:rounded-2xl flex items-center justify-center text-white font-bold text-sm md:text-lg mr-3 md:mr-4 shadow-lg">
                     {recommendations[currentIndex].avatar}
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-800 text-lg">
+                    <h4 className="font-bold text-slate-800 text-base md:text-lg">
                       {recommendations[currentIndex].name}
                     </h4>
-                    <p className="text-slate-600">
+                    <p className="text-sm md:text-base text-slate-600">
                       {recommendations[currentIndex].role}
                     </p>
-                    <p className="text-sm text-slate-500">
+                    <p className="text-xs md:text-sm text-slate-500">
                       {recommendations[currentIndex].company}
                     </p>
                   </div>
@@ -236,7 +236,7 @@ function RecommendationsSection() {
               </div>
 
               {/* Progress Bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-200 rounded-b-3xl overflow-hidden">
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-200 rounded-b-2xl md:rounded-b-3xl overflow-hidden">
                 <div 
                   className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-500 ease-out"
                   style={{ width: `${((currentIndex + 1) / recommendations.length) * 100}%` }}
@@ -246,13 +246,13 @@ function RecommendationsSection() {
           </div>
 
           {/* Dots Navigation */}
-          <div className="flex justify-center mt-8 space-x-3">
+          <div className="flex justify-center mt-6 md:mt-8 space-x-2 md:space-x-3">
             {recommendations.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToCard(index)}
                 disabled={isTransitioning}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 scale-125 shadow-lg' 
                     : 'bg-slate-300 hover:bg-slate-400 hover:scale-110'
@@ -262,34 +262,34 @@ function RecommendationsSection() {
           </div>
 
           {/* Counter */}
-          <div className="text-center mt-4">
-            <span className="text-sm text-slate-500">
+          <div className="text-center mt-3 md:mt-4">
+            <span className="text-xs md:text-sm text-slate-500">
               {currentIndex + 1} de {recommendations.length} recomendações
             </span>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+        <div className="mt-8 md:mt-16 text-center">
+          <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 text-white relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full -translate-y-32 translate-x-32"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full translate-y-24 -translate-x-24"></div>
+            <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full -translate-y-24 md:-translate-y-32 translate-x-24 md:translate-x-32"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full translate-y-16 md:translate-y-24 -translate-x-16 md:-translate-x-24"></div>
             
             <div className="relative z-10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">
                 Quer ver mais recomendações?
               </h3>
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-slate-300 mb-6 md:mb-8 max-w-2xl mx-auto">
                 Acesse meu perfil completo no LinkedIn para ver todas as recomendações e conhecer melhor minha trajetória profissional.
               </p>
               <a
                 href="https://www.linkedin.com/in/adriellysouza/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
                 Ver perfil no LinkedIn

@@ -53,54 +53,62 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
             O que entregamos
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br ${service.bgGradient} rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 ${service.borderColor} overflow-hidden`}
+              className={`group relative bg-gradient-to-br ${service.bgGradient} rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-3 ${service.borderColor} overflow-hidden`}
             >
               {/* Background Pattern */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
-              {/* Icon Container */}
-              <div className={`relative z-10 w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg ${service.shadowColor}`}>
-                {service.icon}
-              </div>
+              {/* Mobile Layout: Horizontal */}
+              <div className="relative z-10 flex flex-col md:block">
+                {/* Icon Container */}
+                <div className={`w-12 h-12 md:w-20 md:h-20 bg-gradient-to-br ${service.gradient} rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg ${service.shadowColor} text-lg md:text-2xl`}>
+                  {service.icon}
+                </div>
 
-              {/* Content */}
-              <div className="relative z-10">
-                <h3 className={`text-xl font-bold text-slate-800 mb-4 ${service.hoverColor} transition-colors duration-300`}>
-                  {service.title}
-                </h3>
+                {/* Content */}
+                <div className="relative z-10 flex-1">
+                  <h3 className={`text-base md:text-xl font-bold text-slate-800 mb-2 md:mb-4 ${service.hoverColor} transition-colors duration-300 leading-tight`}>
+                    {service.title}
+                  </h3>
 
-                {/* Decorative Line */}
-                <div className={`w-12 h-1 bg-gradient-to-r ${service.lineGradient} rounded-full mb-4 group-hover:w-16 transition-all duration-300`}></div>
+                  {/* Description - Hidden on mobile to save space */}
+                  <p className="hidden md:block text-slate-600 text-sm leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+
+                  {/* Decorative Line */}
+                  <div className={`w-8 md:w-12 h-0.5 md:h-1 bg-gradient-to-r ${service.lineGradient} rounded-full mb-2 md:mb-4 group-hover:w-12 md:group-hover:w-16 transition-all duration-300`}></div>
+                </div>
               </div>
 
               {/* Hover Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl md:rounded-3xl`}></div>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
-          <Link to="/produtos" className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
+          <Link to="/produtos" className="group relative inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
             <span className="relative z-10 flex items-center">
               Conheça nossos produtos
               <svg
-                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

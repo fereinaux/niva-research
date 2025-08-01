@@ -103,9 +103,9 @@ function Header() {
 
             <div className="w-px h-8 bg-gradient-to-b from-transparent via-slate-300 to-transparent mx-4"></div>
 
-            <Link to="/contato" className="group relative px-8 py-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 transform">
+            <Link to="/contato" className="group relative px-6 md:px-8 py-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-2xl font-bold text-base md:text-lg transition-all duration-300 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 transform">
               <span className="relative z-10 flex items-center">
-                <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
                 Solicitar Proposta
@@ -210,9 +210,9 @@ function Header() {
               </Link>
               
               <div className="pt-4">
-                <Link to="/contato" className="w-full group relative px-8 py-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 transform" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contato" className="w-full group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-2xl font-bold text-base md:text-lg transition-all duration-300 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/30 transform" onClick={() => setIsMenuOpen(false)}>
                   <span className="relative z-10 flex items-center justify-center">
-                    <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 md:w-5 md:h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                     Solicitar Proposta
