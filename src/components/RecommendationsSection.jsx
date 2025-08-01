@@ -270,26 +270,26 @@ function RecommendationsSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-8 md:mt-16 text-center">
-          <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 text-white relative overflow-hidden">
+        <div className="mt-6 md:mt-16 text-center">
+          <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl md:rounded-2xl lg:rounded-3xl p-4 md:p-6 lg:p-8 xl:p-12 text-white relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full -translate-y-24 md:-translate-y-32 translate-x-24 md:translate-x-32"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full translate-y-16 md:translate-y-24 -translate-x-16 md:-translate-x-24"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full -translate-y-16 md:-translate-y-24 lg:-translate-y-32 translate-x-16 md:translate-x-24 lg:translate-x-32"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full translate-y-12 md:translate-y-16 lg:translate-y-24 -translate-x-12 md:-translate-x-16 lg:-translate-x-24"></div>
             
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">
+              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2 md:mb-3 lg:mb-4">
                 Quer ver mais recomendações?
               </h3>
-              <p className="text-sm md:text-base text-slate-300 mb-6 md:mb-8 max-w-2xl mx-auto">
+              <p className="text-xs md:text-sm lg:text-base text-slate-300 mb-4 md:mb-6 lg:mb-8 max-w-2xl mx-auto leading-relaxed">
                 Acesse meu perfil completo no LinkedIn para ver todas as recomendações e conhecer melhor minha trajetória profissional.
               </p>
               <a
                 href="https://www.linkedin.com/in/adriellysouza/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="inline-flex items-center px-4 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold text-sm md:text-base hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
-                <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mr-1.5 md:mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
                 Ver perfil no LinkedIn
