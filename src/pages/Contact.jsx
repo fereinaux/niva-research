@@ -67,6 +67,18 @@ function Contact() {
       ...prev,
       [field]: value,
     }));
+    
+    // Validação de telefone em tempo real
+    if (field === 'telefone') {
+      const validation = validatePhone(value);
+      setPhoneValidation(validation);
+    }
+    
+    // Validação de email em tempo real
+    if (field === 'email') {
+      const validation = validateEmail(value);
+      setEmailValidation(validation);
+    }
   };
 
   const handleCheckboxChange = (field, value, checked) => {
@@ -79,24 +91,253 @@ function Contact() {
   };
 
   const nextStep = () => {
+    const errors = validateStep(currentStep);
+    
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      return;
+    }
+    
+    setValidationErrors({});
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
+      // Rolar para o topo da tela
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const prevStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
+      // Rolar para o topo da tela
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [validationErrors, setValidationErrors] = useState({});
+  const [phoneValidation, setPhoneValidation] = useState({ isValid: false, message: '' });
+  const [emailValidation, setEmailValidation] = useState({ isValid: false, message: '' });
+
+  const validateStep = (step) => {
+    const errors = {};
+    
+    switch (step) {
+      case 0: // Informações Básicas
+        if (!formData.nome.trim()) errors.nome = 'Nome é obrigatório';
+        if (!formData.email.trim()) errors.email = 'Email é obrigatório';
+        else if (!emailValidation.isValid) errors.email = 'Email inválido';
+        if (!formData.telefone.trim()) errors.telefone = 'Telefone é obrigatório';
+        else if (!phoneValidation.isValid) errors.telefone = 'Telefone inválido';
+        if (!formData.cargo.trim()) errors.cargo = 'Cargo é obrigatório';
+        if (!formData.empresa.trim()) errors.empresa = 'Empresa é obrigatória';
+        break;
+        
+      case 1: // Sobre sua Empresa
+        if (!formData.setor) errors.setor = 'Setor é obrigatório';
+        if (!formData.tamanhoEmpresa) errors.tamanhoEmpresa = 'Tamanho da empresa é obrigatório';
+        break;
+        
+      case 2: // Necessidades
+        if (formData.servicosPrincipais.length === 0) errors.servicosPrincipais = 'Selecione pelo menos um serviço';
+        if (!formData.objetivo) errors.objetivo = 'Objetivo é obrigatório';
+        break;
+        
+      case 3: // Detalhes do Projeto
+        if (!formData.descricaoProjeto.trim()) errors.descricaoProjeto = 'Descrição do projeto é obrigatória';
+        break;
+        
+      default:
+        break;
+    }
+    
+    return errors;
+  };
+
+  // Função para mapear códigos para textos completos
+  const mapCodesToLabels = (codes, optionsArray) => {
+    return codes.map(code => {
+      const option = optionsArray.find(opt => opt.id === code);
+      return option ? option.label : code;
+    });
+  };
+
+  // Função para mapear códigos únicos para textos
+  const mapCodeToLabel = (code, optionsArray) => {
+    const option = optionsArray.find(opt => opt.id === code);
+    return option ? option.label : code;
+  };
+
+  // Função para validar telefone
+  const validatePhone = (phone) => {
+    // Remove todos os caracteres não numéricos
+    const cleanPhone = phone.replace(/\D/g, '');
+    
+    // Verifica se tem entre 10 e 11 dígitos (com DDD)
+    if (cleanPhone.length < 10) {
+      return { isValid: false, message: 'Telefone deve ter pelo menos 10 dígitos' };
+    }
+    
+    if (cleanPhone.length > 11) {
+      return { isValid: false, message: 'Telefone deve ter no máximo 11 dígitos' };
+    }
+    
+    // Verifica se começa com 9 (celular) ou 8,7,6,5,4,3,2 (fixo)
+    const firstDigit = cleanPhone.charAt(cleanPhone.length === 11 ? 2 : 1);
+    const validFirstDigits = ['9', '8', '7', '6', '5', '4', '3', '2'];
+    
+    if (!validFirstDigits.includes(firstDigit)) {
+      return { isValid: false, message: 'Número de telefone inválido' };
+    }
+    
+    return { isValid: true, message: 'Telefone válido' };
+  };
+
+  // Função para validar email
+  const validateEmail = (email) => {
+    // Regex para validação de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    // Verifica se está vazio
+    if (!email.trim()) {
+      return { isValid: false, message: 'Email é obrigatório' };
+    }
+    
+    // Verifica formato básico
+    if (!emailRegex.test(email)) {
+      return { isValid: false, message: 'Formato de email inválido' };
+    }
+    
+    // Verifica se tem pelo menos 2 caracteres antes do @
+    const [localPart] = email.split('@');
+    if (localPart.length < 2) {
+      return { isValid: false, message: 'Email deve ter pelo menos 2 caracteres antes do @' };
+    }
+    
+    // Verifica se tem domínio válido
+    const domainPart = email.split('@')[1];
+    if (!domainPart || domainPart.length < 3 || !domainPart.includes('.')) {
+      return { isValid: false, message: 'Domínio de email inválido' };
+    }
+    
+    // Verifica se termina com extensão válida
+    const validExtensions = ['.com', '.com.br', '.org', '.net', '.edu', '.gov', '.br'];
+    const hasValidExtension = validExtensions.some(ext => domainPart.toLowerCase().endsWith(ext));
+    
+    if (!hasValidExtension) {
+      return { isValid: false, message: 'Extensão de domínio inválida' };
+    }
+    
+    return { isValid: true, message: 'Email válido' };
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validar o último passo antes de enviar
+    const errors = validateStep(currentStep);
+    
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
+
+    // Preparar dados com textos completos
+    const dadosCompletos = {
+      ...formData,
+      // Mapear serviços principais
+      servicosPrincipais: mapCodesToLabels(formData.servicosPrincipais, servicosPrincipais),
+      // Mapear serviços extras
+      servicosExtras: mapCodesToLabels(formData.servicosExtras, servicosExtras),
+      // Mapear outros campos com códigos
+      setor: formData.setor ? mapCodeToLabel(formData.setor, [
+        { id: 'tecnologia', label: 'Tecnologia' },
+        { id: 'saude', label: 'Saúde' },
+        { id: 'educacao', label: 'Educação' },
+        { id: 'financeiro', label: 'Financeiro' },
+        { id: 'varejo', label: 'Varejo' },
+        { id: 'industria', label: 'Indústria' },
+        { id: 'servicos', label: 'Serviços' },
+        { id: 'governo', label: 'Governo' },
+        { id: 'ong', label: 'ONG' },
+        { id: 'outro', label: 'Outro' }
+      ]) : '',
+      tamanhoEmpresa: formData.tamanhoEmpresa ? mapCodeToLabel(formData.tamanhoEmpresa, [
+        { id: 'startup', label: 'Micro (1-50 funcionários)' },
+        { id: 'pequena', label: 'Pequena (51-200 funcionários)' },
+        { id: 'media', label: 'Média (201-1000 funcionários)' },
+        { id: 'grande', label: 'Grande (1000+ funcionários)' },
+        { id: 'multinacional', label: 'Multinacional' }
+      ]) : '',
+      faturamento: formData.faturamento ? mapCodeToLabel(formData.faturamento, [
+        { id: 'ate-100k', label: 'Até R$ 100 mil' },
+        { id: '100k-500k', label: 'R$ 100 mil - R$ 500 mil' },
+        { id: '500k-1m', label: 'R$ 500 mil - R$ 1 milhão' },
+        { id: '1m-10m', label: 'R$ 1M - R$ 10M' },
+        { id: '10m-100m', label: 'R$ 10M - R$ 100M' },
+        { id: '100m-1b', label: 'R$ 100M - R$ 1B' },
+        { id: 'acima-1b', label: 'Acima de R$ 1B' }
+      ]) : '',
+      objetivo: formData.objetivo ? mapCodeToLabel(formData.objetivo, [
+        { id: 'melhorar-produto', label: 'Melhorar produto/serviço' },
+        { id: 'entender-publico', label: 'Entender público-alvo' },
+        { id: 'avaliar-satisfacao', label: 'Avaliar satisfação' },
+        { id: 'testar-ideia', label: 'Testar nova ideia' },
+        { id: 'melhorar-experiencia', label: 'Melhorar experiência do usuário' },
+        { id: 'cultura-organizacional', label: 'Cultura organizacional' },
+        { id: 'outro', label: 'Outro' }
+      ]) : '',
+      prazo: formData.prazo ? mapCodeToLabel(formData.prazo, [
+        { id: 'imediato', label: 'Imediato' },
+        { id: '1-mes', label: '1 mês' },
+        { id: '3-meses', label: '3 meses' },
+        { id: '6-meses', label: '6 meses' },
+        { id: 'sem-prazo', label: 'Sem prazo definido' }
+      ]) : '',
+      orcamento: formData.orcamento ? mapCodeToLabel(formData.orcamento, [
+        { id: 'ate-10k', label: 'Até R$ 10.000' },
+        { id: '10k-25k', label: 'R$ 10.000 - R$ 25.000' },
+        { id: '25k-50k', label: 'R$ 25.000 - R$ 50.000' },
+        { id: '50k-100k', label: 'R$ 50.000 - R$ 100.000' },
+        { id: 'acima-100k', label: 'Acima de R$ 100.000' },
+        { id: 'nao-definido', label: 'Ainda não definido' }
+      ]) : '',
+      // publicoAlvo e expectativas são campos de texto livre, não precisam de mapeamento
+      publicoAlvo: formData.publicoAlvo || '',
+      metodologia: formData.metodologia ? mapCodeToLabel(formData.metodologia, [
+        { id: 'qualitativa', label: 'Qualitativa' },
+        { id: 'quantitativa', label: 'Quantitativa' },
+        { id: 'mista', label: 'Mista (Quali + Quanti)' },
+        { id: 'nao-sei', label: 'Não sei, preciso de orientação' }
+      ]) : '',
+      expectativas: formData.expectativas || '',
+      melhorHorario: formData.melhorHorario ? mapCodeToLabel(formData.melhorHorario, [
+        { id: 'manha', label: 'Manhã (8h-12h)' },
+        { id: 'tarde', label: 'Tarde (13h-17h)' },
+        { id: 'noite', label: 'Noite (18h-21h)' },
+        { id: 'flexivel', label: 'Flexível' }
+      ]) : '',
+      preferenciaContato: formData.preferenciaContato ? mapCodeToLabel(formData.preferenciaContato, [
+        { id: 'email', label: 'Email' },
+        { id: 'telefone', label: 'Telefone' },
+        { id: 'whatsapp', label: 'WhatsApp' },
+        { id: 'videochamada', label: 'Videochamada' }
+      ]) : '',
+      comoConheceu: formData.comoConheceu ? mapCodeToLabel(formData.comoConheceu, [
+        { id: 'google', label: 'Google' },
+        { id: 'linkedin', label: 'LinkedIn' },
+        { id: 'indicacao', label: 'Indicação' },
+        { id: 'redes-sociais', label: 'Redes Sociais' },
+        { id: 'evento', label: 'Evento' },
+        { id: 'outro', label: 'Outro' }
+      ]) : '',
+      timestamp: new Date().toISOString(),
+      source: "Niva Research Website",
+    };
 
     try {
       const response = await fetch(
@@ -106,11 +347,7 @@ function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            ...formData,
-            timestamp: new Date().toISOString(),
-            source: "Niva Research Website",
-          }),
+          body: JSON.stringify(dadosCompletos),
         }
       );
 
@@ -167,10 +404,17 @@ function Contact() {
                   type="text"
                   value={formData.nome}
                   onChange={(e) => handleInputChange("nome", e.target.value)}
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.nome 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   placeholder="Digite seu nome completo"
                   required
                 />
+                {validationErrors.nome && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.nome}</p>
+                )}
               </div>
               <div>
                 <label className="block text-emerald-100 text-sm font-semibold mb-2">
@@ -180,10 +424,37 @@ function Contact() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.email 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : formData.email && !emailValidation.isValid
+                      ? 'border-orange-400 focus:ring-orange-400'
+                      : formData.email && emailValidation.isValid
+                      ? 'border-green-400 focus:ring-green-400'
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   placeholder="seu.email@empresa.com"
                   required
                 />
+                {validationErrors.email && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.email}</p>
+                )}
+                {formData.email && !validationErrors.email && (
+                  <div className={`flex items-center gap-2 mt-1 text-xs ${
+                    emailValidation.isValid ? 'text-green-300' : 'text-orange-300'
+                  }`}>
+                    {emailValidation.isValid ? (
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                    {emailValidation.message}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -198,10 +469,37 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("telefone", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.telefone 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : formData.telefone && !phoneValidation.isValid
+                      ? 'border-orange-400 focus:ring-orange-400'
+                      : formData.telefone && phoneValidation.isValid
+                      ? 'border-green-400 focus:ring-green-400'
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   placeholder="(11) 99999-9999"
                   required
                 />
+                {validationErrors.telefone && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.telefone}</p>
+                )}
+                {formData.telefone && !validationErrors.telefone && (
+                  <div className={`flex items-center gap-2 mt-1 text-xs ${
+                    phoneValidation.isValid ? 'text-green-300' : 'text-orange-300'
+                  }`}>
+                    {phoneValidation.isValid ? (
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                    {phoneValidation.message}
+                  </div>
+                )}
               </div>
               <div>
                 <label className="block text-emerald-100 text-sm font-semibold mb-2">
@@ -211,10 +509,17 @@ function Contact() {
                   type="text"
                   value={formData.cargo}
                   onChange={(e) => handleInputChange("cargo", e.target.value)}
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.cargo 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   placeholder="Ex: Gerente de Marketing"
                   required
                 />
+                {validationErrors.cargo && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.cargo}</p>
+                )}
               </div>
             </div>
 
@@ -226,10 +531,17 @@ function Contact() {
                 type="text"
                 value={formData.empresa}
                 onChange={(e) => handleInputChange("empresa", e.target.value)}
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  validationErrors.empresa 
+                    ? 'border-red-400 focus:ring-red-400' 
+                    : 'border-white/20 focus:ring-emerald-400'
+                }`}
                 placeholder="Nome da sua empresa"
                 required
               />
+              {validationErrors.empresa && (
+                <p className="text-red-300 text-xs mt-1">{validationErrors.empresa}</p>
+              )}
             </div>
           </div>
         );
@@ -245,7 +557,11 @@ function Contact() {
                 <select
                   value={formData.setor}
                   onChange={(e) => handleInputChange("setor", e.target.value)}
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.setor 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   required
                 >
                   <option value="">Selecione o setor</option>
@@ -260,6 +576,9 @@ function Contact() {
                   <option value="ong">ONG</option>
                   <option value="outro">Outro</option>
                 </select>
+                {validationErrors.setor && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.setor}</p>
+                )}
               </div>
               <div>
                 <label className="block text-emerald-100 text-sm font-semibold mb-2">
@@ -270,7 +589,11 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("tamanhoEmpresa", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.tamanhoEmpresa 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   required
                 >
                   <option value="">Selecione o tamanho</option>
@@ -280,6 +603,9 @@ function Contact() {
                   <option value="grande">Grande (1000+ funcionários)</option>
                   <option value="multinacional">Multinacional</option>
                 </select>
+                {validationErrors.tamanhoEmpresa && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.tamanhoEmpresa}</p>
+                )}
               </div>
             </div>
 
@@ -330,6 +656,9 @@ function Contact() {
               <label className="block text-emerald-100 text-sm font-semibold mb-4 md:mb-6">
                 Quais serviços principais você gostaria de contratar? *
               </label>
+              {validationErrors.servicosPrincipais && (
+                <p className="text-red-300 text-xs mb-2">{validationErrors.servicosPrincipais}</p>
+              )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                 {servicosPrincipais.map((servico) => (
                   <div
@@ -506,7 +835,11 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("objetivo", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                    validationErrors.objetivo 
+                      ? 'border-red-400 focus:ring-red-400' 
+                      : 'border-white/20 focus:ring-emerald-400'
+                  }`}
                   required
                 >
                   <option value="">Selecione o objetivo</option>
@@ -526,6 +859,9 @@ function Contact() {
                   </option>
                   <option value="outro">Outro</option>
                 </select>
+                {validationErrors.objetivo && (
+                  <p className="text-red-300 text-xs mt-1">{validationErrors.objetivo}</p>
+                )}
               </div>
               <div>
                 <label className="block text-emerald-100 text-sm font-semibold mb-2">
@@ -580,10 +916,17 @@ function Contact() {
                   handleInputChange("descricaoProjeto", e.target.value)
                 }
                 rows={4}
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent resize-none text-sm md:text-base"
+                className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent resize-none text-sm md:text-base ${
+                  validationErrors.descricaoProjeto 
+                    ? 'border-red-400 focus:ring-red-400' 
+                    : 'border-white/20 focus:ring-emerald-400'
+                }`}
                 placeholder="Conte-nos sobre o que você precisa..."
                 required
               />
+              {validationErrors.descricaoProjeto && (
+                <p className="text-red-300 text-xs mt-1">{validationErrors.descricaoProjeto}</p>
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -834,7 +1177,8 @@ function Contact() {
                 </button>
               ) : (
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={handleSubmit}
                   disabled={isSubmitting}
                   className={`w-full sm:w-auto px-6 md:px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg text-sm md:text-base ${
                     isSubmitting
@@ -857,64 +1201,83 @@ function Contact() {
 
           {/* Feedback Messages */}
           {submitStatus && (
-            <div
-              className={`mt-6 p-4 rounded-xl border ${
-                submitStatus === "success"
-                  ? "bg-green-500/20 border-green-400 text-green-100"
-                  : "bg-red-500/20 border-red-400 text-red-100"
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                {submitStatus === "success" ? (
-                  <>
-                    <svg
-                      className="w-5 h-5 text-green-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <h4 className="font-semibold">
-                        Formulário enviado com sucesso!
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Entraremos em contato em breve.
+            <div className="mt-8 animate-fade-in">
+              {submitStatus === "success" ? (
+                <div className="relative overflow-hidden bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-emerald-600/10 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-emerald-500/20">
+                  {/* Background decoration */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-400/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-teal-400/10 rounded-full blur-2xl"></div>
+                  
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    {/* Success icon with animation */}
+                    <div className="relative mb-4">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 animate-pulse">
+                        <svg
+                          className="w-8 h-8 md:w-10 md:h-10 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      {/* Ripple effect */}
+                      <div className="absolute inset-0 w-16 h-16 md:w-20 md:h-20 bg-emerald-400/30 rounded-full animate-ping"></div>
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-emerald-100 mb-2">
+                      Formulário enviado com sucesso!
+                    </h3>
+                    <p className="text-emerald-200 text-sm md:text-base leading-relaxed max-w-md">
+                      Obrigada pelo seu interesse! Entraremos em contato em até 24 horas para discutir seu projeto.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="relative overflow-hidden bg-gradient-to-br from-red-500/10 via-pink-500/10 to-red-600/10 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-red-500/20">
+                  {/* Background decoration */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-pink-400/10 rounded-full blur-2xl"></div>
+                  
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    {/* Error icon */}
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/30 mb-4">
+                      <svg
+                        className="w-8 h-8 md:w-10 md:h-10 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={3}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-red-100 mb-2">
+                      Erro ao enviar formulário
+                    </h3>
+                    <p className="text-red-200 text-sm md:text-base leading-relaxed max-w-md">
+                      Houve um problema ao enviar seu formulário. Tente novamente ou entre em contato diretamente.
+                    </p>
+                    
+                    {/* Contact alternatives */}
+                    <div className="mt-4 p-3 bg-red-500/10 rounded-xl border border-red-400/20">
+                      <p className="text-red-300 text-xs">
+                        📧 dellysouza@nivaresearch.com | 📱 WhatsApp: (81) 99999-9999
                       </p>
                     </div>
-                  </>
-                ) : (
-                  <>
-                    <svg
-                      className="w-5 h-5 text-red-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                    <div>
-                      <h4 className="font-semibold">
-                        Erro ao enviar formulário
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Tente novamente ou entre em contato diretamente.
-                      </p>
-                    </div>
-                  </>
-                )}
-              </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
