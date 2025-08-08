@@ -37,15 +37,14 @@ function Contact() {
   });
 
   const servicosPrincipais = [
-    { id: "percepcao", label: "Pesquisa de Percepção e Imagem" },
-    {
-      id: "intencao",
-      label: "Pesquisa de Intenção de Compra e Teste de Aceitação",
-    },
-    { id: "satisfacao", label: "Pesquisa de Satisfação e Experiência" },
-    { id: "usabilidade", label: "Teste de Usabilidade e Experiência Digital" },
-    { id: "clima", label: "Pesquisa de Clima e Cultura Organizacional" },
-    { id: "comportamento", label: "Estudos de Comportamento e Cultura" },
+    { id: 'percepcao', label: 'Pesquisa de Percepção e Imagem' },
+    { id: 'intencao', label: 'Pesquisa de Intenção de Compra e Teste de Aceitação' },
+    { id: 'satisfacao', label: 'Pesquisa de Satisfação e Experiência' },
+    { id: 'usabilidade', label: 'Teste de Usabilidade e Experiência Digital' },
+    { id: 'clima', label: 'Pesquisa de Clima e Cultura Organizacional' },
+    { id: 'comportamento', label: 'Estudos de Comportamento e Cultura' },
+    { id: 'personas', label: 'Estudo de Personas' },
+    { id: 'concorrencia', label: 'Análise de Concorrência' }
   ];
 
   const servicosExtras = [
@@ -375,19 +374,19 @@ function Contact() {
                     </div>
 
                     {/* Service Icon */}
-                    <div
-                      className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
-                        formData.servicosPrincipais.includes(servico.id)
-                          ? "bg-emerald-500 text-white"
-                          : "bg-white/20 text-emerald-200"
-                      }`}
-                    >
-                      {servico.id === "percepcao" && "🎯"}
-                      {servico.id === "intencao" && "💡"}
-                      {servico.id === "satisfacao" && "❤️"}
-                      {servico.id === "usabilidade" && "💻"}
-                      {servico.id === "clima" && "🏢"}
-                      {servico.id === "comportamento" && "🔍"}
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
+                      formData.servicosPrincipais.includes(servico.id)
+                        ? 'bg-emerald-500 text-white'
+                        : 'bg-white/20 text-emerald-200'
+                    }`}>
+                      {servico.id === 'percepcao' && '🎯'}
+                      {servico.id === 'intencao' && '💡'}
+                      {servico.id === 'satisfacao' && '❤️'}
+                      {servico.id === 'usabilidade' && '💻'}
+                      {servico.id === 'clima' && '🏢'}
+                      {servico.id === 'comportamento' && '🔍'}
+                      {servico.id === 'personas' && '👥'}
+                      {servico.id === 'concorrencia' && '🏆'}
                     </div>
 
                     <h4

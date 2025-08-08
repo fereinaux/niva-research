@@ -12,15 +12,15 @@ function CareerSection() {
   const timelineItems = [
     {
       year: "2014",
-      title: "Graduação em Turismo",
-      description: "Comecei a graduação em turismo, pela Universidade Federal de Pernambuco (UFPE).",
+      title: "Graduação na UFPE",
+      description: "Aos 17 anos, iniciei a graduação em turismo pela Universidade Federal de Pernambuco, onde fui laureada.",
       gradient: "from-emerald-500 to-teal-500",
       borderColor: "border-emerald-100"
     },
     {
       year: "2016",
       title: "Início da Carreira de Pesquisadora",
-      description: "Iniciei a carreira de pesquisadora, ainda na graduação, numa pesquisa de consumo com abrangência nacional.",
+      description: "Iniciei a carreira de pesquisadora, ainda na graduação, em uma pesquisa de consumo com abrangência nacional.",
       gradient: "from-teal-500 to-cyan-500",
       borderColor: "border-teal-100"
     },
@@ -34,14 +34,14 @@ function CareerSection() {
     {
       year: "2020",
       title: "Projetos de Impacto Social",
-      description: "Atuei em projetos de pesquisa de impacto social para órgãos públicos, dentre eles o Ministério de Turismo.",
+      description: "Atuei em projetos de pesquisa de impacto social para órgãos públicos, entre eles o Ministério de Turismo.",
       gradient: "from-blue-500 to-indigo-500",
       borderColor: "border-blue-100"
     },
     {
       year: "2021",
       title: "Projeto numa Multinacional",
-      description: "Conduzi um projeto nacional de grande impacto para o setor comercial de uma multinacional, atuando end-to-end.",
+      description: "Conduzi um projeto nacional de grande impacto para o setor comercial de uma multinacional, atuando de ponta a ponta.",
       gradient: "from-indigo-500 to-purple-500",
       borderColor: "border-indigo-100"
     },
@@ -365,7 +365,8 @@ function CareerSection() {
             profundos e acionáveis
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 max-w-6xl mx-auto">
+          {/* Mobile/Tablet Grid */}
+          <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
             {researchStrategies.map((strategy, index) => (
               <div
                 key={index}
@@ -392,15 +393,17 @@ function CareerSection() {
                     {strategy.name}
                   </h4>
                   
-                  {/* Expandable Description */}
-                  <div className={`overflow-hidden transition-all duration-300 ${expandedCards[index] ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}`}>
+
+                  
+                  {/* Expandable Description - Only on mobile/tablet */}
+                  <div className={`lg:hidden overflow-hidden transition-all duration-300 ${expandedCards[index] ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {strategy.description}
                     </p>
                   </div>
                   
-                  {/* Expand/Collapse Arrow */}
-                  <div className={`mt-1 transition-transform duration-300 ${expandedCards[index] ? 'rotate-180' : 'rotate-0'}`}>
+                  {/* Expand/Collapse Arrow - Only on mobile/tablet */}
+                  <div className={`lg:hidden mt-1 transition-transform duration-300 ${expandedCards[index] ? 'rotate-180' : 'rotate-0'}`}>
                     <svg className="w-3 h-3 md:w-4 md:h-4 text-slate-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -411,6 +414,96 @@ function CareerSection() {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${strategy.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}
                 ></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Grid - New Design */}
+          <div className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {researchStrategies.slice(0, 6).map((strategy, index) => (
+              <div
+                key={`desktop-${index}`}
+                className="group relative bg-gradient-to-br from-white to-slate-50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-200/50 overflow-hidden cursor-pointer"
+              >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full -translate-y-12 translate-x-12 opacity-30"></div>
+                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full translate-y-8 -translate-x-8 opacity-30"></div>
+                </div>
+
+                {/* Top Border Accent */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${strategy.color} rounded-t-2xl`}></div>
+
+                {/* Icon Container */}
+                <div className="relative z-10 flex items-center justify-center mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${strategy.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                    <div className="w-8 h-8 text-white flex items-center justify-center text-xl">
+                      {strategy.icon}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h4 className="text-lg font-bold text-slate-800 mb-3 group-hover:text-slate-900 transition-colors duration-300 leading-tight text-center">
+                    {strategy.name}
+                  </h4>
+                  
+                  <p className="text-sm text-slate-600 leading-relaxed text-center">
+                    {strategy.description}
+                  </p>
+                </div>
+
+                {/* Bottom Decorative Line */}
+                <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${strategy.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`}></div>
+
+                {/* Hover Effect Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${strategy.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Last 2 cards centered */}
+          <div className="hidden lg:flex justify-center gap-6 max-w-6xl mx-auto mt-6">
+            {researchStrategies.slice(6, 8).map((strategy, index) => (
+              <div
+                key={`desktop-last-${index}`}
+                className="group relative bg-gradient-to-br from-white to-slate-50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-200/50 overflow-hidden cursor-pointer w-80"
+              >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full -translate-y-12 translate-x-12 opacity-30"></div>
+                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full translate-y-8 -translate-x-8 opacity-30"></div>
+                </div>
+
+                {/* Top Border Accent */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${strategy.color} rounded-t-2xl`}></div>
+
+                {/* Icon Container */}
+                <div className="relative z-10 flex items-center justify-center mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${strategy.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                    <div className="w-8 h-8 text-white flex items-center justify-center text-xl">
+                      {strategy.icon}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h4 className="text-lg font-bold text-slate-800 mb-3 group-hover:text-slate-900 transition-colors duration-300 leading-tight text-center">
+                    {strategy.name}
+                  </h4>
+                  
+                  <p className="text-sm text-slate-600 leading-relaxed text-center">
+                    {strategy.description}
+                  </p>
+                </div>
+
+                {/* Bottom Decorative Line */}
+                <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${strategy.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`}></div>
+
+                {/* Hover Effect Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${strategy.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
               </div>
             ))}
           </div>

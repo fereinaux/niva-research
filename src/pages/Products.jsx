@@ -135,6 +135,20 @@ function ProductCard({ title, description, when, how, icon, color }) {
       border: 'border-purple-200',
       text: 'text-purple-700',
       iconBg: 'from-purple-500 to-pink-500'
+    },
+    pink: {
+      gradient: 'from-pink-500 via-rose-500 to-red-500',
+      bg: 'from-pink-50 to-rose-50',
+      border: 'border-pink-200',
+      text: 'text-pink-700',
+      iconBg: 'from-pink-500 to-rose-500'
+    },
+    rose: {
+      gradient: 'from-rose-500 via-red-500 to-pink-500',
+      bg: 'from-rose-50 to-red-50',
+      border: 'border-rose-200',
+      text: 'text-rose-700',
+      iconBg: 'from-rose-500 to-red-500'
     }
   };
 
@@ -334,6 +348,26 @@ function Products() {
               how="Utilizamos métodos qualitativos (entrevistas em profundidade, grupos focais, etnografia ou netnografia) para emergir e entender o contexto."
               icon="🔍"
               color="purple"
+            />
+
+            {/* Product 7 */}
+            <ProductCard
+              title="Estudo de Personas"
+              description="Desenvolva perfis detalhados e realistas dos seus usuários para orientar decisões estratégicas."
+              when="Ideal para empresas que querem entender profundamente seu público-alvo, criar produtos mais alinhados às necessidades reais dos usuários e melhorar a comunicação e marketing."
+              how="Utilizamos métodos qualitativos e quantitativos para criar personas baseadas em dados reais, incluindo pesquisas, entrevistas e análise comportamental."
+              icon="👥"
+              color="pink"
+            />
+
+            {/* Product 8 */}
+            <ProductCard
+              title="Análise de Concorrência"
+              description="Entenda o posicionamento e estratégias dos seus concorrentes para identificar oportunidades de diferenciação."
+              when="Ideal para empresas que estão entrando em um novo mercado, lançando novos produtos ou querem se reposicionar estrategicamente."
+              how="Utilizamos métodos de pesquisa documental, análise de produtos/serviços, entrevistas com usuários e benchmarking para mapear o ecossistema competitivo."
+              icon="🏆"
+              color="rose"
             />
           </div>
         </div>

@@ -343,7 +343,7 @@ function AboutNiva() {
                 <div className="flex-1">
                   <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Integridade intelectual e metodológica</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-                    Com anos de experiência no que fazemos, usamos a nossa expertise, para escolher métodos assertivos e alinhados com a necessidade.
+                    Com anos de experiência no que fazemos, usamos a nossa expertise para escolher métodos assertivos e alinhados com a necessidade.
                   </p>
                 </div>
               </div>
