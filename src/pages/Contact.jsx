@@ -1402,7 +1402,7 @@ function Contact() {
                 </span>
               </div>
               <div className="text-emerald-200 text-xs md:text-sm leading-relaxed">
-                Rua Othon Paraíso, 211, Apt 604, 52050-010
+                Rua Professor Othon Paraíso, 211, Apt 604, 52030-252
               </div>
               <div className="text-emerald-200 text-xs md:text-sm mt-2">
                 Segunda à Sexta: 08h às 18h
@@ -1412,7 +1412,7 @@ function Contact() {
             {/* Copyright */}
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10">
               <p className="text-emerald-300 text-xs md:text-sm">
-                © 2024 Niva Research. Transformando dados em insights.
+                © 2025 Niva Research. Transformando dados em insights.
               </p>
             </div>
           </div>
