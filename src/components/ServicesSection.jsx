@@ -8,64 +8,81 @@ function ServicesSection() {
       title: "Pesquisas Realizadas",
       description: "Mais de 70 pesquisas já realizadas nos últimos 10 anos, tanto qualitativas como quantitativas",
       icon: "📊",
-      gradient: "from-emerald-500 to-teal-600",
-      bgGradient: "from-emerald-50 to-teal-50",
-      borderColor: "border-emerald-100/50",
-      hoverColor: "group-hover:text-emerald-700",
-      lineGradient: "from-emerald-500 to-teal-500",
-      hoverBg: "from-emerald-500/10 to-teal-500/10",
-      shadowColor: "group-hover:shadow-emerald-500/25"
+      gradient: "from-[#3b82f6] to-[#60a5fa]",
+      bgGradient: "from-[#eff6ff] to-[#dbeafe]",
+      borderColor: "border-[#3b82f6]/5",
+      hoverColor: "group-hover:text-[#1d4ed8]",
+      lineGradient: "from-[#3b82f6] to-[#60a5fa]",
+      hoverBg: "from-[#3b82f6]/10 to-[#60a5fa]/10",
+      shadowColor: "group-hover:shadow-[#3b82f6]/25"
     },
     {
       number: "10",
       title: "Artigos Publicados",
       description: "10 pesquisas publicadas em revistas renomadas, como a Revista Brasileira de Marketing",
       icon: "📚",
-      gradient: "from-teal-500 to-cyan-600",
-      bgGradient: "from-teal-50 to-cyan-50",
-      borderColor: "border-teal-100/50",
-      hoverColor: "group-hover:text-teal-700",
-      lineGradient: "from-teal-500 to-cyan-500",
-      hoverBg: "from-teal-500/10 to-cyan-500/10",
-      shadowColor: "group-hover:shadow-teal-500/25"
+      gradient: "from-[#6366f1] to-[#818cf8]",
+      bgGradient: "from-[#f5f3ff] to-[#ede9fe]",
+      borderColor: "border-[#6366f1]/5",
+      hoverColor: "group-hover:text-[#4338ca]",
+      lineGradient: "from-[#6366f1] to-[#818cf8]",
+      hoverBg: "from-[#6366f1]/10 to-[#818cf8]/10",
+      shadowColor: "group-hover:shadow-[#6366f1]/25"
     },
     {
       number: "50+",
       title: "Citações Acadêmicas",
       description: "Relevância reconhecida das pesquisas realizadas, citadas por mais de 50 estudos diferentes",
       icon: "🎓",
-      gradient: "from-cyan-500 to-blue-600",
-      bgGradient: "from-cyan-50 to-blue-50",
-      borderColor: "border-cyan-100/50",
-      hoverColor: "group-hover:text-cyan-700",
-      lineGradient: "from-cyan-500 to-blue-500",
-      hoverBg: "from-cyan-500/10 to-blue-500/10",
-      shadowColor: "group-hover:shadow-cyan-500/25"
+      gradient: "from-[#0ea5e9] to-[#38bdf8]",
+      bgGradient: "from-[#f0f9ff] to-[#e0f2fe]",
+      borderColor: "border-[#0ea5e9]/5",
+      hoverColor: "group-hover:text-[#0369a1]",
+      lineGradient: "from-[#0ea5e9] to-[#38bdf8]",
+      hoverBg: "from-[#0ea5e9]/10 to-[#38bdf8]/10",
+      shadowColor: "group-hover:shadow-[#0ea5e9]/25"
     },
     {
       number: "🏆",
       title: "Reconhecimento no Mercado",
       description: "Reconhecimentos no mercado, com uma trajetória de mérito salarial e promoção de cargo",
       icon: "⭐",
-      gradient: "from-blue-500 to-indigo-600",
-      bgGradient: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-100/50",
-      hoverColor: "group-hover:text-blue-700",
-      lineGradient: "from-blue-500 to-indigo-500",
-      hoverBg: "from-blue-500/10 to-indigo-500/10",
-      shadowColor: "group-hover:shadow-blue-500/25"
+      gradient: "from-[#8b5cf6] to-[#a78bfa]",
+      bgGradient: "from-[#faf5ff] to-[#f3e8ff]",
+      borderColor: "border-[#8b5cf6]/5",
+      hoverColor: "group-hover:text-[#6d28d9]",
+      lineGradient: "from-[#8b5cf6] to-[#a78bfa]",
+      hoverBg: "from-[#8b5cf6]/10 to-[#a78bfa]/10",
+      shadowColor: "group-hover:shadow-[#8b5cf6]/25"
     }
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Section Title */}
+    <section className="py-12 md:py-20 bg-gradient-to-b from-[#fff3e1] via-[#fff3e1]/90 to-[#fff3e1]/80 relative overflow-hidden">
+      {/* Enhanced visual effects with multiple layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/5 via-transparent to-[#ff2d2b]/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-[#60a5fa]/3 via-transparent to-[#f59e0b]/3"></div>
+      
+      {/* Animated floating elements */}
+      <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+      <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+      
+      {/* Additional subtle shadows for depth */}
+      <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+      <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/6 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+      
+      {/* Horizontal gradient overlay for sophistication */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/20 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Section Title with enhanced effects */}
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
-            O que já entregamos
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6 relative">
+            <span className="relative z-10">O que já entregamos</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#3b10ff]/10 to-[#ff2d2b]/10 blur-2xl -z-10"></div>
           </h2>
-          <div className="w-16 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-[#3b10ff] to-[#ff2d2b] mx-auto rounded-full shadow-lg shadow-[#3b10ff]/30"></div>
         </div>
 
         {/* Achievements Grid */}
@@ -73,13 +90,13 @@ function ServicesSection() {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br ${achievement.bgGradient} rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 md:hover:-translate-y-3 ${achievement.borderColor} overflow-hidden border-2`}
+              className={`group relative bg-gradient-to-br ${achievement.bgGradient} rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 md:hover:-translate-y-3 ${achievement.borderColor} overflow-hidden border-2 backdrop-blur-sm`}
             >
               {/* Background Pattern */}
               <div className={`absolute inset-0 bg-gradient-to-br ${achievement.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
               {/* Floating Icon */}
-              <div className="absolute top-4 right-4 text-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+              <div className="absolute top-4 right-4 text-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300">
                 {achievement.icon}
               </div>
 
@@ -114,7 +131,7 @@ function ServicesSection() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Link to="/produtos" className="group relative inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
+          <Link to="/produtos" className="group relative inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold text-white bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#3b10ff]/40">
             <span className="relative z-10 flex items-center">
               Conheça nossos produtos
               <svg
@@ -131,7 +148,7 @@ function ServicesSection() {
                 />
               </svg>
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </Link>
         </div>

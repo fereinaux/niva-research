@@ -131,32 +131,42 @@ function RecommendationsSection() {
 
   const renderStars = (rating) => {
     return Array.from({ length: rating }, (_, i) => (
-      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+      <svg key={i} className="w-4 h-4 text-[#f59e0b] fill-current" viewBox="0 0 20 20">
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
       </svg>
     ));
   };
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-48 h-48 md:w-72 md:h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-48 h-48 md:w-72 md:h-72 bg-rose-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section className="py-12 md:py-20 bg-gradient-to-b from-[#fff3e1] via-[#fff3e1]/90 to-[#fff3e1]/80 relative overflow-hidden">
+      {/* Enhanced visual effects with multiple layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/5 via-transparent to-[#ff2d2b]/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-[#60a5fa]/3 via-transparent to-[#f59e0b]/3"></div>
+      
+      {/* Animated floating elements */}
+      <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#37322c]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#37322c]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+      <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#37322c]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+      
+      {/* Additional subtle shadows for depth */}
+      <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+      <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/6 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+      
+      {/* Horizontal gradient overlay for sophistication */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/20 to-transparent"></div>
+      
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Section Header */}
+        {/* Section Header with enhanced effects */}
         <div className="text-center mb-8 md:mb-16">
-          <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6">
+          <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] text-white rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6 shadow-lg shadow-[#3b10ff]/30">
             <svg className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
             </svg>
             Recomendações Profissionais
           </div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
-            Uma carreira sólida, construída com o suporte de muitas pessoas
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6 relative">
+            <span className="relative z-10">Uma carreira sólida, construída com o suporte de muitas pessoas</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#3b10ff]/10 to-[#ff2d2b]/10 blur-2xl -z-10"></div>
           </h2>
           <p className="text-base md:text-xl text-slate-600 mb-6 md:mb-8 max-w-3xl mx-auto">
             Veja o que dizem sobre meu trabalho no LinkedIn e descubra como posso contribuir para o seu projeto
@@ -171,7 +181,7 @@ function RecommendationsSection() {
             disabled={isTransitioning}
             className="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-[#3b10ff] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -181,7 +191,7 @@ function RecommendationsSection() {
             disabled={isTransitioning}
             className="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 z-20 w-10 h-10 md:w-14 md:h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-xl hover:bg-white transition-all duration-300 hover:scale-110 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-emerald-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-6 md:h-6 text-slate-600 group-hover:text-[#3b10ff] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -191,7 +201,7 @@ function RecommendationsSection() {
             {/* Testimonial Card */}
             <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-12 relative overflow-hidden">
               {/* Background Pattern */}
-              <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16 opacity-50"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-[#3b10ff]/10 to-[#4f46e5]/10 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16 opacity-50"></div>
               
               {/* Decorative Stars */}
               <div className="hidden md:block absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-20">
@@ -204,8 +214,8 @@ function RecommendationsSection() {
               <div className="relative z-10">
                 {/* Quote Icon */}
                 <div className="flex justify-center mb-6 md:mb-8">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl md:rounded-2xl flex items-center justify-center">
-                    <svg className="w-6 h-6 md:w-8 md:h-8 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-[#3b10ff]/10 to-[#4f46e5]/10 rounded-xl md:rounded-2xl flex items-center justify-center">
+                    <svg className="w-6 h-6 md:w-8 md:h-8 text-[#3b10ff]" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -218,7 +228,7 @@ function RecommendationsSection() {
 
                 {/* Author Info */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl md:rounded-2xl flex items-center justify-center text-white font-bold text-sm md:text-lg mr-3 md:mr-4 shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-[#3b10ff] to-[#4f46e5] rounded-xl md:rounded-2xl flex items-center justify-center text-white font-bold text-sm md:text-lg mr-3 md:mr-4 shadow-lg">
                     {recommendations[currentIndex].avatar}
                   </div>
                   <div>
@@ -238,7 +248,7 @@ function RecommendationsSection() {
               {/* Progress Bar */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-200 rounded-b-2xl md:rounded-b-3xl overflow-hidden">
                 <div 
-                  className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-500 ease-out"
+                  className="h-full bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] transition-all duration-500 ease-out"
                   style={{ width: `${((currentIndex + 1) / recommendations.length) * 100}%` }}
                 ></div>
               </div>
@@ -254,7 +264,7 @@ function RecommendationsSection() {
                 disabled={isTransitioning}
                 className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 scale-125 shadow-lg' 
+                    ? 'bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] scale-125 shadow-lg' 
                     : 'bg-slate-300 hover:bg-slate-400 hover:scale-110'
                 }`}
               />
@@ -273,8 +283,8 @@ function RecommendationsSection() {
         <div className="mt-6 md:mt-16 text-center">
           <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl md:rounded-2xl lg:rounded-3xl p-4 md:p-6 lg:p-8 xl:p-12 text-white relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full -translate-y-16 md:-translate-y-24 lg:-translate-y-32 translate-x-16 md:translate-x-24 lg:translate-x-32"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full translate-y-12 md:translate-y-16 lg:translate-y-24 -translate-x-12 md:-translate-x-16 lg:-translate-x-24"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-[#3b10ff]/20 to-[#4f46e5]/20 rounded-full -translate-y-16 md:-translate-y-24 lg:-translate-y-32 translate-x-16 md:translate-x-24 lg:translate-x-32"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-[#ff2d2b]/20 to-[#ef4444]/20 rounded-full translate-y-12 md:translate-y-16 lg:translate-y-24 -translate-x-12 md:-translate-x-16 lg:-translate-x-24"></div>
             
             <div className="relative z-10">
               <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2 md:mb-3 lg:mb-4">
@@ -287,7 +297,7 @@ function RecommendationsSection() {
                 href="https://www.linkedin.com/in/adriellysouza/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold text-sm md:text-base hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="inline-flex items-center px-4 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] text-white rounded-full font-semibold text-sm md:text-base hover:from-[#2d0bc7] hover:to-[#4338ca] transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
                 <svg className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mr-1.5 md:mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -298,32 +308,6 @@ function RecommendationsSection() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
     </section>
   );
 }

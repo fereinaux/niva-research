@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden pt-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden pt-4">
       {/* Subtle circular shadows */}
       <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/30 to-transparent rounded-full blur-3xl animate-pulse shadow-2xl shadow-[#3b10ff]/20"></div>
       <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/30 to-transparent rounded-full blur-3xl animate-pulse shadow-2xl shadow-[#ff2d2b]/20" style={{ animationDelay: "1.5s" }}></div>
