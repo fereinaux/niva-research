@@ -145,7 +145,7 @@ function ValuesSection() {
                   </div>
 
                   {/* Title with Enhanced Typography */}
-                  <h3 className={`text-lg md:text-xl font-bold text-white leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 ${impact.hoverTextColor}`}>
+                  <h3 className={`text-lg md:text-xl font-bold text-white leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 group-hover:text-red-500`}>
                     {impact.title}
                   </h3>
 

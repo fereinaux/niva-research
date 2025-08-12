@@ -62,14 +62,7 @@ function AboutNiva() {
               
 
               
-              {/* Enhanced decorative elements */}
-              <div className="flex justify-center items-center space-x-4 md:space-x-6">
-                <div className="w-2 h-2 md:w-3 md:h-3 bg-[#3b10ff] rounded-full animate-pulse"></div>
-                <div className="w-1 h-1 bg-[#ff2d2b] rounded-full animate-pulse" style={{ animationDelay: "0.3s" }}></div>
-                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#60a5fa] rounded-full animate-pulse" style={{ animationDelay: "0.6s" }}></div>
-                <div className="w-1 h-1 bg-[#3b10ff]/80 rounded-full animate-pulse" style={{ animationDelay: "0.9s" }}></div>
-                <div className="w-2 h-2 md:w-3 md:h-3 bg-[#ff2d2b]/80 rounded-full animate-pulse" style={{ animationDelay: "1.2s" }}></div>
-              </div>
+
               
               {/* Floating accent */}
               <div className="absolute -top-4 -right-4 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-r from-[#3b10ff] to-[#ff2d2b] rounded-full opacity-60 animate-float"></div>
