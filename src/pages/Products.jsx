@@ -95,78 +95,78 @@ function ProductCard({ title, description, when, how, icon, color }) {
 
   const colorSchemes = {
     emerald: {
-      gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
-      bg: 'from-emerald-50 to-teal-50',
-      border: 'border-emerald-200',
-      text: 'text-emerald-700',
-      iconBg: 'from-emerald-500 to-teal-500'
+      gradient: 'from-[#3b10ff] to-[#4f46e5]',
+      bg: 'from-[#f0f4ff] to-[#e0e7ff]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]',
+      iconBg: 'from-[#3b10ff] to-[#4f46e5]'
     },
     teal: {
-      gradient: 'from-teal-500 via-cyan-500 to-blue-500',
-      bg: 'from-teal-50 to-cyan-50',
-      border: 'border-teal-200',
-      text: 'text-teal-700',
-      iconBg: 'from-teal-500 to-cyan-500'
+      gradient: 'from-[#ff2d2b] to-[#ef4444]',
+      bg: 'from-[#fef2f2] to-[#fee2e2]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1d1d]',
+      iconBg: 'from-[#ff2d2b] to-[#ef4444]'
     },
     cyan: {
-      gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
-      bg: 'from-cyan-50 to-blue-50',
-      border: 'border-cyan-200',
-      text: 'text-cyan-700',
-      iconBg: 'from-cyan-500 to-blue-500'
+      gradient: 'from-[#60a5fa] to-[#3b82f6]',
+      bg: 'from-[#eff6ff] to-[#dbeafe]',
+      border: 'border-[#60a5fa]/30',
+      text: 'text-[#1e3a8a]',
+      iconBg: 'from-[#60a5fa] to-[#3b82f6]'
     },
     blue: {
-      gradient: 'from-blue-500 via-indigo-500 to-purple-500',
-      bg: 'from-blue-50 to-indigo-50',
-      border: 'border-blue-200',
-      text: 'text-blue-700',
-      iconBg: 'from-blue-500 to-indigo-500'
+      gradient: 'from-[#3b10ff] to-[#6366f1]',
+      bg: 'from-[#f5f3ff] to-[#ede9fe]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]',
+      iconBg: 'from-[#3b10ff] to-[#6366f1]'
     },
     indigo: {
-      gradient: 'from-indigo-500 via-purple-500 to-pink-500',
-      bg: 'from-indigo-50 to-purple-50',
-      border: 'border-indigo-200',
-      text: 'text-indigo-700',
-      iconBg: 'from-indigo-500 to-purple-500'
+      gradient: 'from-[#ff2d2b] to-[#f87171]',
+      bg: 'from-[#fef2f2] to-[#fecaca]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1d1d]',
+      iconBg: 'from-[#ff2d2b] to-[#f87171]'
     },
     purple: {
-      gradient: 'from-purple-500 via-pink-500 to-rose-500',
-      bg: 'from-purple-50 to-pink-50',
-      border: 'border-purple-200',
-      text: 'text-purple-700',
-      iconBg: 'from-purple-500 to-pink-500'
+      gradient: 'from-[#3b10ff] to-[#8b5cf6]',
+      bg: 'from-[#faf5ff] to-[#f3e8ff]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]',
+      iconBg: 'from-[#3b10ff] to-[#8b5cf6]'
     },
     pink: {
-      gradient: 'from-pink-500 via-rose-500 to-red-500',
-      bg: 'from-pink-50 to-rose-50',
-      border: 'border-pink-200',
-      text: 'text-pink-700',
-      iconBg: 'from-pink-500 to-rose-500'
+      gradient: 'from-[#ff2d2b] to-[#ec4899]',
+      bg: 'from-[#fdf2f8] to-[#fce7f3]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1d1d]',
+      iconBg: 'from-[#ff2d2b] to-[#ec4899]'
     },
     rose: {
-      gradient: 'from-rose-500 via-red-500 to-pink-500',
-      bg: 'from-rose-50 to-red-50',
-      border: 'border-rose-200',
-      text: 'text-rose-700',
-      iconBg: 'from-rose-500 to-red-500'
+      gradient: 'from-[#60a5fa] to-[#f59e0b]',
+      bg: 'from-[#fffbeb] to-[#fef3c7]',
+      border: 'border-[#60a5fa]/30',
+      text: 'text-[#92400e]',
+      iconBg: 'from-[#60a5fa] to-[#f59e0b]'
     }
   };
 
   const scheme = colorSchemes[color];
 
   return (
-    <div className={`relative group cursor-pointer overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br ${scheme.bg} border ${scheme.border} shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-[1.02]`}>
+    <div className={`relative group cursor-pointer overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br ${scheme.bg} border ${scheme.border} shadow-xl hover:shadow-2xl transition-all duration-150 hover:scale-[1.02]`}>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-gradient-to-br from-emerald-300 to-teal-300 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16"></div>
-        <div className="absolute bottom-0 left-0 w-20 md:w-24 h-20 md:h-24 bg-gradient-to-br from-cyan-300 to-blue-300 rounded-full translate-y-8 md:translate-y-12 -translate-x-8 md:-translate-x-12"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-gradient-to-br from-slate-300/30 to-slate-200/30 rounded-full -translate-y-12 md:-translate-y-16 translate-x-12 md:translate-x-16"></div>
+        <div className="absolute bottom-0 left-0 w-20 md:w-24 h-20 md:h-24 bg-gradient-to-br from-slate-300/30 to-slate-200/30 rounded-full translate-y-8 md:translate-y-12 -translate-x-8 md:-translate-x-12"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 p-4 md:p-6 lg:p-8">
         {/* Icon */}
         <div className="flex items-center justify-center mb-4 md:mb-6">
-          <div className={`w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${scheme.iconBg} rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+          <div className={`w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${scheme.iconBg} rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl shadow-lg group-hover:scale-110 transition-transform duration-100`}>
             {icon}
           </div>
         </div>
@@ -176,18 +176,18 @@ function ProductCard({ title, description, when, how, icon, color }) {
           <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 leading-tight group-hover:text-slate-900 transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+          <p className="text-slate-700 leading-relaxed text-base md:text-lg">
             {description}
           </p>
         </div>
 
         {/* Expandable Content */}
-        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
+        <div className={`transition-all duration-150 ease-out overflow-hidden ${
           isExpanded ? 'max-h-[800px] md:max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="space-y-4 md:space-y-6 pt-4 md:pt-6 border-t border-slate-200/50">
+          <div className="space-y-4 md:space-y-6 pt-4 md:pt-6 border-t border-slate-300/50">
             {/* When */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/50">
+            <div className="bg-white/80 rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/50 shadow-sm">
               <h4 className="font-bold text-slate-800 mb-2 md:mb-3 flex items-center text-base md:text-lg">
                 <div className={`w-6 h-6 md:w-8 md:h-8 bg-gradient-to-r ${scheme.iconBg} rounded-lg flex items-center justify-center mr-2 md:mr-3 shadow-md`}>
                   <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,7 +202,7 @@ function ProductCard({ title, description, when, how, icon, color }) {
             </div>
 
             {/* How */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/50">
+            <div className="bg-white/80 rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/50 shadow-sm">
               <h4 className="font-bold text-slate-800 mb-2 md:mb-3 flex items-center text-base md:text-lg">
                 <div className={`w-6 h-6 md:w-8 md:h-8 bg-gradient-to-r ${scheme.iconBg} rounded-lg flex items-center justify-center mr-2 md:mr-3 shadow-md`}>
                   <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,15 +221,15 @@ function ProductCard({ title, description, when, how, icon, color }) {
         {/* Toggle Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className={`mt-4 md:mt-6 w-full flex items-center justify-center gap-2 md:gap-3 px-4 md:px-6 lg:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all duration-500 group/btn ${
+          className={`mt-4 md:mt-6 w-full flex items-center justify-center gap-2 md:gap-3 px-4 md:px-6 lg:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all duration-100 group/btn ${
             isExpanded
-              ? `bg-gradient-to-r ${scheme.iconBg} text-white hover:shadow-xl hover:shadow-emerald-500/25`
-              : 'bg-white/80 backdrop-blur-sm text-slate-700 hover:bg-white hover:shadow-lg border border-slate-200/50'
+              ? `bg-gradient-to-r ${scheme.iconBg} text-white hover:shadow-xl hover:shadow-slate-500/25`
+              : 'bg-white/90 text-slate-700 hover:bg-white hover:shadow-lg border border-slate-200'
           }`}
         >
           <span>{isExpanded ? 'Ver menos' : 'Saiba mais'}</span>
           <svg 
-            className={`w-5 h-5 md:w-6 md:h-6 transition-all duration-500 ${isExpanded ? 'rotate-180 scale-110' : 'group-hover/btn:translate-y-1'}`} 
+            className={`w-5 h-5 md:w-6 md:h-6 transition-all duration-100 ${isExpanded ? 'rotate-180 scale-110' : 'group-hover/btn:translate-y-1'}`} 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -240,7 +240,7 @@ function ProductCard({ title, description, when, how, icon, color }) {
       </div>
 
       {/* Hover Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-teal-500/0 to-cyan-500/0 group-hover:from-emerald-500/5 group-hover:via-teal-500/5 group-hover:to-cyan-500/5 transition-all duration-700 rounded-2xl md:rounded-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-500/0 via-slate-400/0 to-slate-300/0 group-hover:from-slate-500/5 group-hover:via-slate-400/5 group-hover:to-slate-300/5 transition-all duration-150 rounded-2xl md:rounded-3xl"></div>
     </div>
   );
 }
@@ -249,41 +249,40 @@ function Products() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       {/* Section 1 - Produtos Principais */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-emerald-950 via-teal-900 to-cyan-900 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-          >
-            <g fill="none" fillRule="evenodd">
-              <g fill="#ffffff" fillOpacity="0.1">
-                <circle cx="30" cy="30" r="2" />
-              </g>
-            </g>
-          </svg>
-        </div>
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden">
+        {/* Enhanced visual effects with multiple layers - same as HeroSection */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/15 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#ff2d2b]/15 to-transparent"></div>
+        
+        {/* Animated floating elements - same as HeroSection */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+        
+        {/* Additional subtle shadows for depth */}
+        <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+        
+        {/* Horizontal gradient overlay for sophistication */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/5 to-transparent"></div>
         
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-block mb-4 md:mb-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 border border-white/20">
-                <span className="text-emerald-200 text-xs md:text-sm font-medium">Nossas Soluções</span>
+                <span className="text-[#fff3e1] text-xs md:text-sm font-medium">Nossas Soluções</span>
               </div>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#fff3e1] mb-4 md:mb-6 leading-tight">
               Conheça nossos{" "}
-              <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
                 produtos
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-emerald-100 max-w-4xl mx-auto px-4">
+            <p className="text-lg md:text-xl text-[#fff3e1]/80 max-w-4xl mx-auto px-4">
               Soluções personalizadas em pesquisa para transformar dados em insights acionáveis
             </p>
           </div>
