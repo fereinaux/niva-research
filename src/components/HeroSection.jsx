@@ -36,7 +36,7 @@ function HeroSection() {
 
           {/* Subtext */}
           <p className="text-xl md:text-2xl text-[#fff3e1]/80 mb-8 max-w-4xl mx-auto leading-relaxed">
-            A <span className="text-[#f59e0b] font-semibold">Niva</span>{" "}
+            A <span className="bg-gradient-to-r from-[#60a5fa] via-[#93c5fd] to-[#bfdbfe] bg-clip-text text-transparent font-semibold">Niva</span>{" "}
             transforma dados em informações relevantes e acionáveis, ajudando
             a enxergar o que não é possível sem pesquisa.
           </p>
