@@ -659,85 +659,56 @@ function Contact() {
               {validationErrors.servicosPrincipais && (
                 <p className="text-red-300 text-xs mb-2">{validationErrors.servicosPrincipais}</p>
               )}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                {servicosPrincipais.map((servico) => (
-                  <div
-                    key={servico.id}
-                    onClick={() => {
-                      const isSelected = formData.servicosPrincipais.includes(
-                        servico.id
-                      );
-                      handleCheckboxChange(
-                        "servicosPrincipais",
-                        servico.id,
-                        !isSelected
-                      );
-                    }}
-                    className={`relative p-4 md:p-6 rounded-xl md:rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
-                      formData.servicosPrincipais.includes(servico.id)
-                        ? "bg-gradient-to-r from-[#3b10ff]/20 to-[#4f46e5]/20 border-[#3b10ff]/60 shadow-lg shadow-[#3b10ff]/25"
-                        : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30"
-                    }`}
-                  >
-                    {/* Check Icon */}
-                    <div
-                      className={`absolute top-2 md:top-3 right-2 md:right-3 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        formData.servicosPrincipais.includes(servico.id)
-                          ? "bg-[#3b10ff] text-white scale-100"
-                          : "bg-white/20 text-transparent scale-75"
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                {servicosPrincipais.map((servico) => {
+                  const isSelected = formData.servicosPrincipais.includes(servico.id);
+                  return (
+                    <button
+                      key={servico.id}
+                      type="button"
+                      onClick={() =>
+                        handleCheckboxChange(
+                          "servicosPrincipais",
+                          servico.id,
+                          !isSelected
+                        )
+                      }
+                      className={`group relative rounded-full p-[1.5px] transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] shadow-[0_0_0_3px_rgba(59,16,255,0.15)]'
+                          : 'bg-white/15 hover:bg-white/25'
                       }`}
                     >
-                      <svg
-                        className="w-3 h-3 md:w-4 md:h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <span
+                        className={`inline-flex items-center rounded-full px-4 py-2 md:px-5 md:py-2.5 backdrop-blur-sm ${
+                          isSelected ? 'bg-white/5' : 'bg-white/0'
+                        } text-xs md:text-sm font-semibold text-[#fff3e1]`}
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-
-                    {/* Service Icon */}
-                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
-                      formData.servicosPrincipais.includes(servico.id)
-                          ? 'bg-[#3b10ff] text-white'
-                          : 'bg-white/20 text-[#93c5fd]'
-                    }`}>
-                      {servico.id === 'percepcao' && '🎯'}
-                      {servico.id === 'intencao' && '💡'}
-                      {servico.id === 'satisfacao' && '❤️'}
-                      {servico.id === 'usabilidade' && '💻'}
-                      {servico.id === 'clima' && '🏢'}
-                      {servico.id === 'comportamento' && '🔍'}
-                      {servico.id === 'personas' && '👥'}
-                      {servico.id === 'concorrencia' && '🏆'}
-                    </div>
-
-                    <h4
-                      className={`font-semibold mb-2 transition-colors duration-300 text-sm md:text-base ${
-                        formData.servicosPrincipais.includes(servico.id)
-                          ? "text-white"
-                          : "text-[#fff3e1]"
-                      }`}
-                    >
-                      {servico.label}
-                    </h4>
-
-                    {/* Selection Indicator */}
-                    <div
-                      className={`w-full h-1 rounded-full transition-all duration-300 ${
-                        formData.servicosPrincipais.includes(servico.id)
-                          ? "bg-gradient-to-r from-[#3b10ff] to-[#4f46e5]"
-                          : "bg-white/20"
-                      }`}
-                    ></div>
-                  </div>
-                ))}
+                        <span
+                          className={`mr-2 h-1.5 w-1.5 rounded-full ${
+                            isSelected ? 'bg-[#3b10ff]' : 'bg-white/40'
+                          }`}
+                        ></span>
+                        {servico.label}
+                        {isSelected && (
+                          <svg
+                            className="ml-2 w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        )}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -745,83 +716,56 @@ function Contact() {
               <label className="block text-[#fff3e1] text-sm font-semibold mb-4 md:mb-6">
                 Serviços complementares de interesse:
               </label>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                {servicosExtras.map((servico) => (
-                  <div
-                    key={servico.id}
-                    onClick={() => {
-                      const isSelected = formData.servicosExtras.includes(
-                        servico.id
-                      );
-                      handleCheckboxChange(
-                        "servicosExtras",
-                        servico.id,
-                        !isSelected
-                      );
-                    }}
-                    className={`relative p-4 md:p-6 rounded-xl md:rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
-                      formData.servicosExtras.includes(servico.id)
-                        ? "bg-gradient-to-r from-[#60a5fa]/20 to-[#3b82f6]/20 border-[#60a5fa]/60 shadow-lg shadow-[#60a5fa]/25"
-                        : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30"
-                    }`}
-                  >
-                    {/* Check Icon */}
-                    <div
-                      className={`absolute top-2 md:top-3 right-2 md:right-3 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        formData.servicosExtras.includes(servico.id)
-                          ? "bg-[#60a5fa] text-white scale-100"
-                          : "bg-white/20 text-transparent scale-75"
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                {servicosExtras.map((servico) => {
+                  const isSelected = formData.servicosExtras.includes(servico.id);
+                  return (
+                    <button
+                      key={servico.id}
+                      type="button"
+                      onClick={() =>
+                        handleCheckboxChange(
+                          "servicosExtras",
+                          servico.id,
+                          !isSelected
+                        )
+                      }
+                      className={`group relative rounded-full p-[1.5px] transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] shadow-[0_0_0_3px_rgba(96,165,250,0.15)]'
+                          : 'bg-white/15 hover:bg-white/25'
                       }`}
                     >
-                      <svg
-                        className="w-3 h-3 md:w-4 md:h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <span
+                        className={`inline-flex items-center rounded-full px-4 py-2 md:px-5 md:py-2.5 backdrop-blur-sm ${
+                          isSelected ? 'bg-white/5' : 'bg-white/0'
+                        } text-xs md:text-sm font-semibold text-[#fff3e1]`}
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-
-                    {/* Service Icon */}
-                    <div
-                      className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
-                        formData.servicosExtras.includes(servico.id)
-                          ? "bg-[#60a5fa] text-white"
-                          : "bg-white/20 text-[#93c5fd]"
-                      }`}
-                    >
-                      {servico.id === "workshop" && "📚"}
-                      {servico.id === "relatorios" && "📊"}
-                      {servico.id === "formacao" && "🎓"}
-                      {servico.id === "capacitacao" && "⚡"}
-                    </div>
-
-                    <h4
-                      className={`font-semibold mb-2 transition-colors duration-300 text-sm md:text-base ${
-                        formData.servicosExtras.includes(servico.id)
-                          ? "text-white"
-                          : "text-[#fff3e1]"
-                      }`}
-                    >
-                      {servico.label}
-                    </h4>
-
-                    {/* Selection Indicator */}
-                    <div
-                      className={`w-full h-1 rounded-full transition-all duration-300 ${
-                        formData.servicosExtras.includes(servico.id)
-                          ? "bg-gradient-to-r from-[#60a5fa] to-[#3b82f6]"
-                          : "bg-white/20"
-                      }`}
-                    ></div>
-                  </div>
-                ))}
+                        <span
+                          className={`mr-2 h-1.5 w-1.5 rounded-full ${
+                            isSelected ? 'bg-[#60a5fa]' : 'bg-white/40'
+                          }`}
+                        ></span>
+                        {servico.label}
+                        {isSelected && (
+                          <svg
+                            className="ml-2 w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        )}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -1130,7 +1074,9 @@ function Contact() {
                   {index < steps.length - 1 && (
                     <div
                       className={`w-4 sm:w-8 md:w-16 h-1 mx-1 sm:mx-2 transition-all duration-300 ${
-                        index < currentStep ? "bg-[#3b10ff]" : "bg-white/20"
+                        index < currentStep
+                          ? "bg-gradient-to-r from-[#f87171] to-[#ff2d2b]"
+                          : "bg-white/20"
                       }`}
                     />
                   )}
