@@ -397,17 +397,17 @@ function Contact() {
           <div className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Nome completo *
                 </label>
                 <input
                   type="text"
                   value={formData.nome}
                   onChange={(e) => handleInputChange("nome", e.target.value)}
-                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.nome 
                       ? 'border-red-400 focus:ring-red-400' 
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   placeholder="Digite seu nome completo"
                   required
@@ -417,21 +417,21 @@ function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Email corporativo *
                 </label>
                 <input
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.email 
                       ? 'border-red-400 focus:ring-red-400' 
                       : formData.email && !emailValidation.isValid
                       ? 'border-orange-400 focus:ring-orange-400'
                       : formData.email && emailValidation.isValid
                       ? 'border-green-400 focus:ring-green-400'
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   placeholder="seu.email@empresa.com"
                   required
@@ -460,7 +460,7 @@ function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Telefone *
                 </label>
                 <input
@@ -469,14 +469,14 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("telefone", e.target.value)
                   }
-                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.telefone 
                       ? 'border-red-400 focus:ring-red-400' 
                       : formData.telefone && !phoneValidation.isValid
                       ? 'border-orange-400 focus:ring-orange-400'
                       : formData.telefone && phoneValidation.isValid
                       ? 'border-green-400 focus:ring-green-400'
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   placeholder="(11) 99999-9999"
                   required
@@ -502,17 +502,17 @@ function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Cargo *
                 </label>
                 <input
                   type="text"
                   value={formData.cargo}
                   onChange={(e) => handleInputChange("cargo", e.target.value)}
-                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.cargo 
                       ? 'border-red-400 focus:ring-red-400' 
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   placeholder="Ex: Gerente de Marketing"
                   required
@@ -524,17 +524,17 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Nome da empresa *
               </label>
               <input
                 type="text"
                 value={formData.empresa}
                 onChange={(e) => handleInputChange("empresa", e.target.value)}
-                className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                   validationErrors.empresa 
                     ? 'border-red-400 focus:ring-red-400' 
-                    : 'border-white/20 focus:ring-emerald-400'
+                    : 'border-white/20 focus:ring-[#3b10ff]'
                 }`}
                 placeholder="Nome da sua empresa"
                 required
@@ -551,7 +551,7 @@ function Contact() {
           <div className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Setor de atuação *
                 </label>
                 <select
@@ -560,7 +560,7 @@ function Contact() {
                   className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.setor 
                       ? 'border-red-400 focus:ring-red-400' 
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   required
                 >
@@ -581,7 +581,7 @@ function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Tamanho da empresa *
                 </label>
                 <select
@@ -592,7 +592,7 @@ function Contact() {
                   className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.tamanhoEmpresa 
                       ? 'border-red-400 focus:ring-red-400' 
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   required
                 >
@@ -611,7 +611,7 @@ function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Faturamento anual
                 </label>
                 <select
@@ -619,7 +619,7 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("faturamento", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                 >
                   <option value="">Selecione o faturamento</option>
                   <option value="ate-100k">Até R$ 100 mil</option>
@@ -632,7 +632,7 @@ function Contact() {
                 </select>
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Localização principal
                 </label>
                 <input
@@ -641,7 +641,7 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("localizacao", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                   placeholder="Ex: São Paulo, SP"
                 />
               </div>
@@ -653,7 +653,7 @@ function Contact() {
         return (
           <div className="space-y-6 md:space-y-8">
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-4 md:mb-6">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-4 md:mb-6">
                 Quais serviços principais você gostaria de contratar? *
               </label>
               {validationErrors.servicosPrincipais && (
@@ -675,7 +675,7 @@ function Contact() {
                     }}
                     className={`relative p-4 md:p-6 rounded-xl md:rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
                       formData.servicosPrincipais.includes(servico.id)
-                        ? "bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border-emerald-400 shadow-lg shadow-emerald-500/25"
+                        ? "bg-gradient-to-r from-[#3b10ff]/20 to-[#4f46e5]/20 border-[#3b10ff]/60 shadow-lg shadow-[#3b10ff]/25"
                         : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30"
                     }`}
                   >
@@ -683,7 +683,7 @@ function Contact() {
                     <div
                       className={`absolute top-2 md:top-3 right-2 md:right-3 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                         formData.servicosPrincipais.includes(servico.id)
-                          ? "bg-emerald-500 text-white scale-100"
+                          ? "bg-[#3b10ff] text-white scale-100"
                           : "bg-white/20 text-transparent scale-75"
                       }`}
                     >
@@ -705,8 +705,8 @@ function Contact() {
                     {/* Service Icon */}
                     <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
                       formData.servicosPrincipais.includes(servico.id)
-                        ? 'bg-emerald-500 text-white'
-                        : 'bg-white/20 text-emerald-200'
+                          ? 'bg-[#3b10ff] text-white'
+                          : 'bg-white/20 text-[#93c5fd]'
                     }`}>
                       {servico.id === 'percepcao' && '🎯'}
                       {servico.id === 'intencao' && '💡'}
@@ -722,7 +722,7 @@ function Contact() {
                       className={`font-semibold mb-2 transition-colors duration-300 text-sm md:text-base ${
                         formData.servicosPrincipais.includes(servico.id)
                           ? "text-white"
-                          : "text-emerald-100"
+                          : "text-[#fff3e1]"
                       }`}
                     >
                       {servico.label}
@@ -732,7 +732,7 @@ function Contact() {
                     <div
                       className={`w-full h-1 rounded-full transition-all duration-300 ${
                         formData.servicosPrincipais.includes(servico.id)
-                          ? "bg-gradient-to-r from-emerald-400 to-teal-400"
+                          ? "bg-gradient-to-r from-[#3b10ff] to-[#4f46e5]"
                           : "bg-white/20"
                       }`}
                     ></div>
@@ -742,7 +742,7 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-4 md:mb-6">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-4 md:mb-6">
                 Serviços complementares de interesse:
               </label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -761,7 +761,7 @@ function Contact() {
                     }}
                     className={`relative p-4 md:p-6 rounded-xl md:rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
                       formData.servicosExtras.includes(servico.id)
-                        ? "bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border-teal-400 shadow-lg shadow-teal-500/25"
+                        ? "bg-gradient-to-r from-[#60a5fa]/20 to-[#3b82f6]/20 border-[#60a5fa]/60 shadow-lg shadow-[#60a5fa]/25"
                         : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30"
                     }`}
                   >
@@ -769,7 +769,7 @@ function Contact() {
                     <div
                       className={`absolute top-2 md:top-3 right-2 md:right-3 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                         formData.servicosExtras.includes(servico.id)
-                          ? "bg-teal-500 text-white scale-100"
+                          ? "bg-[#60a5fa] text-white scale-100"
                           : "bg-white/20 text-transparent scale-75"
                       }`}
                     >
@@ -792,8 +792,8 @@ function Contact() {
                     <div
                       className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 ${
                         formData.servicosExtras.includes(servico.id)
-                          ? "bg-teal-500 text-white"
-                          : "bg-white/20 text-teal-200"
+                          ? "bg-[#60a5fa] text-white"
+                          : "bg-white/20 text-[#93c5fd]"
                       }`}
                     >
                       {servico.id === "workshop" && "📚"}
@@ -806,7 +806,7 @@ function Contact() {
                       className={`font-semibold mb-2 transition-colors duration-300 text-sm md:text-base ${
                         formData.servicosExtras.includes(servico.id)
                           ? "text-white"
-                          : "text-teal-100"
+                          : "text-[#fff3e1]"
                       }`}
                     >
                       {servico.label}
@@ -816,7 +816,7 @@ function Contact() {
                     <div
                       className={`w-full h-1 rounded-full transition-all duration-300 ${
                         formData.servicosExtras.includes(servico.id)
-                          ? "bg-gradient-to-r from-teal-400 to-cyan-400"
+                          ? "bg-gradient-to-r from-[#60a5fa] to-[#3b82f6]"
                           : "bg-white/20"
                       }`}
                     ></div>
@@ -827,7 +827,7 @@ function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Objetivo principal da pesquisa *
                 </label>
                 <select
@@ -838,7 +838,7 @@ function Contact() {
                   className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white focus:outline-none focus:ring-2 focus:border-transparent text-sm md:text-base ${
                     validationErrors.objetivo 
                       ? 'border-red-400 focus:ring-red-400' 
-                      : 'border-white/20 focus:ring-emerald-400'
+                      : 'border-white/20 focus:ring-[#3b10ff]'
                   }`}
                   required
                 >
@@ -864,13 +864,13 @@ function Contact() {
                 )}
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Prazo desejado para início
                 </label>
                 <select
                   value={formData.prazo}
                   onChange={(e) => handleInputChange("prazo", e.target.value)}
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                 >
                   <option value="">Selecione o prazo</option>
                   <option value="imediato">Imediato</option>
@@ -883,13 +883,13 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Faixa de orçamento estimada
               </label>
               <select
                 value={formData.orcamento}
                 onChange={(e) => handleInputChange("orcamento", e.target.value)}
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
               >
                 <option value="">Selecione o orçamento</option>
                 <option value="ate-10k">Até R$ 10.000</option>
@@ -907,7 +907,7 @@ function Contact() {
         return (
           <div className="space-y-4 md:space-y-6">
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Descreva brevemente seu projeto ou necessidade *
               </label>
               <textarea
@@ -916,10 +916,10 @@ function Contact() {
                   handleInputChange("descricaoProjeto", e.target.value)
                 }
                 rows={4}
-                className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:border-transparent resize-none text-sm md:text-base ${
+                  className={`w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:border-transparent resize-none text-sm md:text-base ${
                   validationErrors.descricaoProjeto 
                     ? 'border-red-400 focus:ring-red-400' 
-                    : 'border-white/20 focus:ring-emerald-400'
+                    : 'border-white/20 focus:ring-[#3b10ff]'
                 }`}
                 placeholder="Conte-nos sobre o que você precisa..."
                 required
@@ -931,7 +931,7 @@ function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Público-alvo da pesquisa
                 </label>
                 <input
@@ -940,12 +940,12 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("publicoAlvo", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                   placeholder="Ex: Clientes B2B, usuários finais, etc."
                 />
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Metodologia preferida
                 </label>
                 <select
@@ -953,7 +953,7 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("metodologia", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                 >
                   <option value="">Selecione a metodologia</option>
                   <option value="qualitativa">Qualitativa</option>
@@ -967,7 +967,7 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+              <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Principais expectativas com a pesquisa
               </label>
               <textarea
@@ -976,7 +976,7 @@ function Contact() {
                   handleInputChange("expectativas", e.target.value)
                 }
                 rows={3}
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent resize-none text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent resize-none text-sm md:text-base"
                 placeholder="O que você espera alcançar com esta pesquisa?"
               />
             </div>
@@ -988,7 +988,7 @@ function Contact() {
           <div className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Melhor horário para contato
                 </label>
                 <select
@@ -996,7 +996,7 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("melhorHorario", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                 >
                   <option value="">Selecione o horário</option>
                   <option value="manha">Manhã (8h - 12h)</option>
@@ -1006,7 +1006,7 @@ function Contact() {
                 </select>
               </div>
               <div>
-                <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                   Preferência de contato
                 </label>
                 <select
@@ -1014,7 +1014,7 @@ function Contact() {
                   onChange={(e) =>
                     handleInputChange("preferenciaContato", e.target.value)
                   }
-                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
                 >
                   <option value="">Selecione a preferência</option>
                   <option value="email">Email</option>
@@ -1026,7 +1026,7 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Como você conheceu a Niva Research?
               </label>
               <select
@@ -1034,7 +1034,7 @@ function Contact() {
                 onChange={(e) =>
                   handleInputChange("comoConheceu", e.target.value)
                 }
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent text-sm md:text-base"
               >
                 <option value="">Selecione a opção</option>
                 <option value="google">Google</option>
@@ -1047,7 +1047,7 @@ function Contact() {
             </div>
 
             <div>
-              <label className="block text-emerald-100 text-sm font-semibold mb-2">
+                <label className="block text-[#fff3e1] text-sm font-semibold mb-2">
                 Observações adicionais
               </label>
               <textarea
@@ -1056,7 +1056,7 @@ function Contact() {
                   handleInputChange("observacoes", e.target.value)
                 }
                 rows={3}
-                className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent resize-none text-sm md:text-base"
+                  className="w-full px-3 md:px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-[#fff3e1]/60 focus:outline-none focus:ring-2 focus:ring-[#3b10ff] focus:border-transparent resize-none text-sm md:text-base"
                 placeholder="Alguma informação adicional que gostaria de compartilhar..."
               />
             </div>
@@ -1069,45 +1069,41 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f]">
       {/* Section 1 - Contact Form */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-emerald-950 via-teal-900 to-cyan-900 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-          >
-            <g fill="none" fillRule="evenodd">
-              <g fill="#ffffff" fillOpacity="0.1">
-                <circle cx="30" cy="30" r="2" />
-              </g>
-            </g>
-          </svg>
-        </div>
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden">
+        {/* Enhanced visual effects with multiple layers - aligned with brand */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/15 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#ff2d2b]/15 to-transparent"></div>
+        {/* Animated floating elements */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        {/* Additional subtle shadows for depth */}
+        <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+        {/* Horizontal gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/5 to-transparent"></div>
 
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           {/* Header */}
           <div className="text-center mb-8 md:mb-12">
             <div className="inline-block mb-4 md:mb-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 border border-white/20">
-                <span className="text-emerald-200 text-xs md:text-sm font-medium">
+                <span className="text-[#fff3e1] text-xs md:text-sm font-medium">
                   Vamos conversar?
                 </span>
               </div>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#fff3e1] mb-4 md:mb-6 leading-tight">
               Conte-nos sobre seu{" "}
-              <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
                 projeto
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto px-4">
+            <p className="text-lg md:text-xl text-[#fff3e1]/80 max-w-3xl mx-auto px-4">
               Preencha o formulário abaixo e nossa equipe entrará em contato
               para entender melhor suas necessidades.
             </p>
@@ -1121,16 +1117,20 @@ function Contact() {
                   <div
                     className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm md:text-lg font-bold transition-all duration-300 ${
                       index <= currentStep
-                        ? "bg-emerald-500 text-white"
-                        : "bg-white/20 text-emerald-200"
+                        ? "bg-[#ff2d2b] text-white"
+                        : "bg-white/20 text-[#fff3e1]/70"
                     }`}
                   >
-                    {index < currentStep ? "✓" : step.icon}
+                    {index < currentStep ? (
+                      "✓"
+                    ) : (
+                      <span className="text-[#ff2d2b]">{step.icon}</span>
+                    )}
                   </div>
                   {index < steps.length - 1 && (
                     <div
                       className={`w-4 sm:w-8 md:w-16 h-1 mx-1 sm:mx-2 transition-all duration-300 ${
-                        index < currentStep ? "bg-emerald-500" : "bg-white/20"
+                        index < currentStep ? "bg-[#3b10ff]" : "bg-white/20"
                       }`}
                     />
                   )}
@@ -1138,7 +1138,7 @@ function Contact() {
               ))}
             </div>
             <div className="text-center">
-              <span className="text-emerald-200 text-xs md:text-sm font-medium">
+              <span className="text-[#fff3e1] text-xs md:text-sm font-medium">
                 Passo {currentStep + 1} de {steps.length}:{" "}
                 {steps[currentStep].title}
               </span>
@@ -1161,7 +1161,7 @@ function Contact() {
                 className={`w-full sm:w-auto px-4 md:px-6 py-3 rounded-xl font-semibold transition-all duration-300 text-sm md:text-base ${
                   currentStep === 0
                     ? "bg-white/10 text-white/50 cursor-not-allowed"
-                    : "bg-white/20 text-white hover:bg-white/30"
+                    : "bg-white/20 text-[#fff3e1] hover:bg-white/30"
                 }`}
               >
                 Anterior
@@ -1171,7 +1171,7 @@ function Contact() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="w-full sm:w-auto px-6 md:px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base"
+                  className="w-full sm:w-auto px-6 md:px-8 py-3 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] text-white rounded-xl font-semibold hover:from-[#3b10ff]/90 hover:to-[#4f46e5]/90 transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base"
                 >
                   Próximo
                 </button>
@@ -1183,7 +1183,7 @@ function Contact() {
                   className={`w-full sm:w-auto px-6 md:px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg text-sm md:text-base ${
                     isSubmitting
                       ? "bg-gray-500 text-white cursor-not-allowed"
-                      : "bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl"
+                      : "bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] text-white hover:from-[#3b10ff]/90 hover:to-[#4f46e5]/90 hover:shadow-xl"
                   }`}
                 >
                   {isSubmitting ? (
@@ -1200,18 +1200,18 @@ function Contact() {
           </form>
 
           {/* Feedback Messages */}
-          {submitStatus && (
+            {submitStatus && (
             <div className="mt-8 animate-fade-in">
               {submitStatus === "success" ? (
-                <div className="relative overflow-hidden bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-emerald-600/10 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-emerald-500/20">
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#3b10ff]/10 via-[#4f46e5]/10 to-[#3b10ff]/10 backdrop-blur-sm border border-[#3b10ff]/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-[#3b10ff]/20">
                   {/* Background decoration */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-400/10 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-teal-400/10 rounded-full blur-2xl"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#3b10ff]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#4f46e5]/10 rounded-full blur-2xl"></div>
                   
                   <div className="relative z-10 flex flex-col items-center text-center">
                     {/* Success icon with animation */}
                     <div className="relative mb-4">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 animate-pulse">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] rounded-full flex items-center justify-center shadow-lg shadow-[#3b10ff]/30 animate-pulse">
                         <svg
                           className="w-8 h-8 md:w-10 md:h-10 text-white"
                           fill="none"
@@ -1227,26 +1227,26 @@ function Contact() {
                         </svg>
                       </div>
                       {/* Ripple effect */}
-                      <div className="absolute inset-0 w-16 h-16 md:w-20 md:h-20 bg-emerald-400/30 rounded-full animate-ping"></div>
+                      <div className="absolute inset-0 w-16 h-16 md:w-20 md:h-20 bg-[#3b10ff]/30 rounded-full animate-ping"></div>
                     </div>
                     
-                    <h3 className="text-xl md:text-2xl font-bold text-emerald-100 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#fff3e1] mb-2">
                       Formulário enviado com sucesso!
                     </h3>
-                    <p className="text-emerald-200 text-sm md:text-base leading-relaxed max-w-md">
+                    <p className="text-[#fff3e1]/80 text-sm md:text-base leading-relaxed max-w-md">
                       Obrigada pelo seu interesse! Entraremos em contato em até 24 horas para discutir seu projeto.
                     </p>
                   </div>
                 </div>
               ) : (
-                <div className="relative overflow-hidden bg-gradient-to-br from-red-500/10 via-pink-500/10 to-red-600/10 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-red-500/20">
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#ff2d2b]/10 via-[#ef4444]/10 to-[#f87171]/10 backdrop-blur-sm border border-[#ff2d2b]/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-[#ff2d2b]/20">
                   {/* Background decoration */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-3xl"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-pink-400/10 rounded-full blur-2xl"></div>
                   
                   <div className="relative z-10 flex flex-col items-center text-center">
                     {/* Error icon */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/30 mb-4">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-full flex items-center justify-center shadow-lg shadow-[#ff2d2b]/30 mb-4">
                       <svg
                         className="w-8 h-8 md:w-10 md:h-10 text-white"
                         fill="none"
@@ -1262,16 +1262,16 @@ function Contact() {
                       </svg>
                     </div>
                     
-                    <h3 className="text-xl md:text-2xl font-bold text-red-100 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#fff3e1] mb-2">
                       Erro ao enviar formulário
                     </h3>
-                    <p className="text-red-200 text-sm md:text-base leading-relaxed max-w-md">
+                    <p className="text-[#fff3e1]/80 text-sm md:text-base leading-relaxed max-w-md">
                       Houve um problema ao enviar seu formulário. Tente novamente ou entre em contato diretamente.
                     </p>
                     
                     {/* Contact alternatives */}
-                    <div className="mt-4 p-3 bg-red-500/10 rounded-xl border border-red-400/20">
-                      <p className="text-red-300 text-xs">
+                    <div className="mt-4 p-3 bg-[#ff2d2b]/10 rounded-xl border border-[#ff2d2b]/20">
+                      <p className="text-[#fca5a5] text-xs">
                         📧 dellysouza@nivaresearch.com | 📱 WhatsApp: (81) 99999-9999
                       </p>
                     </div>
@@ -1284,10 +1284,10 @@ function Contact() {
       </section>
 
       {/* Section 2 - Footer */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-emerald-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-0 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-[#3b10ff] rounded-full blur-3xl animate-pulse"></div>
           <div
             className="absolute bottom-0 right-1/4 w-36 md:w-48 h-36 md:h-48 bg-teal-400 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "1s" }}
@@ -1303,7 +1303,7 @@ function Contact() {
                 className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#60a5fa] group-hover:text-[#93c5fd] transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1315,7 +1315,7 @@ function Contact() {
                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-emerald-100 group-hover:text-white transition-colors font-medium text-sm md:text-base">
+                <span className="text-[#fff3e1] group-hover:text-white transition-colors font-medium text-sm md:text-base">
                   Email
                 </span>
               </a>
@@ -1327,13 +1327,13 @@ function Contact() {
                 className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#60a5fa] group-hover:text-[#93c5fd] transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                 </svg>
-                <span className="text-emerald-100 group-hover:text-white transition-colors font-medium text-sm md:text-base">
+                <span className="text-[#fff3e1] group-hover:text-white transition-colors font-medium text-sm md:text-base">
                   WhatsApp
                 </span>
               </a>
@@ -1345,13 +1345,13 @@ function Contact() {
                 className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#60a5fa] group-hover:text-[#93c5fd] transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
-                <span className="text-emerald-100 group-hover:text-white transition-colors font-medium text-sm md:text-base">
+                <span className="text-[#fff3e1] group-hover:text-white transition-colors font-medium text-sm md:text-base">
                   Instagram
                 </span>
               </a>
@@ -1363,23 +1363,23 @@ function Contact() {
                 className="group flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#60a5fa] group-hover:text-[#93c5fd] transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
-                <span className="text-emerald-100 group-hover:text-white transition-colors font-medium text-sm md:text-base">
+                <span className="text-[#fff3e1] group-hover:text-white transition-colors font-medium text-sm md:text-base">
                   LinkedIn
                 </span>
               </a>
             </div>
 
             {/* Address and Hours */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/10 max-w-2xl mx-auto">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/10 max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-2 md:gap-3 mb-2 md:mb-3">
                 <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-emerald-300"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#60a5fa]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1397,21 +1397,21 @@ function Contact() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-emerald-100 font-medium text-sm md:text-base">
+                <span className="text-[#fff3e1] font-medium text-sm md:text-base">
                   Recife, PE
                 </span>
               </div>
-              <div className="text-emerald-200 text-xs md:text-sm leading-relaxed">
+              <div className="text-[#fff3e1]/80 text-xs md:text-sm leading-relaxed">
                 Rua Professor Othon Paraíso, 211, Apt 604, 52030-252
               </div>
-              <div className="text-emerald-200 text-xs md:text-sm mt-2">
+              <div className="text-[#fff3e1]/80 text-xs md:text-sm mt-2">
                 Segunda à Sexta: 08h às 18h
               </div>
             </div>
 
             {/* Copyright */}
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10">
-              <p className="text-emerald-300 text-xs md:text-sm">
+              <p className="text-[#fff3e1] text-xs md:text-sm">
                 © 2025 Niva Research. Transformando dados em insights.
               </p>
             </div>
