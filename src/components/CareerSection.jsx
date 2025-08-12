@@ -94,6 +94,19 @@ function CareerSection() {
           <div className="relative">
             {/* Compact presentation */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-[#3b10ff]/15 shadow-lg">
+              {/* Avatar */}
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <img 
+                    src="/delly-nova.png" 
+                    alt="Adrielly Souza - Fundadora da Niva Research" 
+                    className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  />
+                  {/* Subtle glow effect around avatar */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#3b10ff]/20 to-[#ff2d2b]/20 blur-xl -z-10"></div>
+                </div>
+              </div>
+              
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <div className="w-2 h-2 bg-[#3b10ff] rounded-full"></div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-800">

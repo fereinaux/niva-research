@@ -24,7 +24,7 @@ function HeroSection() {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="block bg-gradient-to-r from-[#fff3e1] via-[#fff3e1]/90 to-[#fff3e1]/80 bg-clip-text text-transparent animate-gradient">
               Tudo começa
             </span>

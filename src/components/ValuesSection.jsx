@@ -9,10 +9,10 @@ function ValuesSection() {
       icon: "🏛️",
       result: "10+ trabalhadores capacitados",
       gradient: "from-[#3b10ff] to-[#4f46e5]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#3b10ff]/10",
-      hoverBorderColor: "hover:border-[#3b10ff]/25",
-      hoverBg: "hover:bg-[#3b10ff]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#3b10ff]",
       lineGradient: "from-[#3b10ff] to-[#4f46e5]"
     },
@@ -23,10 +23,10 @@ function ValuesSection() {
       icon: "🌎",
       result: "Novo modelo comercial",
       gradient: "from-[#ff2d2b] to-[#ef4444]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#ff2d2b]/10",
-      hoverBorderColor: "hover:border-[#ff2d2b]/25",
-      hoverBg: "hover:bg-[#ff2d2b]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#ff2d2b]",
       lineGradient: "from-[#ff2d2b] to-[#ef4444]"
     },
@@ -37,10 +37,10 @@ function ValuesSection() {
       icon: "💼",
       result: "4 novos planos + ↗️ receita",
       gradient: "from-[#60a5fa] to-[#3b82f6]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#60a5fa]/10",
-      hoverBorderColor: "hover:border-[#60a5fa]/25",
-      hoverBg: "hover:bg-[#60a5fa]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#60a5fa]",
       lineGradient: "from-[#60a5fa] to-[#3b82f6]"
     },
@@ -51,10 +51,10 @@ function ValuesSection() {
       icon: "📱",
       result: "100k+ usuários VIP",
       gradient: "from-[#f59e0b] to-[#d97706]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#f59e0b]/10",
-      hoverBorderColor: "hover:border-[#f59e0b]/25",
-      hoverBg: "hover:bg-[#f59e0b]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#f59e0b]",
       lineGradient: "from-[#f59e0b] to-[#d97706]"
     },
@@ -65,10 +65,10 @@ function ValuesSection() {
       icon: "💳",
       result: "Redesenho + ↗️ receita crédito",
       gradient: "from-[#3b10ff] to-[#6366f1]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#3b10ff]/10",
-      hoverBorderColor: "hover:border-[#3b10ff]/25",
-      hoverBg: "hover:bg-[#3b10ff]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#3b10ff]",
       lineGradient: "from-[#3b10ff] to-[#6366f1]"
     },
@@ -79,10 +79,10 @@ function ValuesSection() {
       icon: "🚀",
       result: "Resultados mensuráveis",
       gradient: "from-[#ff2d2b] to-[#f87171]",
-      bgGradient: "from-[#fff3e1] to-[#fff3e1]/90",
-      borderColor: "border-[#ff2d2b]/10",
-      hoverBorderColor: "hover:border-[#ff2d2b]/25",
-      hoverBg: "hover:bg-[#ff2d2b]/8",
+      bgGradient: "from-white/20 to-white/10",
+      borderColor: "border-white/20",
+      hoverBorderColor: "hover:border-white/40",
+      hoverBg: "hover:bg-white/15",
       hoverTextColor: "group-hover:text-[#ff2d2b]",
       lineGradient: "from-[#ff2d2b] to-[#f87171]"
     }
@@ -90,16 +90,21 @@ function ValuesSection() {
 
   return (
     <section className="py-12 md:py-20 bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden">
-      {/* Subtle circular shadows for consistency with hero section */}
-      <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/30 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
-      <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/25 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
-      <div className="absolute top-1/4 right-32 w-36 h-36 bg-gradient-to-bl from-[#3b10ff]/28 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
-      <div className="absolute bottom-1/3 left-1/4 w-28 h-28 bg-gradient-to-tr from-[#ff2d2b]/25 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+      {/* Enhanced visual effects with multiple layers - same as HeroSection */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/15 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-[#ff2d2b]/15 to-transparent"></div>
       
-      {/* Additional subtle shadows */}
-      <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#60a5fa]/22 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-      <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/20 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+      {/* Animated floating elements - same as HeroSection */}
+      <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+      <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+      
+      {/* Additional subtle shadows for depth - same as HeroSection */}
+      <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+      <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+      
+      {/* Horizontal gradient overlay for sophistication - same as HeroSection */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/5 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Title */}
@@ -117,8 +122,8 @@ function ValuesSection() {
               key={index}
               className={`group relative overflow-hidden rounded-2xl transition-all duration-700 hover:scale-[1.02] hover:-translate-y-1`}
             >
-              {/* Main Card Container */}
-              <div className={`relative bg-gradient-to-br ${impact.bgGradient} backdrop-blur-sm rounded-2xl p-6 md:p-7 border ${impact.borderColor} transition-all duration-500 ${impact.hoverBorderColor} ${impact.hoverBg}`}>
+              {/* Main Card Container with Glass Effect */}
+              <div className={`relative bg-gradient-to-br ${impact.bgGradient} backdrop-blur-xl rounded-2xl p-6 md:p-7 border ${impact.borderColor} transition-all duration-500 ${impact.hoverBorderColor} ${impact.hoverBg} shadow-xl shadow-black/20`}>
                 
                 {/* Top Accent Line */}
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${impact.gradient} rounded-t-2xl`}></div>
@@ -140,12 +145,12 @@ function ValuesSection() {
                   </div>
 
                   {/* Title with Enhanced Typography */}
-                  <h3 className={`text-lg md:text-xl font-bold text-gray-900 leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 ${impact.hoverTextColor}`}>
+                  <h3 className={`text-lg md:text-xl font-bold text-white leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 ${impact.hoverTextColor}`}>
                     {impact.title}
                   </h3>
 
                   {/* Description with Better Spacing */}
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-gray-200 text-sm md:text-base leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                     {impact.description}
                   </p>
 
