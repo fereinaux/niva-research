@@ -13,7 +13,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#3b10ff]",
+      hoverTextColor: "group-hover:text-[#60a5fa]",
       lineGradient: "from-[#3b10ff] to-[#4f46e5]"
     },
     {
@@ -27,7 +27,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#ff2d2b]",
+      hoverTextColor: "group-hover:text-[#f87171]",
       lineGradient: "from-[#ff2d2b] to-[#ef4444]"
     },
     {
@@ -41,7 +41,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#60a5fa]",
+      hoverTextColor: "group-hover:text-[#93c5fd]",
       lineGradient: "from-[#60a5fa] to-[#3b82f6]"
     },
     {
@@ -55,7 +55,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#f59e0b]",
+      hoverTextColor: "group-hover:text-[#fbbf24]",
       lineGradient: "from-[#f59e0b] to-[#d97706]"
     },
     {
@@ -69,7 +69,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#3b10ff]",
+      hoverTextColor: "group-hover:text-[#93c5fd]",
       lineGradient: "from-[#3b10ff] to-[#6366f1]"
     },
     {
@@ -83,7 +83,7 @@ function ValuesSection() {
       borderColor: "border-white/20",
       hoverBorderColor: "hover:border-white/40",
       hoverBg: "hover:bg-white/15",
-      hoverTextColor: "group-hover:text-[#ff2d2b]",
+      hoverTextColor: "group-hover:text-[#f87171]",
       lineGradient: "from-[#ff2d2b] to-[#f87171]"
     }
   ];
@@ -125,8 +125,10 @@ function ValuesSection() {
               {/* Main Card Container with Glass Effect */}
               <div className={`relative bg-gradient-to-br ${impact.bgGradient} backdrop-blur-xl rounded-2xl p-6 md:p-7 border ${impact.borderColor} transition-all duration-500 ${impact.hoverBorderColor} ${impact.hoverBg} shadow-xl shadow-black/20`}>
                 
-                {/* Top Accent Line */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${impact.gradient} rounded-t-2xl`}></div>
+                 {/* Top Accent Line */}
+                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${impact.gradient} rounded-t-2xl`}></div>
+                 {/* Title subtle glow to improve legibility on dark bg during hover */}
+                 <div className="pointer-events-none absolute inset-x-0 -top-px h-12 bg-gradient-to-b from-black/0 via-black/0 to-black/0 group-hover:via-black/10 transition-colors duration-500 rounded-t-2xl"></div>
                 
                 {/* Background Pattern */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${impact.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
@@ -145,7 +147,7 @@ function ValuesSection() {
                   </div>
 
                   {/* Title with Enhanced Typography */}
-                  <h3 className={`text-lg md:text-xl font-bold text-white leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 group-hover:text-red-500`}>
+                  <h3 className={`text-lg md:text-xl font-bold text-white leading-tight group-hover:text-xl md:group-hover:text-2xl transition-all duration-500 ${impact.hoverTextColor}`}>
                     {impact.title}
                   </h3>
 

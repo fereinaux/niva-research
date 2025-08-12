@@ -292,7 +292,7 @@ function AboutNiva() {
                   {/* Image Section */}
                   <div className="text-center mb-6 md:mb-8">
                     <div className="relative inline-block">
-                      <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg shadow-[#ff2d2b]/25 relative overflow-hidden">
+                      <div className="w-36 h-36 md:w-48 md:h-48 bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg shadow-[#ff2d2b]/25 relative overflow-hidden">
                         <img 
                           src="/niva-photo.png" 
                           alt="Nivaldo - Pai e incentivador" 
@@ -300,8 +300,8 @@ function AboutNiva() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-[#ff2d2b]/20 via-[#ef4444]/20 to-[#f87171]/20"></div>
                       </div>
-                      <div className="absolute bottom-2 right-2 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-full flex items-center justify-center shadow-lg">
-                        <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="absolute bottom-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                       </div>
@@ -491,8 +491,11 @@ function AboutNiva() {
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
         
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#fff3e1] mb-4 md:mb-6">
-            Pronto para começar sua jornada conosco?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#fff3e1] mb-6 md:mb-8">
+            Pronto para começar sua{" "}
+            <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
+              jornada conosco?
+            </span>
           </h2>
           <p className="text-base md:text-xl text-slate-200 mb-6 md:mb-8">
             Vamos transformar suas dúvidas em insights valiosos
