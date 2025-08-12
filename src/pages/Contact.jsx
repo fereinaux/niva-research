@@ -1091,6 +1091,47 @@ function Contact() {
             </div>
           </div>
 
+          {/* Feedback Messages (top) */}
+          {submitStatus && (
+            <div className="mb-6 md:mb-8 animate-fade-in">
+              {submitStatus === "success" ? (
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#3b10ff]/10 via-[#4f46e5]/10 to-[#3b10ff]/10 backdrop-blur-sm border border-[#3b10ff]/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-[#3b10ff]/20">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#3b10ff]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#4f46e5]/10 rounded-full blur-2xl"></div>
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className="relative mb-4">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] rounded-full flex items-center justify-center shadow-lg shadow-[#3b10ff]/30 animate-pulse">
+                        <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="absolute inset-0 w-16 h-16 md:w-20 md:h-20 bg-[#3b10ff]/30 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#fff3e1] mb-2">Formulário enviado com sucesso!</h3>
+                    <p className="text-[#fff3e1]/80 text-sm md:text-base leading-relaxed max-w-md">Obrigada pelo seu interesse! Entraremos em contato em até 24 horas para discutir seu projeto.</p>
+                  </div>
+                </div>
+              ) : (
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#ff2d2b]/10 via-[#ef4444]/10 to-[#f87171]/10 backdrop-blur-sm border border-[#ff2d2b]/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-[#ff2d2b]/20">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff2d2b]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#ef4444]/10 rounded-full blur-2xl"></div>
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-full flex items-center justify-center shadow-lg shadow-[#ff2d2b]/30 mb-4">
+                      <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#fff3e1] mb-2">Erro ao enviar formulário</h3>
+                    <p className="text-[#fff3e1]/80 text-sm md:text-base leading-relaxed max-w-md">Houve um problema ao enviar seu formulário. Tente novamente ou entre em contato diretamente.</p>
+                    <div className="mt-4 p-3 bg-[#ff2d2b]/10 rounded-xl border border-[#ff2d2b]/20">
+                      <p className="text-[#fca5a5] text-xs">📧 dellysouza@nivaresearch.com | 📱 WhatsApp: (81) 99999-9999</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Form */}
           <form
             onSubmit={handleSubmit}
@@ -1145,8 +1186,8 @@ function Contact() {
             </div>
           </form>
 
-          {/* Feedback Messages */}
-            {submitStatus && (
+          {/* Feedback Messages (bottom) - removed in favor of top placement */}
+            {false && submitStatus && (
             <div className="mt-8 animate-fade-in">
               {submitStatus === "success" ? (
                 <div className="relative overflow-hidden bg-gradient-to-br from-[#3b10ff]/10 via-[#4f46e5]/10 to-[#3b10ff]/10 backdrop-blur-sm border border-[#3b10ff]/30 rounded-2xl p-6 md:p-8 shadow-2xl shadow-[#3b10ff]/20">
