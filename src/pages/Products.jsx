@@ -5,52 +5,52 @@ import { Link } from 'react-router-dom';
 function JourneyStep({ number, title, description, icon, color }) {
   const colorSchemes = {
     emerald: {
-      primary: 'from-emerald-500 to-teal-500',
-      bg: 'bg-emerald-50',
-      border: 'border-emerald-200',
-      text: 'text-emerald-700'
+      primary: 'from-[#3b10ff] to-[#4f46e5]',
+      bg: 'from-[#f0f4ff] to-[#e0e7ff]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]'
     },
     teal: {
-      primary: 'from-teal-500 to-cyan-500',
-      bg: 'bg-teal-50',
-      border: 'border-teal-200',
-      text: 'text-teal-700'
+      primary: 'from-[#ff2d2b] to-[#ef4444]',
+      bg: 'from-[#fef2f2] to-[#fee2e2]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1d1d]'
     },
     cyan: {
-      primary: 'from-cyan-500 to-blue-500',
-      bg: 'bg-cyan-50',
-      border: 'border-cyan-200',
-      text: 'text-cyan-700'
+      primary: 'from-[#60a5fa] to-[#3b82f6]',
+      bg: 'from-[#eff6ff] to-[#dbeafe]',
+      border: 'border-[#60a5fa]/30',
+      text: 'text-[#1e3a8a]'
     },
     blue: {
-      primary: 'from-blue-500 to-indigo-500',
-      bg: 'bg-blue-50',
-      border: 'border-blue-200',
-      text: 'text-blue-700'
+      primary: 'from-[#3b10ff] to-[#6366f1]',
+      bg: 'from-[#f5f3ff] to-[#ede9fe]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]'
     },
     indigo: {
-      primary: 'from-indigo-500 to-purple-500',
-      bg: 'bg-indigo-50',
-      border: 'border-indigo-200',
-      text: 'text-indigo-700'
+      primary: 'from-[#ff2d2b] to-[#f87171]',
+      bg: 'from-[#fef2f2] to-[#fecaca]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1d1d]'
     },
     purple: {
-      primary: 'from-purple-500 to-pink-500',
-      bg: 'bg-purple-50',
-      border: 'border-purple-200',
-      text: 'text-purple-700'
+      primary: 'from-[#3b10ff] to-[#8b5cf6]',
+      bg: 'from-[#faf5ff] to-[#f3e8ff]',
+      border: 'border-[#3b10ff]/30',
+      text: 'text-[#1e1b4b]'
     },
     pink: {
-      primary: 'from-pink-500 to-rose-500',
-      bg: 'bg-pink-50',
-      border: 'border-pink-200',
-      text: 'text-pink-700'
+      primary: 'from-[#ff2d2b] to-[#ec4899]',
+      bg: 'from-[#fdf2f8] to-[#fce7f3]',
+      border: 'border-[#ff2d2b]/30',
+      text: 'text-[#7f1b1d]'
     },
     rose: {
-      primary: 'from-rose-500 to-red-500',
-      bg: 'bg-rose-50',
-      border: 'border-rose-200',
-      text: 'text-rose-700'
+      primary: 'from-[#60a5fa] to-[#f59e0b]',
+      bg: 'from-[#fffbeb] to-[#fef3c7]',
+      border: 'border-[#60a5fa]/30',
+      text: 'text-[#92400e]'
     }
   };
 
@@ -59,7 +59,7 @@ function JourneyStep({ number, title, description, icon, color }) {
   return (
     <div className="group h-full">
       {/* Main Card - Fixed Height */}
-      <div className={`${scheme.bg} rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 border ${scheme.border} shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col`}>
+      <div className={`bg-gradient-to-br ${scheme.bg} rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 border ${scheme.border} shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col`}>
         {/* Header */}
         <div className="flex items-center justify-between mb-4 md:mb-6">
           <div className={`w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${scheme.primary} rounded-xl md:rounded-2xl flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -81,8 +81,8 @@ function JourneyStep({ number, title, description, icon, color }) {
         </div>
 
         {/* Footer */}
-        <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-slate-200/50">
-          <div className={`w-full h-2 bg-gradient-to-r ${scheme.primary} rounded-full group-hover:scale-x-110 transition-transform duration-500`}></div>
+        <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-slate-300/50">
+          <div className={`w-full h-2 bg-gradient-to-r ${scheme.primary} rounded-full group-hover:scale-x-110 transition-transform duration-300`}></div>
         </div>
       </div>
     </div>
@@ -373,19 +373,19 @@ function Products() {
       </section>
 
       {/* Section 2 - Jornada de Pesquisa */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-[#fff3e1]">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 relative z-10">
             <div className="inline-block mb-4 md:mb-6">
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full px-4 md:px-6 py-2 shadow-lg">
-                <span className="text-white text-xs md:text-sm font-medium">Nosso Processo</span>
+              <div className="bg-[#60a5fa]/10 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 border border-[#60a5fa]/20">
+                <span className="text-[#60a5fa] text-xs md:text-sm font-medium">Nosso processo</span>
               </div>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 md:mb-6 leading-tight">
               Não sabe como é o processo de uma{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
                 pesquisa? Entenda agora!
               </span>
             </h2>
@@ -477,15 +477,15 @@ function Products() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center mt-12 md:mt-16">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-emerald-100">
+          <div className="text-center mt-12 md:mt-16 relative z-10">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-slate-200">
               <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">
                 Pronto para começar sua jornada?
               </h3>
               <p className="text-slate-600 mb-4 md:mb-6 max-w-2xl mx-auto text-sm md:text-base">
                 Cada passo é cuidadosamente planejado para garantir resultados de qualidade e insights valiosos para sua organização.
               </p>
-              <Link to="/contato" className="inline-flex items-center px-4 md:px-6 lg:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base">
+              <Link to="/contato" className="inline-flex items-center px-4 md:px-6 lg:px-8 py-3 md:py-4 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] text-white rounded-full font-semibold hover:from-[#3b10ff]/90 hover:to-[#4f46e5]/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base">
                 <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
