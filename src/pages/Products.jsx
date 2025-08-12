@@ -385,9 +385,10 @@ function Products() {
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 md:mb-6 leading-tight">
               Não sabe como é o processo de uma{" "}
-              <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
-                pesquisa? Entenda agora!
+              <span className="bg-gradient-to-r from-[#3b10ff] via-[#4f46e5] to-[#6366f1] bg-clip-text text-transparent">
+                pesquisa?
               </span>
+              {" "}Entenda agora!
             </h2>
             
             <p className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto px-4">
@@ -497,19 +498,19 @@ function Products() {
       </section>
 
       {/* Section 3 - Produtos Extras */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-emerald-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-[#fefaf0]">
         <div className="max-w-6xl mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-block mb-4 md:mb-6">
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full px-4 md:px-6 py-2 shadow-lg">
-                <span className="text-white text-xs md:text-sm font-medium">Serviços Complementares</span>
+              <div className="bg-[#3b10ff]/10 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 border border-[#3b10ff]/20">
+                <span className="text-[#3b10ff] text-xs md:text-sm font-medium">Serviços complementares</span>
               </div>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 md:mb-6 leading-tight">
               Serviços que{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#3b10ff] via-[#4f46e5] to-[#6366f1] bg-clip-text text-transparent">
                 potencializam seus resultados
               </span>
             </h2>
@@ -518,15 +519,15 @@ function Products() {
           {/* Extra Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Workshop */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-[#3b10ff]/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#3b10ff] to-[#4f46e5] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                   <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-emerald-700 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-[#3b10ff] transition-colors duration-300">
                     Workshops para sensibilização
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
@@ -537,15 +538,15 @@ function Products() {
             </div>
 
             {/* Relatórios */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-[#ff2d2b]/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                   <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-teal-700 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-[#ff2d2b] transition-colors duration-300">
                     Criação de relatórios visuais e executivos
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
@@ -556,15 +557,15 @@ function Products() {
             </div>
 
             {/* Formação */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-[#60a5fa]/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                   <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-cyan-700 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-[#60a5fa] transition-colors duration-300">
                     Formação para equipes em cultura de pesquisa
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
@@ -575,15 +576,15 @@ function Products() {
             </div>
 
             {/* Capacitação */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-emerald-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-[#3b10ff]/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#3b10ff] to-[#6366f1] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                   <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3 group-hover:text-[#3b10ff] transition-colors duration-300">
                     Capacitação técnica para times de pesquisa
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-sm md:text-lg">
