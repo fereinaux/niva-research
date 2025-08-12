@@ -45,7 +45,7 @@ function ServicesSection() {
     {
       number: "🏆",
       title: "Reconhecimento no Mercado",
-      description: "Reconhecimentos no mercado, com uma trajetória de mérito salarial e promoção de cargo",
+      description: "Uma trajetória de gratos reconhecimentos, prêmios, mérito salarial e promoção de cargo",
       icon: "⭐",
       gradient: "from-[#8b5cf6] to-[#a78bfa]",
       bgGradient: "from-[#faf5ff] to-[#f3e8ff]",
