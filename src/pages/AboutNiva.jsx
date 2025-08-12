@@ -290,7 +290,7 @@ function AboutNiva() {
 
             {/* Visual Element */}
             <div className="relative">
-              <div className="bg-[#fff3e1]/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 relative overflow-hidden shadow-xl shadow-[#ff2d2b]/10 border border-[#fff3e1]/40">
+              <div className="bg-[#fff3e1]/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 relative overflow-hidden shadow-xl shadow-[#d4a574]/30 border border-[#fff3e1]/40">
                 {/* Background Pattern */}
                 <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#ff2d2b]/20 to-[#ef4444]/20 rounded-full -translate-y-16 md:-translate-y-20 translate-x-16 md:translate-x-20 opacity-20 animate-pulse"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-[#60a5fa]/20 to-[#3b10ff]/20 rounded-full translate-y-12 md:translate-y-16 -translate-x-12 md:-translate-x-16 opacity-20 animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -371,25 +371,44 @@ function AboutNiva() {
       </section>
 
       {/* Values Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#fff3e1]/20 via-[#fff3e1]/15 to-[#fff3e1]/10 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/2 via-transparent to-[#ff2d2b]/2"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#60a5fa]/1.5 via-transparent to-[#f59e0b]/1.5"></div>
+        
+        {/* Animated floating elements */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/4 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/4 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+        
+        {/* Additional subtle shadows for depth */}
+        <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/2.5 to-transparent rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/2 to-transparent rounded-full blur-2xl animate-pulse" style={{animationDelay: '2.5s'}}></div>
+        
+        {/* Horizontal gradient overlay for sophistication */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/3 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
-              Agora que você já nos conhece, entenda nossos valores:
+              Agora que você já nos conhece, entenda nossos{' '}
+              <span className="bg-gradient-to-r from-[#3b10ff] to-[#60a5fa] bg-clip-text text-transparent">
+                valores
+              </span>:
             </h2>
           </div>
 
           <div className="space-y-6 md:space-y-8">
             {/* Value 1 */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl shadow-[#d4a574]/25 hover:shadow-2xl hover:shadow-[#d4a574]/35 transition-all duration-300 border border-[#fff3e1]/40 hover:scale-105 group">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <span className="text-lg md:text-2xl font-bold text-white">1</span>
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Cooperação e empatia</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4 group-hover:text-[#3b10ff] transition-colors duration-300">Cooperação e empatia</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     As pessoas importam muito para nós e elas são o começo, meio e fim de quem somos e o que fazemos.
                   </p>
@@ -398,15 +417,15 @@ function AboutNiva() {
             </div>
 
             {/* Value 2 */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl shadow-[#d4a574]/25 hover:shadow-2xl hover:shadow-[#d4a574]/35 transition-all duration-300 border border-[#fff3e1]/40 hover:scale-105 group">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <span className="text-lg md:text-2xl font-bold text-white">2</span>
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Integridade intelectual e metodológica</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4 group-hover:text-[#ff2d2b] transition-colors duration-300">Integridade intelectual e metodológica</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     Com anos de experiência no que fazemos, usamos a nossa expertise para escolher métodos assertivos e alinhados com a necessidade.
                   </p>
@@ -415,15 +434,15 @@ function AboutNiva() {
             </div>
 
             {/* Value 3 */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl shadow-[#d4a574]/25 hover:shadow-2xl hover:shadow-[#d4a574]/35 transition-all duration-300 border border-[#fff3e1]/40 hover:scale-105 group">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <span className="text-lg md:text-2xl font-bold text-white">3</span>
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Compromisso e responsabilidade</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4 group-hover:text-[#60a5fa] transition-colors duration-300">Compromisso e responsabilidade</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     Não abrimos mão do nosso compromisso com quem nos contrata. Somos profissionais e prezamos por isso.
                   </p>
@@ -432,15 +451,15 @@ function AboutNiva() {
             </div>
 
             {/* Value 4 */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl shadow-[#d4a574]/25 hover:shadow-2xl hover:shadow-[#d4a574]/35 transition-all duration-300 border border-[#fff3e1]/40 hover:scale-105 group">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <span className="text-lg md:text-2xl font-bold text-white">4</span>
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Propósito com impacto</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4 group-hover:text-[#f59e0b] transition-colors duration-300">Propósito com impacto</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     Acreditamos que os nossos pilares são realmente valiosos e entregam resultados palpáveis para os envolvidos.
                   </p>
@@ -449,15 +468,15 @@ function AboutNiva() {
             </div>
 
             {/* Value 5 */}
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl shadow-[#d4a574]/25 hover:shadow-2xl hover:shadow-[#d4a574]/35 transition-all duration-300 border border-[#fff3e1]/40 hover:scale-105 group">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#ff2d2b] to-[#ef4444] rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <span className="text-lg md:text-2xl font-bold text-white">5</span>
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4">Legado e aprendizado contínuo</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-3 md:mb-4 group-hover:text-[#8b5cf6] transition-colors duration-300">Legado e aprendizado contínuo</h3>
                   <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                     A nossa trajetória nos conduziu até aqui e a nossa busca por aprendizados será o que nos levará adiante.
                   </p>
@@ -469,15 +488,23 @@ function AboutNiva() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/8 via-transparent to-[#ff2d2b]/8"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#60a5fa]/6 via-transparent to-[#f59e0b]/6"></div>
+        
+        {/* Subtle floating elements */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#fff3e1] mb-4 md:mb-6">
             Pronto para começar sua jornada conosco?
           </h2>
-          <p className="text-base md:text-xl text-emerald-100 mb-6 md:mb-8">
+          <p className="text-base md:text-xl text-slate-200 mb-6 md:mb-8">
             Vamos transformar suas dúvidas em insights valiosos
           </p>
-          <Link to="/contato" className="inline-flex items-center px-5 md:px-6 lg:px-8 py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 hover:scale-105">
+          <Link to="/contato" className="inline-flex items-center px-5 md:px-6 lg:px-8 py-3 md:py-4 bg-gradient-to-r from-[#3b10ff] to-[#6366f1] text-white rounded-full font-semibold hover:from-[#3b10ff]/90 hover:to-[#6366f1]/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-[#3b10ff]/25 hover:shadow-xl hover:shadow-[#3b10ff]/35">
             <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
