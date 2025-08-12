@@ -598,51 +598,61 @@ function Products() {
       </section>
 
       {/* Section 4 - Chamada Final */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-emerald-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-36 md:w-48 h-36 md:h-48 bg-teal-400 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        </div>
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#37322c] via-[#2a2a2a] to-[#1f1f1f] relative overflow-hidden">
+        {/* Enhanced visual effects with multiple layers - same as HeroSection */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/15 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#ff2d2b]/15 to-transparent"></div>
+        
+        {/* Animated floating elements - same as HeroSection */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-br from-[#3b10ff]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-tl from-[#ff2d2b]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute top-1/2 left-32 w-32 h-32 bg-gradient-to-br from-[#60a5fa]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+        
+        {/* Additional subtle shadows for depth */}
+        <div className="absolute top-40 right-1/3 w-24 h-24 bg-gradient-to-br from-[#f59e0b]/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute bottom-40 left-1/3 w-20 h-20 bg-gradient-to-tl from-[#3b10ff]/8 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2.5s" }}></div>
+        
+        {/* Horizontal gradient overlay for sophistication */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fff3e1]/5 to-transparent"></div>
         
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="text-center">
             {/* Badge */}
             <div className="inline-block mb-6 md:mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 border border-white/20">
-                <span className="text-emerald-200 text-xs md:text-sm font-medium">Vamos conversar?</span>
+                <span className="text-[#fff3e1] text-xs md:text-sm font-medium">Vamos conversar?</span>
               </div>
             </div>
             
             {/* Main Title */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#fff3e1] mb-6 md:mb-8 leading-tight">
               Pronto para transformar{" "}
-              <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#ff2d2b] via-[#ef4444] to-[#f87171] bg-clip-text text-transparent">
                 dados em insights?
               </span>
             </h2>
             
             {/* Description */}
-            <p className="text-lg md:text-xl lg:text-2xl text-emerald-100 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg md:text-xl lg:text-2xl text-[#fff3e1]/80 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
               Nossa equipe está pronta para entender suas necessidades e criar soluções personalizadas que gerem resultados reais para sua organização.
             </p>
             
             {/* CTA Button */}
             <div className="flex justify-center">
-              <Link to="/contato" className="group relative inline-flex items-center justify-center px-4 md:px-6 lg:px-8 py-3 md:py-4 text-sm md:text-base lg:text-lg font-semibold text-emerald-600 bg-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25">
+              <Link to="/contato" className="group relative inline-flex items-center justify-center px-4 md:px-6 lg:px-8 py-3 md:py-4 text-sm md:text-base lg:text-lg font-semibold text-[#3b10ff] bg-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#3b10ff]/25">
                 <span className="relative z-10 flex items-center">
                   <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                   Agendar uma conversa
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#f0f4ff] to-[#e0e7ff] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </div>
             
             {/* Additional Info */}
             <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
-              <p className="text-emerald-200 text-base md:text-lg">
+              <p className="text-[#fff3e1]/80 text-base md:text-lg">
                 Resposta em até 24 horas
               </p>
             </div>
