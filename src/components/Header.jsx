@@ -90,6 +90,21 @@ function Header() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/10 to-[#3b10ff]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
 
+            {/* <Link 
+              to="/landing-pages" 
+              className={`relative px-4 md:px-6 py-2.5 md:py-3 rounded-full font-semibold text-base md:text-lg transition-all duration-300 group ${
+                isActive('/landing-pages') 
+                  ? 'text-[#3b10ff] bg-gradient-to-br from-[#fff3e1] to-[#fff3e1]/90 shadow-lg shadow-[#3b10ff]/25 backdrop-blur-sm' 
+                  : 'text-[#282828] hover:text-[#3b10ff] hover:bg-gradient-to-br hover:from-[#fff3e1]/80 hover:to-[#fff3e1]/60 hover:shadow-md hover:shadow-[#3b10ff]/15'
+              }`}
+            >
+              <span className="relative z-10">Landing Pages</span>
+              {isActive('/landing-pages') && (
+                <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/15 to-[#3b10ff]/5 rounded-full animate-pulse"></div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#3b10ff]/10 to-[#3b10ff]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Link> */}
+
             <Link 
               to="/contato" 
               className={`relative px-4 md:px-6 py-2.5 md:py-3 rounded-full font-semibold text-base md:text-lg transition-all duration-300 group ${
@@ -221,6 +236,21 @@ function Header() {
                   Produtos
                 </Link>
                 
+                {/* <Link 
+                  to="/landing-pages" 
+                  className={`flex items-center px-4 py-3 rounded-xl font-semibold text-base transition-all duration-300 group ${
+                    isActive('/landing-pages') 
+                      ? 'text-[#3b10ff] bg-[#fff3e1] shadow-md border border-[#3b10ff]/20' 
+                      : 'text-[#282828] hover:text-[#3b10ff] hover:bg-[#fff3e1]/80'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  Landing Pages
+                </Link>
+                 */}
                 <Link 
                   to="/contato" 
                   className={`flex items-center px-4 py-3 rounded-xl font-semibold text-base transition-all duration-300 group ${
