@@ -1,56 +1,59 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import ValuesSection from './components/ValuesSection';
-import CareerSection from './components/CareerSection';
-import RecommendationsSection from './components/RecommendationsSection';
-import CallToActionSection from './components/CallToActionSection';
-import AboutNiva from './pages/AboutNiva';
-import Products from './pages/Products';
-import Contact from './pages/Contact';
-import LandingPagePricing from './pages/LandingPagePricing';
-
-function HomePage() {
-  return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <ServicesSection />
-      <ValuesSection />
-      <CareerSection />
-      <RecommendationsSection />
-      <CallToActionSection />
-    </div>
-  );
-}
-
-// Component to handle scroll to top on route change
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen">
-        <ScrollToTop />
         <Header />
-        <div className="pt-20"> {/* Add padding-top to account for fixed header */}
+        <main className="pt-20">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/sobre" element={<AboutNiva />} />
-            <Route path="/produtos" element={<Products />} />
-            <Route path="/contato" element={<Contact />} />
-            <Route path="/landing-pages" element={<LandingPagePricing />} />
+            <Route path="/" element={
+              <div>
+                <section className="min-h-screen bg-[#F5F5DC] flex items-center justify-center pt-20">
+                  <div className="text-center">
+                    <h1 className="text-6xl font-bold text-gray-800 mb-6">Seção 1</h1>
+                    <p className="text-xl text-gray-600">Conteúdo da primeira seção</p>
+                  </div>
+                </section>
+                
+                <section className="min-h-screen bg-white flex items-center justify-center">
+                  <div className="text-center">
+                    <h2 className="text-5xl font-bold text-gray-800 mb-6">Seção 2</h2>
+                    <p className="text-xl text-gray-600">Conteúdo da segunda seção</p>
+                  </div>
+                </section>
+                
+                <section className="min-h-screen bg-gray-50 flex items-center justify-center">
+                  <div className="text-center">
+                    <h2 className="text-5xl font-bold text-gray-800 mb-6">Seção 3</h2>
+                    <p className="text-xl text-gray-600">Conteúdo da terceira seção</p>
+                  </div>
+                </section>
+                
+                <section className="min-h-screen bg-white flex items-center justify-center">
+                  <div className="text-center">
+                    <h2 className="text-5xl font-bold text-gray-800 mb-6">Seção 4</h2>
+                    <p className="text-xl text-gray-600">Conteúdo da quarta seção</p>
+                  </div>
+                </section>
+                
+                <section className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <h2 className="text-5xl font-bold text-gray-800 mb-6">Seção 5</h2>
+                    <p className="text-xl text-gray-600">Conteúdo da quinta seção</p>
+                  </div>
+                </section>
+              </div>
+            } />
+            <Route path="/sobre" element={<div className="p-8 text-center">Página Sobre nós</div>} />
+            <Route path="/servicos" element={<div className="p-8 text-center">Página Serviços</div>} />
+            <Route path="/portfolio" element={<div className="p-8 text-center">Página Portfólio</div>} />
+            <Route path="/blog" element={<div className="p-8 text-center">Página Blog</div>} />
+            <Route path="/contato" element={<div className="p-8 text-center">Página Contato</div>} />
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   );
