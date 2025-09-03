@@ -2,7 +2,7 @@ import React from 'react';
 
 function BigNumbers() {
   return (
-    <section id="big-numbers" className="min-h-screen bg-gradient-to-br from-[#FFF3E1] via-white to-[#FFF3E1] flex items-center justify-center relative overflow-hidden pb-40">
+    <section id="big-numbers" className="min-h-screen bg-gradient-to-br from-[#FFF3E1] via-white to-[#FFF3E1] flex items-center justify-center relative overflow-hidden pb-24">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#FF6339] rounded-full blur-3xl animate-float"></div>

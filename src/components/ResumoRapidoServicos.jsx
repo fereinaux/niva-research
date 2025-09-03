@@ -78,7 +78,7 @@ function ResumoRapidoServicos() {
           </div>
         </div>
         
-        <div className="mt-16 mb-16 animate-fade-in-up animate-delay-800">
+        <div className="mt-16 mb-24 animate-fade-in-up animate-delay-800">
           <p className="text-lg text-[#282828]/70 mb-8">
             Pronto para transformar dados em <span className="text-[#1595FF] font-semibold">vantagem competitiva</span>?
           </p>
