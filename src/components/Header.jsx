@@ -25,8 +25,8 @@ function Header() {
                 onClick={() => handleSectionClick('inicio')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'inicio' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Início
@@ -36,8 +36,8 @@ function Header() {
                 onClick={() => handleSectionClick('sobre')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'sobre' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Sobre
@@ -47,8 +47,8 @@ function Header() {
                 onClick={() => handleSectionClick('servicos')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'servicos' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Serviços
@@ -58,8 +58,8 @@ function Header() {
                 onClick={() => handleSectionClick('portfolio')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'portfolio' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Portfólio
@@ -69,8 +69,8 @@ function Header() {
                 onClick={() => handleSectionClick('blog')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'blog' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Blog
@@ -80,12 +80,15 @@ function Header() {
                 onClick={() => handleSectionClick('contato')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === 'contato' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-[#1595FF] text-white' 
+                    : 'text-[#282828] hover:text-[#1595FF]'
                 }`}
               >
                 Contato
               </a>
+              <button className="ml-4 px-6 py-2 bg-[#FF6339] text-white text-sm font-medium rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Dê o primeiro passo
+              </button>
             </div>
           </nav>
         </div>

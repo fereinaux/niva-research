@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#FFF3E1]">
       <Header />
       <main>
         <HeroSection />
