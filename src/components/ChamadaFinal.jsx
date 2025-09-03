@@ -13,6 +13,7 @@ function ChamadaFinal() {
       <div className="max-w-6xl mx-auto text-center px-4 relative z-10">
         {/* Conteúdo será adicionado posteriormente */}
       </div>
+      <div className="mb-16"></div>
     </section>
   );
 }
