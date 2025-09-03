@@ -36,7 +36,7 @@ function Depoimentos() {
         <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#1595FF] rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
       </div>
       
-      <div className="max-w-6xl mx-auto text-center px-4 relative z-10">
+      <div className="max-w-7xl mx-auto text-center px-2 sm:px-4 md:px-6 lg:px-8 relative z-10 w-full">
         <div className="mb-8 animate-fade-in-up">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#1595FF] to-[#0D7AE8] rounded-full shadow-lg mb-6">
             <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,18 +45,18 @@ function Depoimentos() {
           </div>
         </div>
         
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#282828] animate-fade-in-up animate-delay-200">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-[#282828] animate-fade-in-up animate-delay-200">
           <span className="block">Veja o que dizem sobre</span>
           <span className="block text-[#1595FF]">o nosso trabalho</span>
         </h2>
         
-        <p className="text-xl md:text-2xl text-[#282828]/80 mb-16 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
+        <p className="text-lg sm:text-xl md:text-2xl text-[#282828]/80 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
           Recomendações reais de pessoas que já <span className="text-[#FF6339] font-semibold">experimentaram</span> o nosso jeito de trabalhar.
         </p>
         
         {/* Carrossel de depoimentos - 10 depoimentos */}
         <div className="animate-fade-in-up animate-delay-400">
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden w-full max-w-5xl mx-auto px-2 sm:px-4 md:px-6">
             <div className="flex transition-transform duration-500 ease-in-out" id="depoimentos-carousel">
               <DepoimentosCards />
             </div>
@@ -98,7 +98,7 @@ function Depoimentos() {
 
         {/* Card CTA LinkedIn */}
         <div className="mt-12 animate-fade-in-up animate-delay-600">
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 max-w-2xl mx-auto">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 max-w-2xl mx-auto">
             <div className="text-center text-[#282828]">
               <div className="w-12 h-12 bg-[#1595FF]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-[#1595FF]" fill="currentColor" viewBox="0 0 24 24">
