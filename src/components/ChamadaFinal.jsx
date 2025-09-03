@@ -30,18 +30,18 @@ function ChamadaFinal() {
         
         {/* Card CTA Principal */}
         <div className="animate-fade-in-up animate-delay-400">
-          <div className="bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 max-w-4xl mx-auto border border-white/30 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 max-w-2xl mx-auto border border-white/30 relative overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#1595FF]/20 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#FF6339]/20 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-r from-[#1595FF]/5 to-[#FF6339]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#1595FF]/20 to-transparent rounded-full -translate-y-10 translate-x-10"></div>
+            <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-[#FF6339]/20 to-transparent rounded-full translate-y-8 -translate-x-8"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-[#1595FF]/5 to-[#FF6339]/5 rounded-full blur-2xl"></div>
             
             <div className="text-center text-[#282828] relative z-10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#282828]">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#282828]">
                 Vamos começar sua jornada de <span className="text-[#1595FF]">transformação</span>?
               </h3>
               
-              <p className="text-lg md:text-xl mb-8 leading-relaxed text-[#282828]/80 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg mb-6 leading-relaxed text-[#282828]/80 max-w-xl mx-auto">
                 Agende uma conversa gratuita e descubra como podemos ajudar seu negócio a crescer com dados e estratégia.
               </p>
               
@@ -57,9 +57,9 @@ function ChamadaFinal() {
                 </a>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-[#282828]/10">
-                <p className="text-sm text-[#282828]/60">
-                  <span className="font-semibold">Conversa gratuita</span> • Sem compromisso • Resposta em até 24h
+              <div className="mt-6 pt-4 border-t border-[#282828]/10">
+                <p className="text-xs text-[#282828]/60">
+                  <span className="font-semibold">Orçamento gratuito</span> • Sem compromisso • Resposta em até 24h
                 </p>
               </div>
             </div>
