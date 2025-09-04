@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ChamadaFinal() {
+function ChamadaFinalSobre() {
   return (
-    <section id="chamada-final" className="min-h-screen bg-gradient-to-br from-[#FFF3E1] via-white to-[#FFF3E1] flex items-center justify-center relative overflow-hidden">
+    <section id="chamada-final-sobre" className="py-16 px-4 relative z-10">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#1595FF] rounded-full blur-3xl animate-float"></div>
@@ -10,7 +10,7 @@ function ChamadaFinal() {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#1595FF] rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
       </div>
       
-      <div className="max-w-6xl mx-auto text-center px-4 relative z-10">
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="mb-8 animate-fade-in-up">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#FF6339] to-[#E55A2B] rounded-full shadow-lg mb-6">
             <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,12 +20,12 @@ function ChamadaFinal() {
         </div>
         
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#282828] animate-fade-in-up animate-delay-200">
-          <span className="block">Pronto para transformar</span>
-          <span className="block text-[#FF6339]">dados em resultados?</span>
+          <span className="block">Na Niva, nossas pesquisas</span>
+          <span className="block text-[#FF6339]">se tornam ações</span>
         </h2>
         
         <p className="text-xl md:text-2xl text-[#282828]/80 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
-          Vamos conversar sobre como podemos <span className="text-[#1595FF] font-semibold">impulsionar seu negócio</span> com pesquisas estratégicas e soluções orientadas por dados.
+          Utilizamos a metodologia <span className="text-[#1595FF] font-semibold">Double Diamond</span> para transformar dados em <span className="text-[#FF6339] font-semibold">ações concretas</span> que geram resultados reais para seu negócio.
         </p>
         
         {/* Card CTA Principal */}
@@ -67,9 +67,8 @@ function ChamadaFinal() {
         </div>
 
       </div>
-      <div className="mb-24"></div>
     </section>
   );
 }
 
-export default ChamadaFinal;
+export default ChamadaFinalSobre;

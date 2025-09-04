@@ -1,4 +1,7 @@
 import React from 'react';
+import HistoriaNome from '../components/HistoriaNome';
+import Valores from '../components/Valores';
+import ChamadaFinalSobre from '../components/ChamadaFinalSobre';
 
 function Sobre() {
   return (
@@ -244,35 +247,14 @@ function Sobre() {
         </div>
       </section>
 
-      {/* Seção 2: Explicação do Nome */}
-      <section className="py-16 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#282828] text-center mb-8">
-            Explicação do Nome
-          </h2>
-          {/* Conteúdo será adicionado posteriormente */}
-        </div>
-      </section>
+      {/* Seção 2: História do Nome */}
+      <HistoriaNome />
 
       {/* Seção 3: Valores */}
-      <section className="py-16 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#282828] text-center mb-8">
-            Valores
-          </h2>
-          {/* Conteúdo será adicionado posteriormente */}
-        </div>
-      </section>
+      <Valores />
 
-      {/* Seção 4: Diferencial */}
-      <section className="py-16 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#282828] text-center mb-8">
-            Diferencial
-          </h2>
-          {/* Conteúdo será adicionado posteriormente */}
-      </div>
-      </section>
+      {/* Seção 4: Chamada Final */}
+      <ChamadaFinalSobre />
     </div>
   );
 }
