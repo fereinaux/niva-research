@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -882,6 +883,7 @@ function Portfolio() {
         </div>
       )}
 
+      <Footer />
     </div>
   );
 }

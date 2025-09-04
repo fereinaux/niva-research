@@ -1,12 +1,16 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
 function Blog() {
   return (
-    <div className="min-h-screen flex items-center justify-center pt-16">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-[#282828] mb-4">Blog</h1>
-        <p className="text-lg text-gray-600">Página em desenvolvimento</p>
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 flex items-center justify-center pt-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-[#282828] mb-4">Blog</h1>
+          <p className="text-lg text-gray-600">Página em desenvolvimento</p>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

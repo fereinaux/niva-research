@@ -4,6 +4,7 @@ import ResumoRapidoServicos from '../components/ResumoRapidoServicos';
 import BigNumbers from '../components/BigNumbers';
 import Depoimentos from '../components/Depoimentos';
 import ChamadaFinal from '../components/ChamadaFinal';
+import Footer from '../components/Footer';
 
 function Inicio() {
   return (
@@ -13,6 +14,7 @@ function Inicio() {
       <BigNumbers />
       <Depoimentos />
       <ChamadaFinal />
+      <Footer />
     </main>
   );
 }

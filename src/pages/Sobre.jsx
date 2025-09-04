@@ -2,6 +2,7 @@ import React from 'react';
 import HistoriaNome from '../components/HistoriaNome';
 import Valores from '../components/Valores';
 import ChamadaFinalSobre from '../components/ChamadaFinalSobre';
+import Footer from '../components/Footer';
 
 function Sobre() {
   return (
@@ -255,6 +256,7 @@ function Sobre() {
 
       {/* Seção 4: Chamada Final */}
       <ChamadaFinalSobre />
+      <Footer />
     </div>
   );
 }

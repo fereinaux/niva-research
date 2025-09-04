@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../components/Footer';
 
 function Contato() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -231,7 +232,148 @@ function Contato() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Dados do formulário:', formData);
+    
+    // Formatar os dados do formulário para o WhatsApp
+    const formatarDadosParaWhatsApp = () => {
+      let mensagem = "*NOVO CONTATO DO SITE NIVA RESEARCH*\n\n";
+      
+      // Informações básicas
+      mensagem += "*INFORMAÇÕES BÁSICAS:*\n";
+      mensagem += `• Nome: ${formData.nome}\n`;
+      mensagem += `• E-mail: ${formData.email}\n`;
+      mensagem += `• Telefone/WhatsApp: ${formData.telefone}\n`;
+      mensagem += `• Empresa: ${formData.empresa}\n`;
+      mensagem += `• Cargo: ${formData.cargo}\n\n`;
+      
+      // Serviços de interesse
+      mensagem += "*SERVIÇOS DE INTERESSE:*\n";
+      const servicos = {
+        'pesquisa': 'Pesquisa',
+        'capacitacao': 'Capacitação',
+        'landingPage': 'Landing Page'
+      };
+      
+      formData.tipoProduto.forEach(servico => {
+        mensagem += `• ${servicos[servico]}\n`;
+      });
+      mensagem += "\n";
+      
+      // Mapeamento de valores para descrições completas
+      const mapearValores = (tipo, valor) => {
+        const mapeamentos = {
+          // Tipos de pesquisa
+          'percepcao-imagem': 'Percepção e Imagem',
+          'intencao-compra': 'Intenção de Compra',
+          'satisfacao': 'Satisfação e Experiência',
+          'usabilidade': 'Teste de Usabilidade',
+          'personas': 'Estudo de Personas',
+          'concorrencia': 'Análise de Concorrência',
+          'nao-sei': 'Não sei, preciso de orientação',
+          'outro': 'Outro',
+          
+          // Prazos
+          'urgente': 'Urgente (até 1 mês)',
+          '1-2-meses': '1-2 meses',
+          '2-3-meses': '2-3 meses',
+          '3-6-meses': '3-6 meses',
+          'flexivel': 'Flexível',
+          
+          // Tipos de capacitação
+          'individual': 'Individual',
+          'grupo': 'Em grupo/equipe',
+          'ambos': 'Ambos',
+          
+          // Níveis de experiência
+          'iniciante': 'Iniciante - Nunca fizemos pesquisa antes',
+          'basico': 'Básico - Já fizemos algumas pesquisas simples',
+          'intermediario': 'Intermediário - Temos experiência moderada',
+          'avancado': 'Avançado - Temos bastante experiência',
+          
+          // Tipos de landing page
+          'simples': 'LP Simples',
+          'avancada': 'LP Avançada',
+          
+          // Como conheceu
+          'google': 'Google',
+          'linkedin': 'LinkedIn',
+          'instagram': 'Instagram',
+          'indicacao': 'Indicação',
+          'evento': 'Evento/Palestra',
+          
+          // Como contatar
+          'whatsapp': 'WhatsApp',
+          'telefone': 'Telefone',
+          'email': 'E-mail',
+          'qualquer': 'Qualquer um dos acima'
+        };
+        
+        return mapeamentos[valor] || valor;
+      };
+      
+      // Detalhes específicos por serviço
+      if (formData.tipoProduto.includes('pesquisa')) {
+        mensagem += "*DETALHES DA PESQUISA:*\n";
+        mensagem += `• Tipo: ${mapearValores('pesquisa', formData.detalhesPesquisa.tipoPesquisa)}\n`;
+        mensagem += `• Prazo: ${mapearValores('prazo', formData.detalhesPesquisa.prazo)}\n`;
+        mensagem += `• Objetivo: ${formData.detalhesPesquisa.objetivo}\n`;
+        if (formData.detalhesPesquisa.publicoAlvo) {
+          mensagem += `• Público-alvo: ${formData.detalhesPesquisa.publicoAlvo}\n`;
+        }
+        if (formData.detalhesPesquisa.orcamento) {
+          mensagem += `• Orçamento: ${formData.detalhesPesquisa.orcamento}\n`;
+        }
+        mensagem += "\n";
+      }
+      
+      if (formData.tipoProduto.includes('capacitacao')) {
+        mensagem += "*DETALHES DA CAPACITAÇÃO:*\n";
+        mensagem += `• Tipo: ${mapearValores('capacitacao', formData.detalhesCapacitacao.tipoCapacitacao)}\n`;
+        mensagem += `• Número de pessoas: ${formData.detalhesCapacitacao.numeroPessoas}\n`;
+        mensagem += `• Nível de experiência: ${mapearValores('experiencia', formData.detalhesCapacitacao.nivelExperiencia)}\n`;
+        mensagem += `• Prazo: ${mapearValores('prazo', formData.detalhesCapacitacao.prazo)}\n`;
+        if (formData.detalhesCapacitacao.orcamento) {
+          mensagem += `• Orçamento: ${formData.detalhesCapacitacao.orcamento}\n`;
+        }
+        mensagem += "\n";
+      }
+      
+      if (formData.tipoProduto.includes('landingPage')) {
+        mensagem += "*DETALHES DA LANDING PAGE:*\n";
+        mensagem += `• Tipo: ${mapearValores('landingPage', formData.detalhesLandingPage.tipoLandingPage)}\n`;
+        mensagem += `• Prazo: ${mapearValores('prazo', formData.detalhesLandingPage.prazo)}\n`;
+        mensagem += `• Objetivo: ${formData.detalhesLandingPage.objetivo}\n`;
+        if (formData.detalhesLandingPage.publicoAlvo) {
+          mensagem += `• Público-alvo: ${formData.detalhesLandingPage.publicoAlvo}\n`;
+        }
+        if (formData.detalhesLandingPage.orcamento) {
+          mensagem += `• Orçamento: ${formData.detalhesLandingPage.orcamento}\n`;
+        }
+        mensagem += "\n";
+      }
+      
+      // Informações adicionais
+      mensagem += "*INFORMAÇÕES ADICIONAIS:*\n";
+      mensagem += `• Como conheceu: ${mapearValores('conheceu', formData.comoConheceu)}\n`;
+      mensagem += `• Como contatar: ${mapearValores('contatar', formData.comoContatar)}\n`;
+      if (formData.observacoes) {
+        mensagem += `• Observações: ${formData.observacoes}\n`;
+      }
+      mensagem += "\n";
+      
+      mensagem += "_Contato via WhatsApp do site Niva Research_";
+      
+      return mensagem;
+    };
+    
+    // Criar URL do WhatsApp
+    const mensagem = formatarDadosParaWhatsApp();
+    const numeroWhatsApp = "5581997436143"; // Número com código do país
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    
+    // Abrir WhatsApp em nova aba
+    window.open(urlWhatsApp, '_blank');
+    
+    // Marcar formulário como enviado
     setFormSubmitted(true);
   };
 
@@ -798,6 +940,8 @@ function Contato() {
             </div>
           </div>
         </section>
+        
+        <Footer />
       </div>
     );
   }
@@ -895,11 +1039,12 @@ function Contato() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+                  </div>
+        </section>
 
-    </div>
-  );
-}
+        <Footer />
+      </div>
+    );
+  }
 
 export default Contato;

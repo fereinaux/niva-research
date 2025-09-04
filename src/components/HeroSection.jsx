@@ -21,14 +21,14 @@ function HeroSection() {
           Unimos pesquisa, capacitação e comunicação digital para transformar dados em estratégias que geram <span className="text-[#FF6339] font-semibold">impacto</span>.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-400 px-4 sm:px-0">
+        <div className="flex flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up animate-delay-400 px-4 sm:px-0">
           <Link to="/contato">
-            <button className="px-4 sm:px-8 py-4 bg-[#FF6339] text-white font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button className="px-3 sm:px-8 py-4 bg-[#FF6339] text-white font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base">
               Fale com a Niva
             </button>
           </Link>
           <Link to="/sobre">
-            <button className="px-4 sm:px-8 py-4 border-2 border-[#1595FF] text-[#1595FF] font-semibold rounded-lg hover:bg-[#1595FF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+            <button className="px-3 sm:px-8 py-4 border-2 border-[#1595FF] text-[#1595FF] font-semibold rounded-lg hover:bg-[#1595FF] hover:text-white transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base">
               Saiba mais
             </button>
           </Link>
