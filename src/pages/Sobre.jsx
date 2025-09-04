@@ -219,14 +219,14 @@ function Sobre() {
                     <div className="text-[#1595FF] font-bold text-base mb-2">2025</div>
                     <p className="text-sm text-gray-700 font-medium">Fundou a <span className="text-[#1595FF] font-bold">Niva Research</span> - transformando dados em insights estratégicos para empresas que buscam inovação e crescimento.</p>
                   </div>
-                  <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gradient-to-r from-[#1595FF] to-[#0ea5e9] rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                  <div className="absolute left-[0.375rem] top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gradient-to-r from-[#1595FF] to-[#0ea5e9] rounded-full border-4 border-white shadow-xl flex items-center justify-center">
                     <div className="w-5 h-5 bg-white rounded-full"></div>
                   </div>
                 </div>
                 
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:block w-1/2 pr-8"></div>
-                <div className="hidden md:block w-12 h-12 bg-gradient-to-r from-[#1595FF] to-[#0ea5e9] rounded-full border-4 border-white shadow-xl flex-shrink-0 flex items-center justify-center">
+                <div className="hidden md:flex w-12 h-12 bg-gradient-to-r from-[#1595FF] to-[#0ea5e9] rounded-full border-4 border-white shadow-xl flex-shrink-0 flex items-center justify-center">
                   <div className="w-6 h-6 bg-white rounded-full"></div>
                 </div>
                 <div className="hidden md:block w-1/2 pl-8 mt-4 md:mt-0">
