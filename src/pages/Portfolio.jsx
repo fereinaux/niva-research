@@ -24,7 +24,7 @@ function Portfolio() {
                 {/* Lado esquerdo - Conteúdo */}
                 <div className="flex-1 p-6">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-[#1595FF]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#1595FF]/20 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-[#FF6339]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#FF6339]/20 transition-colors duration-300">
                       <span className="text-[#1595FF] font-bold">01</span>
                     </div>
                     <div>
@@ -40,7 +40,7 @@ function Portfolio() {
                   
                   <div className="bg-gradient-to-r from-[#1595FF]/5 to-[#1595FF]/10 rounded-lg p-4 border border-[#1595FF]/20">
                     <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#1595FF] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <div className="w-6 h-6 bg-[#FF6339] rounded-full flex items-center justify-center mr-3 mt-0.5">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -58,12 +58,12 @@ function Portfolio() {
                 {/* Lado direito - Elemento visual */}
                 <div className="lg:w-40 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/5 flex items-center justify-center p-6">
                   <div className="text-center">
-                    <div className="w-10 h-10 bg-[#1595FF] rounded-full flex items-center justify-center mb-2 mx-auto">
+                    <div className="w-10 h-10 bg-[#FF6339] rounded-full flex items-center justify-center mb-2 mx-auto">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                       </svg>
                     </div>
-                    <p className="text-[#1595FF] font-semibold text-xs">Capacitação</p>
+                    <p className="text-[#FF6339] font-semibold text-xs">Capacitação</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function Portfolio() {
               <div className="flex flex-col lg:flex-row">
                 <div className="flex-1 p-6">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-[#1595FF]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#1595FF]/20 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-[#FF6339]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#FF6339]/20 transition-colors duration-300">
                       <span className="text-[#1595FF] font-bold">02</span>
                     </div>
                     <div>
@@ -90,7 +90,7 @@ function Portfolio() {
                   
                   <div className="bg-gradient-to-r from-[#1595FF]/5 to-[#1595FF]/10 rounded-lg p-4 border border-[#1595FF]/20">
                     <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#1595FF] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <div className="w-6 h-6 bg-[#FF6339] rounded-full flex items-center justify-center mr-3 mt-0.5">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -107,12 +107,12 @@ function Portfolio() {
                 
                 <div className="lg:w-40 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/5 flex items-center justify-center p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-[#1595FF] rounded-full flex items-center justify-center mb-2 mx-auto">
+                    <div className="w-12 h-12 bg-[#FF6339] rounded-full flex items-center justify-center mb-2 mx-auto">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                     </div>
-                    <p className="text-[#1595FF] font-semibold text-xs">Personas</p>
+                    <p className="text-[#FF6339] font-semibold text-xs">Personas</p>
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ function Portfolio() {
               <div className="flex flex-col lg:flex-row">
                 <div className="flex-1 p-6">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-[#1595FF]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#1595FF]/20 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-[#FF6339]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#FF6339]/20 transition-colors duration-300">
                       <span className="text-[#1595FF] font-bold text-base">03</span>
                     </div>
                     <div>
@@ -139,7 +139,7 @@ function Portfolio() {
                   
                   <div className="bg-gradient-to-r from-[#1595FF]/5 to-[#1595FF]/10 rounded-lg p-4 border border-[#1595FF]/20">
                     <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#1595FF] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <div className="w-6 h-6 bg-[#FF6339] rounded-full flex items-center justify-center mr-3 mt-0.5">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -156,12 +156,12 @@ function Portfolio() {
                 
                 <div className="lg:w-40 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/5 flex items-center justify-center p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-[#1595FF] rounded-full flex items-center justify-center mb-2 mx-auto">
+                    <div className="w-12 h-12 bg-[#FF6339] rounded-full flex items-center justify-center mb-2 mx-auto">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                     </div>
-                    <p className="text-[#1595FF] font-semibold text-xs">B2B</p>
+                    <p className="text-[#FF6339] font-semibold text-xs">B2B</p>
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ function Portfolio() {
               <div className="flex flex-col lg:flex-row">
                 <div className="flex-1 p-6">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-[#1595FF]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#1595FF]/20 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-[#FF6339]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#FF6339]/20 transition-colors duration-300">
                       <span className="text-[#1595FF] font-bold text-base">04</span>
                     </div>
                     <div>
@@ -188,7 +188,7 @@ function Portfolio() {
                   
                   <div className="bg-gradient-to-r from-[#1595FF]/5 to-[#1595FF]/10 rounded-lg p-4 border border-[#1595FF]/20">
                     <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#1595FF] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <div className="w-6 h-6 bg-[#FF6339] rounded-full flex items-center justify-center mr-3 mt-0.5">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -205,12 +205,12 @@ function Portfolio() {
                 
                 <div className="lg:w-40 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/5 flex items-center justify-center p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-[#1595FF] rounded-full flex items-center justify-center mb-2 mx-auto">
+                    <div className="w-12 h-12 bg-[#FF6339] rounded-full flex items-center justify-center mb-2 mx-auto">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <p className="text-[#1595FF] font-semibold text-xs">Mobile</p>
+                    <p className="text-[#FF6339] font-semibold text-xs">Mobile</p>
                   </div>
                 </div>
               </div>
@@ -221,7 +221,7 @@ function Portfolio() {
               <div className="flex flex-col lg:flex-row">
                 <div className="flex-1 p-6">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-[#1595FF]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#1595FF]/20 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-[#FF6339]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#FF6339]/20 transition-colors duration-300">
                       <span className="text-[#1595FF] font-bold text-base">05</span>
                     </div>
                     <div>
@@ -237,7 +237,7 @@ function Portfolio() {
                   
                   <div className="bg-gradient-to-r from-[#1595FF]/5 to-[#1595FF]/10 rounded-lg p-4 border border-[#1595FF]/20">
                     <div className="flex items-start">
-                      <div className="w-6 h-6 bg-[#1595FF] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <div className="w-6 h-6 bg-[#FF6339] rounded-full flex items-center justify-center mr-3 mt-0.5">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -254,12 +254,12 @@ function Portfolio() {
                 
                 <div className="lg:w-40 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/5 flex items-center justify-center p-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-[#1595FF] rounded-full flex items-center justify-center mb-2 mx-auto">
+                    <div className="w-12 h-12 bg-[#FF6339] rounded-full flex items-center justify-center mb-2 mx-auto">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                       </svg>
                     </div>
-                    <p className="text-[#1595FF] font-semibold text-xs">Crédito</p>
+                    <p className="text-[#FF6339] font-semibold text-xs">Crédito</p>
                   </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@ function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
-              <span className="text-[#FF6339]">Portfólio Capacitações</span>
+              <span className="text-[#1595FF]">Portfólio Capacitações</span>
             </h2>
             <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm">
               Veja os resultados das capacitações realizadas
