@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
 import Inicio from './pages/Inicio';
 import Sobre from './pages/Sobre';
 import Servicos from './pages/Servicos';
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-[#FFF3E1]">
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Inicio />} />

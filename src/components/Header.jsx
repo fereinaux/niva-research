@@ -13,6 +13,21 @@ function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  // Função para scroll suave para o topo
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Função combinada para fechar menu mobile e fazer scroll
+  const handleNavigation = () => {
+    closeMobileMenu();
+    scrollToTop();
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,6 +46,7 @@ function Header() {
             <div className="ml-10 flex items-center space-x-6 xl:space-x-8">
               <Link 
                 to="/" 
+                onClick={scrollToTop}
                 className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === '/' 
                     ? 'bg-[#1595FF] text-white' 
@@ -41,6 +57,7 @@ function Header() {
               </Link>
               <Link 
                 to="/sobre" 
+                onClick={scrollToTop}
                 className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === '/sobre' 
                     ? 'bg-[#1595FF] text-white' 
@@ -51,6 +68,7 @@ function Header() {
               </Link>
               <Link 
                 to="/servicos" 
+                onClick={scrollToTop}
                 className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === '/servicos' 
                     ? 'bg-[#1595FF] text-white' 
@@ -61,6 +79,7 @@ function Header() {
               </Link>
               <Link 
                 to="/portfolio" 
+                onClick={scrollToTop}
                 className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === '/portfolio' 
                     ? 'bg-[#1595FF] text-white' 
@@ -70,17 +89,8 @@ function Header() {
                 Portfólio
               </Link>
               <Link 
-                to="/blog" 
-                className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  location.pathname === '/blog' 
-                    ? 'bg-[#1595FF] text-white' 
-                    : 'text-[#282828] hover:text-[#1595FF]'
-                }`}
-              >
-                Blog
-              </Link>
-              <Link 
                 to="/contato" 
+                onClick={scrollToTop}
                 className={`px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === '/contato' 
                     ? 'bg-[#1595FF] text-white' 
@@ -144,7 +154,7 @@ function Header() {
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
             <Link 
               to="/" 
-              onClick={closeMobileMenu}
+              onClick={handleNavigation}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                 location.pathname === '/' 
                   ? 'bg-[#1595FF] text-white' 
@@ -155,7 +165,7 @@ function Header() {
             </Link>
             <Link 
               to="/sobre" 
-              onClick={closeMobileMenu}
+              onClick={handleNavigation}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                 location.pathname === '/sobre' 
                   ? 'bg-[#1595FF] text-white' 
@@ -166,7 +176,7 @@ function Header() {
             </Link>
             <Link 
               to="/servicos" 
-              onClick={closeMobileMenu}
+              onClick={handleNavigation}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                 location.pathname === '/servicos' 
                   ? 'bg-[#1595FF] text-white' 
@@ -177,7 +187,7 @@ function Header() {
             </Link>
             <Link 
               to="/portfolio" 
-              onClick={closeMobileMenu}
+              onClick={handleNavigation}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                 location.pathname === '/portfolio' 
                   ? 'bg-[#1595FF] text-white' 
@@ -187,19 +197,8 @@ function Header() {
               Portfólio
             </Link>
             <Link 
-              to="/blog" 
-              onClick={closeMobileMenu}
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                location.pathname === '/blog' 
-                  ? 'bg-[#1595FF] text-white' 
-                  : 'text-[#282828] hover:text-[#1595FF] hover:bg-gray-50'
-              }`}
-            >
-              Blog
-            </Link>
-            <Link 
               to="/contato" 
-              onClick={closeMobileMenu}
+              onClick={handleNavigation}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                 location.pathname === '/contato' 
                   ? 'bg-[#1595FF] text-white' 
