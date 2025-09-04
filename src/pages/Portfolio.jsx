@@ -4,6 +4,7 @@ function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
+  const [touchStart, setTouchStart] = useState(null);
 
   const openImageModal = (imageSrc, imageAlt) => {
     setSelectedImage({ src: imageSrc, alt: imageAlt });
@@ -15,6 +16,7 @@ function Portfolio() {
     setSelectedImage(null);
     setZoomLevel(1); // Reset zoom when closing
     setImagePosition({ x: 0, y: 0 }); // Reset position when closing
+    setTouchStart(null); // Reset touch state when closing
   };
 
   const zoomIn = () => {
@@ -60,6 +62,46 @@ function Portfolio() {
 
   const resetPosition = () => {
     setImagePosition({ x: 0, y: 0 });
+  };
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const deltaX = e.deltaX;
+    const deltaY = e.deltaY;
+    
+    setImagePosition(prev => ({
+      x: prev.x - deltaX * 0.5,
+      y: prev.y - deltaY * 0.5
+    }));
+  };
+
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    setTouchStart({ x: touch.clientX, y: touch.clientY });
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (!touchStart) return;
+    
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStart.x;
+    const deltaY = touch.clientY - touchStart.y;
+    
+    setImagePosition(prev => ({
+      x: prev.x + deltaX,
+      y: prev.y + deltaY
+    }));
+    
+    setTouchStart({ x: touch.clientX, y: touch.clientY });
+  };
+
+  const handleTouchEnd = () => {
+    setTouchStart(null);
   };
 
   return (
@@ -691,7 +733,12 @@ function Portfolio() {
             </p>
           </div>
           
-          {/* CTA será adicionado posteriormente */}
+          {/* CTA */}
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-[#1595FF] to-[#0D7AE5] hover:from-[#0D7AE5] hover:to-[#1595FF] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
+              <span className="text-lg">Comece agora mesmo</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -822,6 +869,10 @@ function Portfolio() {
                   transformOrigin: 'center center'
                 }}
                 onClick={(e) => e.stopPropagation()}
+                onWheel={handleWheel}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
               />
             </div>
           </div>
