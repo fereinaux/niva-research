@@ -95,7 +95,7 @@ function Servicos() {
     <div className="min-h-screen pt-16 bg-gradient-to-br from-[#FF6339]/5 via-white to-[#1595FF]/5 relative">
       
       {/* Seção 1: Pesquisas */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="pesquisas" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             {/* Elemento visual para Pesquisas */}
@@ -172,7 +172,7 @@ function Servicos() {
       </section>
 
       {/* Seção 2: Capacitações */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="capacitacoes" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             {/* Elemento visual para Capacitações */}
@@ -361,7 +361,7 @@ function Servicos() {
       </section>
 
       {/* Seção 3: Landing Pages Orientadas por Dados */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="landing-pages" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             {/* Elemento visual para Landing Pages */}

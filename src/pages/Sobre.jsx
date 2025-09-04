@@ -8,7 +8,7 @@ function Sobre() {
     <div className="min-h-screen pt-16 bg-gradient-to-r from-[#1595FF]/8 via-white to-[#1595FF]/8 relative">
       
       {/* Seção 1: Trajetória Delly */}
-      <section className="py-8 md:py-16 pb-32 md:pb-40 px-4 relative z-10">
+      <section id="trajetoria-delly" className="py-8 md:py-16 pb-32 md:pb-40 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-4">

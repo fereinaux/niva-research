@@ -55,7 +55,7 @@ function Valores() {
   ];
 
   return (
-    <section className="py-16 px-4 relative z-10">
+    <section id="valores" className="py-16 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
         {/* Cabeçalho da seção */}
         <div className="text-center mb-12">

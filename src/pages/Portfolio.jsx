@@ -109,7 +109,7 @@ function Portfolio() {
     <div className="min-h-screen pt-16 bg-gradient-to-t from-[#fff3e1]/30 via-white to-[#1595FF]/10 relative">
       
       {/* Seção 1: Portfólio Pesquisa */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="portfolio-pesquisas" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
@@ -373,7 +373,7 @@ function Portfolio() {
       </section>
 
       {/* Seção 2: Portfólio Capacitações */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="portfolio-capacitacoes" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
@@ -570,7 +570,7 @@ function Portfolio() {
       </section>
 
       {/* Seção 3: Portfólio LPs */}
-      <section className="py-16 px-4 relative z-10">
+      <section id="portfolio-landing-pages" className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">

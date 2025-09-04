@@ -2,7 +2,7 @@ import React from 'react';
 
 function HistoriaNome() {
   return (
-    <section className="py-16 px-4 relative z-10">
+    <section id="historia-nome" className="py-16 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
         {/* Cabeçalho da seção */}
         <div className="text-center mb-12">
