@@ -9,9 +9,9 @@ function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
-              <span className="text-[#1595FF]">Portfólio Pesquisa</span>
+              <span className="text-[#1595FF]">Portfólio Pesquisas</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm">
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-base">
               Conheça nossos projetos de pesquisa e os resultados alcançados
             </p>
           </div>
@@ -34,7 +34,7 @@ function Portfolio() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-2 leading-relaxed text-sm text-xs">
+                  <p className="text-gray-600 mb-2 leading-relaxed text-sm">
                     Pesquisa financiada pelo Ministério de Turismo utilizada como base para o Programa de Qualificação Profissional do Turismo.
                   </p>
                   
@@ -84,7 +84,7 @@ function Portfolio() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-2 leading-relaxed text-sm text-xs">
+                  <p className="text-gray-600 mb-2 leading-relaxed text-sm">
                     Projeto misto (quali + quanti) de abrangência nacional que descobriu e desenhou todas as personas da empresa.
                   </p>
                   
@@ -133,7 +133,7 @@ function Portfolio() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-base">
                     A partir de pesquisas exploratórias, foram descobertas oportunidades para a reformulação dos planos B2B da startup.
                   </p>
                   
@@ -182,7 +182,7 @@ function Portfolio() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-base">
                     Pesquisas exploratórias e tracking com 100+ usuários trouxeram insights que orientaram decisões estratégicas dos times de Produto, Comercial, Design e Marketing.
                   </p>
                   
@@ -231,7 +231,7 @@ function Portfolio() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-base">
                     Pesquisas exploratórias sobre aceitação e experiência dos novos produtos de crédito B2B e B2C da fintech.
                   </p>
                   
@@ -275,12 +275,193 @@ function Portfolio() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
               <span className="text-[#1595FF]">Portfólio Capacitações</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm">
-              Veja os resultados das capacitações realizadas
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-base">
+              Veja alguns resultados de capacitações realizadas em 10 anos de trajetória
             </p>
           </div>
           
-          {/* Conteúdo será adicionado posteriormente */}
+          {/* Grid de Casos de Capacitação */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              {/* Caso 1: Projeto de Conclusão de Curso */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden group">
+                <div className="p-6">
+                  {/* Header com número e ícone */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#FF6339] to-[#FF8A65] rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">01</span>
+                    </div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/20 rounded-lg flex items-center justify-center group-hover:from-[#1595FF]/20 group-hover:to-[#1595FF]/30 transition-all duration-300">
+                      <svg className="w-5 h-5 text-[#1595FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-lg font-bold text-[#282828] mb-3 leading-tight">
+                    Suporte no Projeto de Conclusão de Curso
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Uma psicóloga especialista em EMDR estava finalizando sua pós-graduação em Terapia Cognitiva Comportamental e precisava de orientação especializada.
+                  </p>
+                  
+                  {/* Nossa Abordagem */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-[#1595FF] mb-2">Nossa Abordagem</h4>
+                    <ul className="space-y-1">
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Definição estratégica dos objetivos</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Técnicas de coleta de dados</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Análise e interpretação</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Redação acadêmica assertiva</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Resultado */}
+                  <div className="bg-gradient-to-r from-[#FF6339]/5 to-[#FF6339]/10 rounded-lg p-3 border-l-4 border-[#FF6339]">
+                    <p className="text-[#FF6339] font-semibold text-xs mb-1">Resultado</p>
+                    <p className="text-[#FF6339] text-xs leading-relaxed">
+                      Aprovação do projeto de conclusão de curso e conquista do certificado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Caso 2: Placeholder */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden group">
+                <div className="p-6">
+                  {/* Header com número e ícone */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#FF6339] to-[#FF8A65] rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">02</span>
+                    </div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/20 rounded-lg flex items-center justify-center group-hover:from-[#1595FF]/20 group-hover:to-[#1595FF]/30 transition-all duration-300">
+                      <svg className="w-5 h-5 text-[#1595FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-lg font-bold text-[#282828] mb-3 leading-tight">
+                    Orientação Pré-Projeto Acadêmico
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Uma empresária desejava ingressar em um mestrado acadêmico para se especializar. Entretanto, o seu desafio era a falta de conhecimento deste universo.
+                  </p>
+                  
+                  {/* Nossa Abordagem */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-[#1595FF] mb-2">Nossa Abordagem</h4>
+                    <ul className="space-y-1">
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Conceitos básicos de pesquisa</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Definir pergunta e objetivo de pesquisa</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Teoria e prática sobre método de pesquisas</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Redação técnica do projeto</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Resultado */}
+                  <div className="bg-gradient-to-r from-[#FF6339]/5 to-[#FF6339]/10 rounded-lg p-3 border-l-4 border-[#FF6339]">
+                    <p className="text-[#FF6339] font-semibold text-xs mb-1">Resultado</p>
+                    <p className="text-[#FF6339] text-xs leading-relaxed">
+                      A empresária conseguiu compreender o que é uma pesquisa acadêmica, escreveu o seu pré-projeto e foi aprovada no concurso.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Caso 3: Placeholder */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden group">
+                <div className="p-6">
+                  {/* Header com número e ícone */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#FF6339] to-[#FF8A65] rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">03</span>
+                    </div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#1595FF]/10 to-[#1595FF]/20 rounded-lg flex items-center justify-center group-hover:from-[#1595FF]/20 group-hover:to-[#1595FF]/30 transition-all duration-300">
+                      <svg className="w-5 h-5 text-[#1595FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-lg font-bold text-[#282828] mb-3 leading-tight">
+                    Capacitação do Time de Atendimento
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    O time de atendimento da empresa estava com um desafio: tinha contato direto com os clientes, mas não sabia o que fazer com todos os dados que recebia diariamente.
+                  </p>
+                  
+                  {/* Nossa Abordagem */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-[#1595FF] mb-2">Nossa Abordagem</h4>
+                    <ul className="space-y-1">
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Construir roteiros com perguntas assertivas</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Elaborar questionários concisos e precisos</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Como analisar e interpretar resultados</span>
+                      </li>
+                      <li className="flex items-start text-xs text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#1595FF] rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Estruturar os resultados</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Resultado */}
+                  <div className="bg-gradient-to-r from-[#FF6339]/5 to-[#FF6339]/10 rounded-lg p-3 border-l-4 border-[#FF6339]">
+                    <p className="text-[#FF6339] font-semibold text-xs mb-1">Resultado</p>
+                    <p className="text-[#FF6339] text-xs leading-relaxed">
+                      Time de atendimento preparado para ser uma área mais estratégica na empresa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </section>
 
@@ -291,7 +472,7 @@ function Portfolio() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
               <span className="text-[#1595FF]">Portfólio LPs</span>
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm">
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-base">
               Landing Pages criadas com base em dados e insights reais
             </p>
           </div>
@@ -307,7 +488,7 @@ function Portfolio() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-2">
               Pronto para <span className="text-[#1595FF]">impulsionar</span> seu negócio?
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-sm">
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-base">
               Vamos conversar sobre como podemos ajudar você a alcançar seus objetivos
             </p>
           </div>
