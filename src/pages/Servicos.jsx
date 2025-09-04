@@ -201,12 +201,11 @@ function Servicos() {
                 {/* Foto Individuais */}
                 <div className="relative group">
                   <div className="h-64 bg-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-full h-full bg-gradient-to-br from-[#FF6339]/20 to-[#FF6339]/5 flex items-center justify-center">
-                      <div className="text-center">
-                        <UserCheck className="w-12 h-12 text-[#FF6339] mx-auto mb-3" />
-                        <p className="text-[#FF6339] font-semibold">Capacitação Individual</p>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Fotos/capaindividual.png" 
+                      alt="Capacitação Individual" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Overlay com título */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 rounded-b-xl">
@@ -237,12 +236,11 @@ function Servicos() {
                 {/* Foto Em equipe/grupos */}
                 <div className="relative group">
                   <div className="h-64 bg-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-full h-full bg-gradient-to-br from-[#1595FF]/20 to-[#1595FF]/5 flex items-center justify-center">
-                      <div className="text-center">
-                        <Users className="w-12 h-12 text-[#1595FF] mx-auto mb-3" />
-                        <p className="text-[#1595FF] font-semibold">Capacitação em Grupo</p>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Fotos/capagrupo.png" 
+                      alt="Capacitação em Grupo" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Overlay com título */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 rounded-b-xl">
@@ -276,12 +274,11 @@ function Servicos() {
                 {/* Foto 1 - Individuais */}
                 <div className="relative group">
                   <div className="h-64 bg-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-full h-full bg-gradient-to-br from-[#FF6339]/20 to-[#FF6339]/5 flex items-center justify-center">
-                      <div className="text-center">
-                        <UserCheck className="w-12 h-12 text-[#FF6339] mx-auto mb-3" />
-                        <p className="text-[#FF6339] font-semibold">Capacitação Individual</p>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Fotos/capaindividual.png" 
+                      alt="Capacitação Individual" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Overlay com título */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 rounded-b-xl">
@@ -292,12 +289,11 @@ function Servicos() {
                 {/* Foto 2 - Em equipe/grupos */}
                 <div className="relative group">
                   <div className="h-64 bg-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-full h-full bg-gradient-to-br from-[#1595FF]/20 to-[#1595FF]/5 flex items-center justify-center">
-                      <div className="text-center">
-                        <Users className="w-12 h-12 text-[#1595FF] mx-auto mb-3" />
-                        <p className="text-[#1595FF] font-semibold">Capacitação em Grupo</p>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Fotos/capagrupo.png" 
+                      alt="Capacitação em Grupo" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Overlay com título */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 rounded-b-xl">
