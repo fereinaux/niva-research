@@ -19,6 +19,13 @@ function ChamadaFinalSobre() {
           </div>
         </div>
         
+        {/* Tag introdutória */}
+        <div className="mb-6 animate-fade-in-up animate-delay-100">
+          <span className="inline-block bg-[#fff3e1] text-[#FF6339] px-4 py-2 rounded-full text-sm font-semibold border border-[#FF6339]/20">
+            Nosso diferencial
+          </span>
+        </div>
+        
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#282828] animate-fade-in-up animate-delay-200">
           <span className="block">Na Niva, nossas pesquisas</span>
           <span className="block text-[#FF6339]">se tornam ações</span>
