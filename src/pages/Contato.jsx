@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function Contato() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showError, setShowError] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     // Etapa 1: Informações básicas
     nome: '',
@@ -102,9 +103,15 @@ function Contato() {
       if (formData.tipoProduto.includes('pesquisa')) {
         const updatedPesquisa = { ...formData.detalhesPesquisa, [field]: value };
         if (productType === 'Pesquisa') {
-          allRequiredFilled = allRequiredFilled && updatedPesquisa.prazo.trim() !== '';
+          allRequiredFilled = allRequiredFilled && 
+            updatedPesquisa.tipoPesquisa.trim() !== '' &&
+            updatedPesquisa.prazo.trim() !== '' &&
+            updatedPesquisa.objetivo.trim() !== '';
         } else {
-          allRequiredFilled = allRequiredFilled && formData.detalhesPesquisa.prazo.trim() !== '';
+          allRequiredFilled = allRequiredFilled && 
+            formData.detalhesPesquisa.tipoPesquisa.trim() !== '' &&
+            formData.detalhesPesquisa.prazo.trim() !== '' &&
+            formData.detalhesPesquisa.objetivo.trim() !== '';
         }
       }
       
@@ -112,11 +119,13 @@ function Contato() {
         const updatedCapacitacao = { ...formData.detalhesCapacitacao, [field]: value };
         if (productType === 'Capacitacao') {
           allRequiredFilled = allRequiredFilled && 
+            updatedCapacitacao.tipoCapacitacao.trim() !== '' &&
             updatedCapacitacao.prazo.trim() !== '' &&
             updatedCapacitacao.numeroPessoas.trim() !== '' &&
             updatedCapacitacao.nivelExperiencia.trim() !== '';
         } else {
           allRequiredFilled = allRequiredFilled && 
+            formData.detalhesCapacitacao.tipoCapacitacao.trim() !== '' &&
             formData.detalhesCapacitacao.prazo.trim() !== '' &&
             formData.detalhesCapacitacao.numeroPessoas.trim() !== '' &&
             formData.detalhesCapacitacao.nivelExperiencia.trim() !== '';
@@ -126,9 +135,15 @@ function Contato() {
       if (formData.tipoProduto.includes('landingPage')) {
         const updatedLandingPage = { ...formData.detalhesLandingPage, [field]: value };
         if (productType === 'LandingPage') {
-          allRequiredFilled = allRequiredFilled && updatedLandingPage.prazo.trim() !== '';
+          allRequiredFilled = allRequiredFilled && 
+            updatedLandingPage.tipoLandingPage.trim() !== '' &&
+            updatedLandingPage.prazo.trim() !== '' &&
+            updatedLandingPage.objetivo.trim() !== '';
         } else {
-          allRequiredFilled = allRequiredFilled && formData.detalhesLandingPage.prazo.trim() !== '';
+          allRequiredFilled = allRequiredFilled && 
+            formData.detalhesLandingPage.tipoLandingPage.trim() !== '' &&
+            formData.detalhesLandingPage.prazo.trim() !== '' &&
+            formData.detalhesLandingPage.objetivo.trim() !== '';
         }
       }
       
@@ -162,14 +177,17 @@ function Contato() {
       
       // Validação para Pesquisa
       if (formData.tipoProduto.includes('pesquisa')) {
-        if (!formData.detalhesPesquisa.prazo.trim()) {
+        if (!formData.detalhesPesquisa.tipoPesquisa.trim() || 
+            !formData.detalhesPesquisa.prazo.trim() || 
+            !formData.detalhesPesquisa.objetivo.trim()) {
           hasMissingRequired = true;
         }
       }
       
       // Validação para Capacitação
       if (formData.tipoProduto.includes('capacitacao')) {
-        if (!formData.detalhesCapacitacao.prazo.trim() || 
+        if (!formData.detalhesCapacitacao.tipoCapacitacao.trim() ||
+            !formData.detalhesCapacitacao.prazo.trim() || 
             !formData.detalhesCapacitacao.numeroPessoas.trim() || 
             !formData.detalhesCapacitacao.nivelExperiencia.trim()) {
           hasMissingRequired = true;
@@ -178,7 +196,9 @@ function Contato() {
       
       // Validação para Landing Page
       if (formData.tipoProduto.includes('landingPage')) {
-        if (!formData.detalhesLandingPage.prazo.trim()) {
+        if (!formData.detalhesLandingPage.tipoLandingPage.trim() ||
+            !formData.detalhesLandingPage.prazo.trim() || 
+            !formData.detalhesLandingPage.objetivo.trim()) {
           hasMissingRequired = true;
         }
       }
@@ -212,7 +232,52 @@ function Contato() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Dados do formulário:', formData);
-    alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+    setFormSubmitted(true);
+  };
+
+  const handleNewForm = () => {
+    setFormSubmitted(false);
+    setCurrentStep(1);
+    setShowError(false);
+    setFormData({
+      // Etapa 1: Informações básicas
+      nome: '',
+      email: '',
+      telefone: '',
+      empresa: '',
+      cargo: '',
+      
+      // Etapa 2: Tipo de produto (filtro)
+      tipoProduto: [],
+      
+      // Etapa 3: Detalhes específicos por produto
+      detalhesPesquisa: {
+        tipoPesquisa: '',
+        objetivo: '',
+        publicoAlvo: '',
+        prazo: '',
+        orcamento: ''
+      },
+      detalhesCapacitacao: {
+        tipoCapacitacao: '',
+        numeroPessoas: '',
+        nivelExperiencia: '',
+        prazo: '',
+        orcamento: ''
+      },
+      detalhesLandingPage: {
+        tipoLandingPage: '',
+        objetivo: '',
+        publicoAlvo: '',
+        prazo: '',
+        orcamento: ''
+      },
+      
+      // Etapa 4: Informações adicionais
+      comoConheceu: '',
+      comoContatar: '',
+      observacoes: ''
+    });
   };
 
   const renderStep1 = () => (
@@ -688,6 +753,55 @@ function Contato() {
     }
   };
 
+  // Tela de sucesso
+  if (formSubmitted) {
+    return (
+      <div className="min-h-screen pt-16 bg-gradient-to-br from-[#FF6339]/5 via-white to-[#1595FF]/5 relative">
+        <section className="py-16 px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center">
+              {/* Ícone de sucesso */}
+              <div className="flex justify-center mb-8">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+              
+              {/* Título de sucesso */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#282828] mb-6">
+                Formulário enviado com sucesso!
+              </h1>
+              
+              {/* Mensagem */}
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+                Agradecemos pelo seu interesse! Entraremos em contato em até 24 horas por meio do canal que você preferiu.
+              </p>
+              
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button
+                  onClick={handleNewForm}
+                  className="px-8 py-4 bg-[#1595FF] text-white rounded-lg font-medium hover:bg-[#1595FF]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  Enviar novo formulário
+                </button>
+                
+                <button
+                  onClick={() => window.location.href = '/servicos'}
+                  className="px-8 py-4 bg-[#FF6339] text-white rounded-lg font-medium hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  Ver serviços
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen pt-16 bg-gradient-to-br from-[#FF6339]/5 via-white to-[#1595FF]/5 relative">
       
@@ -702,18 +816,6 @@ function Contato() {
               Pronto para transformar dados em estratégia? Vamos juntos transformá-lo em estratégia com pesquisa e comunicação digital.
             </p>
             
-            {/* Destaque especial */}
-            <div className="bg-gradient-to-r from-[#FF6339]/10 to-[#1595FF]/10 rounded-xl p-6 border border-gray-100 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center mb-3">
-                <div className="w-8 h-8 bg-[#FF6339] rounded-full flex items-center justify-center mr-3">
-                  <span className="text-white text-lg">💬</span>
-                </div>
-                <h2 className="text-xl font-bold text-[#282828]">Primeira conversa gratuita</h2>
-              </div>
-              <p className="text-gray-700 leading-relaxed">
-                Vamos entender suas necessidades e mostrar como podemos ajudar seu negócio a crescer com base em dados reais.
-              </p>
-            </div>
           </div>
           
           {/* Formulário Wizard */}
@@ -772,11 +874,26 @@ function Contato() {
                     onClick={handleSubmit}
                     className="px-8 py-3 bg-[#FF6339] text-white rounded-lg font-medium hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
-                    Enviar Formulário ✨
+                    Enviar Formulário
                   </button>
                 )}
               </div>
             </form>
+          </div>
+          
+          {/* Destaque especial - Primeira conversa gratuita */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <div className="bg-gradient-to-r from-[#FF6339]/10 to-[#1595FF]/10 rounded-xl p-6 border border-gray-100">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-8 h-8 bg-[#FF6339] rounded-full flex items-center justify-center mr-3">
+                  <span className="text-white text-lg">💬</span>
+                </div>
+                <h2 className="text-xl font-bold text-[#282828]">Primeira conversa gratuita</h2>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-center">
+                Vamos entender suas necessidades e mostrar como podemos ajudar seu negócio a crescer com base em dados reais.
+              </p>
+            </div>
           </div>
         </div>
       </section>

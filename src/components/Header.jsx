@@ -99,18 +99,22 @@ function Header() {
               >
                 Contato
               </Link>
-              <button className="ml-4 px-4 xl:px-6 py-2 bg-[#FF6339] text-white text-sm font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                Dê o primeiro passo
-              </button>
+              <Link to="/contato" onClick={scrollToTop}>
+                <button className="ml-4 px-4 xl:px-6 py-2 bg-[#FF6339] text-white text-sm font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  Dê o primeiro passo
+                </button>
+              </Link>
             </div>
           </nav>
 
           {/* Mobile CTA Button and Menu Button */}
           <div className="lg:hidden flex items-center space-x-3">
             {/* CTA Button - Always visible on mobile */}
-            <button className="px-3 py-2 bg-[#FF6339] text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              Dê o primeiro passo
-            </button>
+            <Link to="/contato" onClick={handleNavigation}>
+              <button className="px-3 py-2 bg-[#FF6339] text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Dê o primeiro passo
+              </button>
+            </Link>
             
             {/* Mobile Menu Button */}
             <button

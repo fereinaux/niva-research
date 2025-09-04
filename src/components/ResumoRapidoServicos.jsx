@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ResumoRapidoServicos() {
   return (
@@ -83,9 +84,11 @@ function ResumoRapidoServicos() {
             Pronto para transformar dados em <span className="text-[#1595FF] font-semibold">vantagem competitiva</span>?
           </p>
           <div className="flex justify-center">
-            <button className="px-8 py-4 bg-[#FF6339] text-white font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Conheça nossos casos
-            </button>
+            <Link to="/portfolio">
+              <button className="px-8 py-4 bg-[#FF6339] text-white font-semibold rounded-lg hover:bg-[#FF6339]/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Conheça nossos casos
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Eye, 
   ShoppingCart, 
@@ -569,9 +570,11 @@ function Servicos() {
             
             {/* CTA Button */}
             <div className="flex justify-center">
-              <button className="bg-[#1595FF] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#1595FF]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Fale agora mesmo
-              </button>
+              <Link to="/contato">
+                <button className="bg-[#1595FF] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#1595FF]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  Fale agora mesmo
+                </button>
+              </Link>
             </div>
           </div>
         </div>

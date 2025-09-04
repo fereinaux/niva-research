@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -735,9 +736,11 @@ function Portfolio() {
           
           {/* CTA */}
           <div className="text-center">
-            <button className="bg-gradient-to-r from-[#1595FF] to-[#0D7AE5] hover:from-[#0D7AE5] hover:to-[#1595FF] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-              <span className="text-lg">Comece agora mesmo</span>
-            </button>
+            <Link to="/contato">
+              <button className="bg-gradient-to-r from-[#1595FF] to-[#0D7AE5] hover:from-[#0D7AE5] hover:to-[#1595FF] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
+                <span className="text-lg">Comece agora mesmo</span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
