@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 function Sobre() {
   return (
     <div className="min-h-screen pt-16 bg-gradient-to-r from-[#1595FF]/8 via-white to-[#1595FF]/8 relative">
-      
+
       {/* Seção 1: Trajetória Delly */}
       <section id="trajetoria-delly" className="py-8 md:py-16 pb-32 md:pb-40 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -20,7 +20,7 @@ function Sobre() {
               Uma jornada de quase 10 anos transformando dados em insights estratégicos
             </p>
           </div>
-          
+
           {/* Resumo */}
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
             <div className="space-y-4 md:space-y-6">
@@ -31,12 +31,12 @@ function Sobre() {
                 Essa diversidade de experiências trouxe não apenas repertório técnico, mas também a sensibilidade de compreender realidades distintas e transformar dados em insights estratégicos.
               </p>
             </div>
-            
+
             {/* Foto da Delly */}
             <div className="flex justify-center">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-[#1595FF]/20">
-                <img 
-                  src="/Fotos/delly.png" 
+                <img
+                  src="/Fotos/delly.png"
                   alt="Adrielly Souza (Delly) - Fundadora da Niva Research"
                   className="w-full h-full object-cover object-center"
                 />
@@ -49,14 +49,14 @@ function Sobre() {
             <h3 className="text-xl md:text-2xl font-bold text-[#282828] text-center mb-8 md:mb-12">
               10 anos de expertise comprovada em pesquisa estratégica
             </h3>
-            
-            
+
+
             {/* Layout Desktop - Linha central */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#1595FF] to-[#1595FF]/50"></div>
-            
+
             {/* Layout Mobile - Linha vertical à esquerda */}
             <div className="md:hidden absolute left-6 w-1 h-[calc(100%-2rem)] bg-gradient-to-b from-[#1595FF] to-[#1595FF]/50"></div>
-            
+
             <div className="space-y-8 md:space-y-12">
               {/* 2014 */}
               <div className="flex flex-col md:flex-row items-center">
@@ -68,7 +68,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:flex w-1/2 pr-8 text-right mb-4 md:mb-0">
                   <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#1595FF]">
@@ -90,7 +90,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:block w-1/2 pr-8"></div>
                 <div className="hidden md:block w-8 h-8 bg-[#1595FF] rounded-full border-4 border-white shadow-lg flex-shrink-0"></div>
@@ -112,7 +112,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:flex w-1/2 pr-8 text-right mb-4 md:mb-0">
                   <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#1595FF]">
@@ -134,7 +134,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:block w-1/2 pr-8"></div>
                 <div className="hidden md:block w-8 h-8 bg-[#1595FF] rounded-full border-4 border-white shadow-lg flex-shrink-0"></div>
@@ -156,7 +156,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:flex w-1/2 pr-8 text-right mb-4 md:mb-0">
                   <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#1595FF]">
@@ -178,7 +178,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:block w-1/2 pr-8"></div>
                 <div className="hidden md:block w-8 h-8 bg-[#1595FF] rounded-full border-4 border-white shadow-lg flex-shrink-0"></div>
@@ -200,7 +200,7 @@ function Sobre() {
                   </div>
                   <div className="absolute left-[0.875rem] top-1/2 transform -translate-y-1/2 w-6 h-6 bg-[#1595FF] rounded-full border-4 border-white shadow-lg"></div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:flex w-1/2 pr-8 text-right mb-4 md:mb-0">
                   <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#1595FF]">
@@ -227,7 +227,7 @@ function Sobre() {
                     <div className="w-5 h-5 bg-white rounded-full"></div>
                   </div>
                 </div>
-                
+
                 {/* Layout Desktop - Mantém o original */}
                 <div className="hidden md:block w-1/2 pr-8"></div>
                 <div className="hidden md:flex w-12 h-12 bg-gradient-to-r from-[#1595FF] to-[#0ea5e9] rounded-full border-4 border-white shadow-xl flex-shrink-0 flex items-center justify-center">
