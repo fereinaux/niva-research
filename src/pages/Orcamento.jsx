@@ -133,6 +133,10 @@ function Orcamento() {
               </li>
               <li className="flex items-start">
                 <span className="text-[#FF6339] mr-3">✓</span>
+                <span>Publicação e configuração do site no ar (configurações de servidor, SSL, DNS e demais ajustes técnicos necessários)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#FF6339] mr-3">✓</span>
                 <span><strong>Domínio</strong> (válido por 1 ano - após esse período, deve ser renovado pelo cliente)</span>
               </li>
             </ul>
